@@ -1,0 +1,174 @@
+project:
+  type: website
+  preview:
+    port: 8800
+    browser: false
+  output-dir: docs
+  render:
+    # - pages/*.ipynb
+    - pages/*.qmd
+    - slides/*.qmd
+
+website:
+  title: "Promptly Literate //"
+  site-url: https://virtuelleakademie.github.io/promptly-literate
+  repo-url: https://github.com/virtuelleakademie/promptly-literate
+  # repo-actions: [edit, issue]
+  favicon: /assets/robot.png
+  open-graph: true
+  search:
+    location: navbar
+    type: overlay
+    # type: textbox
+  twitter-card:
+    creator: "@awellis"
+    card-style: summary_large_image
+
+  reader-mode: false
+  page-navigation: true
+  back-to-top-navigation: true
+
+  # Bootstrap icons: https://icons.getbootstrap.com/
+  navbar:
+    # title: false
+    # logo: /assets/robot.png
+    background: light
+    left:
+      # - text: "🏠 Home"
+      #   file: pages/index.qmd
+      - icon: calendar-event #house-door
+        text: "Agenda" # {{< fa calendar >}}
+        file: pages/agenda.qmd
+
+      - icon: file-slides
+        text: "Slides" # {{< fa person-chalkboard >}}
+        menu:
+          - text: "Workshop: Global Management"
+            file: slides/workshop-global-management.qmd
+          - text: "Prompt Labor: Basics"
+            file: slides/prompt-labor-basics.qmd
+          - text: "Prompt Labor: Vertiefung"
+            file: slides/prompt-labor-vertiefung.qmd
+          - text: "CAS Hochschuldidaktik"
+            file: slides/cas-hochschuldidaktik.qmd
+          - text: "The busy lecturer's guide to LLMs"
+            file: slides/busy-lecturers-guide.qmd
+
+
+      - icon: brush #pencil-square
+        text: "Activities"
+        menu:
+          # - text: "Activities"
+          #   file: pages/activities.qmd
+          - text: "Activity: Workshop Global Management"
+            file: pages/activity-global-management.qmd
+          - text: "Activity: Confabulations and prompting"
+            file: pages/activities-20240223.qmd
+          - text: "Activity: CAS"
+            file: pages/activity-cas-hochschuldidaktik.qmd
+          - text: "Activity: Prompt Labor: Vertiefung"
+            file: pages/activity-prompt-labor-vertiefung.qmd
+          - text: "Exploring LLMs"
+            file: pages/activity-0-explore-llms.qmd
+          - text: "Prompting techniques"
+            file: pages/activity-1-prompting-techniques.qmd 
+          - text: "Prompting for educational settings"
+            file: pages/activity-2-prompting-learning-teaching.qmd
+          # - text: "Activity 3: Add your prompt tricks to the Miro board"
+          #   file: pages/activity-4-miro.qmd
+          # - text: "Activity 4: Discussion"
+          #   file: pages/activity-4-discussion.qmd 
+
+      - icon: book
+        text: "Tutorials"
+        menu:
+          - text: "Text representation: embeddings"
+            file: pages/text-representation.qmd
+          # - text: "How does text generation work?"
+          #   file: pages/text-generation.ipynb
+          # - text: "ChatGPT vs Playground"
+          #   file: pages/chatgpt-playground.ipynb
+          - text: "Using the API: Prompting Programmatically"
+            file: pages/prompting.qmd
+          # - text: Dashboard
+          #   file: dashboards/python-penguins.qmd
+          # - text: "Prompts for teaching and learning"
+          #   file: pages/about.qmd
+      - icon: archive
+        text: "Archive"
+        menu: 
+          - text: "Part 1: What is ChatGPT?"
+            file: slides/00-introduction.qmd
+          - text: "Further info: Text representation, training and text generation"
+            file: slides/01-text-representation-generation.qmd
+          - text: "Part 2: Prompting techniques"
+            file: slides/02-prompting-techniques.qmd
+          - text: "Part 3: Prompting for learning and teaching"
+            file: slides/03-prompting-learning-teaching.qmd
+
+      - icon: wrench-adjustable #tools
+        text: "Resources"
+        menu:
+          - text: "Guides"
+            file: pages/resources.qmd
+          - text: "Tools"
+            file: pages/tools.qmd
+
+    tools:
+      # - icon: robot
+      #   text: Assistant
+      #   file: pages/assistant.qmd
+      - icon: lightbulb-fill
+        text: Knowledge Base
+        href: https://virtuelleakademie.ch/knowledge-base/
+      # - icon: twitter
+      #   href: https://twitter.com
+      - icon: github
+        menu:
+          - text: Source Code
+            url:  https://github.com/virtuelleakademie/promptly-literate/
+          - text: Report a Bug
+            url:  https://github.com/virtuelleakademie/promptly-literate/issues
+  # sidebar:
+  #   - title: "Slides 📺"
+  #     style: "docked"
+  #     background: light
+  #     contents:
+  #       - text: "The busy lecturer's guide to LLMs"
+  #         file: slides/busy-lecturers-guide.qmd
+  #       - text: "Part 1: What is ChatGPT?"
+  #         file: slides/00-introduction.qmd
+  #   - title: "🎓 Tutorials"
+  #     style: "docked"
+  #     background: light
+  #     contents:
+  #       - text: "Using the API: Prompting Programmatically"
+  #         file: pages/prompting.qmd
+page-footer:
+    right:
+    - icon: github
+      href: https://github.com/virtuelleakademie/promptly-literate
+
+format:
+  html:
+    theme:
+      light: simplex
+    toc: true
+    link-external-icon: true
+    link-external-newwindow: true
+    anchor-sections: true
+    smooth-scroll: true
+    # linkcolor: rebeccapurple
+comments:
+  hypothesis: 
+    theme: clean
+  # utterances: 
+    # repo: virtuelleakademie/promptly-literate
+
+execute:
+  cache: true
+  freeze: auto
+  execute-dir: project
+
+editor:
+  render-on-save: true

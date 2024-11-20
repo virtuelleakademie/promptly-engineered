@@ -1,0 +1,257 @@
+---
+title: "Hands-On Practice: Prompting"
+description: |
+  Basic prompting techniques.
+# date: last-modified
+date: 27 June, 2024
+date-format: "DD MMM, YYYY"
+author: 
+  - name: Andrew Ellis
+    url: https://github.com/awellis
+    affiliation: Virtuelle Akademie, Berner Fachhochschule
+    affiliation-url: https://virtuelleakademie.ch
+    orcid: 0000-0002-2788-936X
+license: CC BY
+citation: true
+bibliography: ../bibliography.bib
+format:
+    html:
+        toc: true
+        code-fold: true
+        code-link: true
+        callout-appearance: simple
+        callout-icon: false
+---
+
+Designing effective prompts to instruct LLMs to generate a desired output is referred to as _prompt engineering_. This activity will guide you through the process of creating prompts for LLMs.
+
+:::{.callout-tip}
+- In general, it is advisable to improve your prompting strategy by **iterating**. 
+
+- Start with a simple prompt, see what the model generates, and then refine. Repeat this process until you are satisfied with the results. 
+
+- Once you have a good prompt, you can use it in a new chat session - in this way, the "failed" attempts will not be part of the context.
+
+:::
+
+# Prompting
+
+
+
+
+## General tips
+
+OpenAI give a set of [{{< bi link >}} strategies](https://platform.openai.com/docs/guides/prompt-engineering/six-strategies-for-getting-better-results)  for using their models. If you need examples, this might be a good place to start. 
+
+
+The strategies include:
+
+- writing clear instructions
+- providing reference texts
+- splitting tasks into subtasks
+- giving GPT 'time to think'
+- using external tools
+
+
+Some general techniques are:
+
+- **Numbered Steps:**: For sequential tasks, use numbered steps. This helps the model understand the sequence of actions.
+
+- **Use delimiters:** To separate various parts of the prompt (e.g. `"`, \`,, `'`, `|`, `#`, ...).
+
+- **Few-shot prompting:** Provide a few examples for guidance.
+
+Combining these techniques, a template prompt might look like this:
+
+:::{.callout-tip}
+## Template
+1) Role: who is being simulated?
+2) Task: what is to be done?
+3) Steps: what are the steps to complete the task?
+4) Context: what is the context of the task?
+5) Goal: what is the goal of the task?
+6) Format: what is the format of the output? How long should it be?
+:::
+
+Remember to structure your prompt in a way that is clear and easy to understand. You can use markdown to format your prompt, and you instruct the mode to format its response using markdown.
+
+### Example
+
+:::{.callout-note}
+## {{< bi person >}} Prompt:
+You are an expert on the topic of university education and didactics. Explain the concept of "flipped classroom" to a group of teachers. Use markdown to format your response. Keep you explanation concise and to the point.
+:::
+
+
+Different persona:
+
+
+:::{.callout-note}
+## {{< bi person >}} Prompt:
+You are 13 year old high school student. Explain the concept of "flipped classroom" to your friends. Use markdown to format your response. Keep you explanation concise and to the point.
+:::
+
+Ask the model to output a table:
+
+:::{.callout-note}
+## {{< bi person >}} Prompt:
+You are a high school teacher. Give me a table containing Greek letters in one column, their pronunciation in the second column, and examples of usage in the third column. Give me a maximum of 6 rows.
+:::
+
+
+## Structured prompting techniques
+
+### In-Context Learning: Provide examples within the prompt
+
+#### Explanation
+In-Context Learning involves providing the language model with examples or context within the prompt itself. This technique helps guide the model's responses by demonstrating the desired output format or type of information.
+
+#### Techniques
+
+- **Few-Shot Prompting**: Provide a few examples of the desired output before asking for a new response.
+
+- **Zero-Shot Prompting**: Ask the model to perform a task without any examples, relying on its pre-trained knowledge.
+
+  
+#### Example
+
+:::{.callout-note}
+## {{< bi person >}} Few-Shot Prompting:
+Summarize the main findings of these research paper abstracts:
+
+1. Abstract: [Insert first abstract]
+   Summary: The study found that increased physical activity is associated with improved cognitive function in older adults.
+
+2. Abstract: [Insert second abstract]
+   Summary: The research demonstrated a positive correlation between employee satisfaction and productivity in remote work environments.
+
+Now summarize this new abstract:
+[Insert new abstract to be summarized]
+
+:::
+
+
+:::{.callout-important}
+## Hands-on Exercise
+1. Choose a topic you're interested in. If you would like to use an AI-based tool for literature research, you can use [Elicit](https://elicit.com/).
+2. Create zero-shot and few-shot prompts to extract the research question, methodology, and main findings from the abstracts of three research papers.
+:::
+
+
+
+
+
+
+
+
+
+###  Thought Generation: Instruct the model to think step-by-step
+
+
+
+
+
+
+#### Explanation
+Thought generation techniques encourage the model to show its reasoning process, making the output more transparent and often more accurate.
+
+#### Techniques
+Chain-of-Thought (CoT) Prompting: Ask the model to break down its thinking into steps.
+
+- **Zero-Shot CoT**: Request step-by-step reasoning without providing examples.
+- **Few-Shot CoT**: Provide examples of step-by-step reasoning before asking for a new response.
+
+#### Example Prompt (Chain-of-Thought):
+
+:::{.callout-note}
+## {{< bi person >}} Prompt:
+Analyze the methodology of the following research study. Think through this step-by-step:
+1. Identify the research design.
+2. Evaluate the appropriateness of the chosen methods.
+3. Assess potential limitations or biases.
+4. Consider alternative approaches that could have been used.
+
+[Insert methodology section of a research paper]
+:::
+
+
+
+### Decomposition Techniques: Break down tasks into subtasks
+
+
+#### Explanation
+Decomposition techniques involve breaking down complex tasks into smaller, more manageable subtasks. This approach can lead to more accurate and comprehensive responses.
+
+#### Techniques
+
+- Least-to-Most Prompting: Start with the simplest subtask and gradually increase complexity. More info here: {{< bi link >}} [Least-to-Most Prompting](https://learnprompting.org/docs/intermediate/least_to_most)
+- Plan-and-Solve Prompting: Separate the task into a planning phase and an execution phase.
+
+#### Example Prompt (Plan-and-Solve):
+
+
+:::{.callout-note}
+## {{< bi person >}} Prompt:
+
+We need to conduct a systematic literature review on [specific topic]. Let's approach this in two phases:
+
+Planning Phase:
+1. Outline the main steps needed for this systematic review.
+2. For each step, briefly describe what needs to be considered.
+
+Solving Phase:
+Now, let's address each step in detail, providing specific strategies and methodologies.
+:::
+
+
+
+# Exercise: Essay writing
+
+The goal of this exercise is to develop prompting skills. Focusing on structuring and guiding the model to generate coherent and informative responses. Use  the techniques that you have learned so far, including providing reference texts.
+
+:::{.callout-important}
+1. Use ChatGPT to write an (short) essay on the pros and cons of the introduction of a universal basic income (UBI). 
+2. Exchange your essay with your neighbour and provide feedback (using ChatGPT) on the clarity and coherence of the essay.
+:::
+
+
+
+
+
+
+# Further Resources
+
+(@) **Explore these prompt guides**. Use ChatGPT to try out new ideas.
+
+:::{.callout-tip collapse="true"}
+## Learn prompting: An comprehensive (and free) guide aimed at non-technical users.
+{{< bi link >}} [Learn prompting](https://learnprompting.org/docs/intro)
+
+```{=html}
+<iframe src="https://learnprompting.org/docs/intro" width="100%" height="500px"></iframe>
+``` 
+:::
+
+
+:::{.callout-tip collapse="true"}
+## Prompting guide: A more technical guide to prompting
+{{< bi link >}} [Prompting guide](https://www.promptingguide.ai/): **DAIR.AI** (Democratizing Artificial Intelligence Research, Education, and Technologies). The guide is licensed under an MIT license.
+
+```{=html}
+<iframe src="https://www.promptingguide.ai/" width="100%" height="500px"></iframe>
+``` 
+:::
+
+
+
+
+
+
+<!-- 
+:::{.callout-caution}
+## Discussion 💬 
+
+- What experiences did you have with prompting?
+- Did you find any of the techniques particularly useful?
+::: -->
+

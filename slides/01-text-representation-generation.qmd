@@ -1,0 +1,377 @@
+---
+title: "LLMs: Text representation, training, and text generation"
+author: "Andrew Ellis"
+date: last-modified
+date-format: "DD MMMM, YYYY"
+bibliography: ../bibliography.bib
+nocite: |
+  @broschinskiGrafikenErklaertFunktioniert2023
+format: 
+    revealjs:
+        theme: simple                                                                                    
+        # theme: default
+        title-slide-attributes:
+          data-background-image: ../assets/background-purple.png
+          # data-background-size: contain
+          data-background-opacity: "1"
+        # logo: ../assets/robot.png
+        footer: <a href="../index.html">back to website ⤴️</a>
+        navigation-mode: vertical
+        progress: true
+        scrollable: true
+        slide-number: true
+        show-slide-number: all
+        controls-layout: bottom-right
+        controls-tutorial: true
+        preview-links: auto
+        chalkboard: true
+        from: markdown+emoji
+        code-fold: true
+        code-summary: "Show code"
+        code-tools: true
+        menu: 
+          sticky: true
+          keyboard: true
+          autoOpen: true
+          width: normal
+          numbers: true
+          markers: true
+
+# slide-level: 3
+# number-sections: true
+---
+
+```{r}
+#| warning: false
+#| message: false
+library(knitr)
+```
+
+
+# Contents {background-color="#b48ead"}
+
+1. What is natural language processing?
+2. How do LLMs represent text?
+3. What is ChatGPT?
+4. How was ChatGPT trained??
+5. How should we think about LLMs?
+6. ChatGPT and OpenAI Playground?
+
+<!-- ::: footer
+<a href="https://virtuelleakademie.github.io/gpt-nano">🏠 KI/GPT in der Hochschule</a>
+::: -->
+
+
+
+# What is natural language processing (NLP)? {background-color="#b48ead"}
+
+::: {.absolute top="0" left="100%"}
+::: {.sectionhead}
+1 [2 3 4 5 6]{style="opacity:0.25"}
+:::
+:::
+
+## What is NLP?
+
+- NLP is a subfield of [artificial intelligence (AI)]((https://www.derbund.ch/so-funktioniert-kuenstliche-intelligenz-599276436215)).
+- NLP is concerned with the interactions between computers and human (natural) languages.
+  
+### Brief timeline
+
+- 1950: Alan Turing proposed the Turing test to assess machine intelligence through conversation.
+- 1954: IBM introduced the first machine translation system, translating Russian to English using rules.
+- 1960s-1970s: Rule-based systems like SHRDLU and ELIZA used human-crafted rules for language interaction.
+- 1980s-1990s: Statistical methods employed probabilities and text data, using models like Hidden Markov Models and n-grams.
+- 2000s-present: NLP shifted to neural network methods with deep learning, employing recurrent neural networks for complex language tasks.
+- Transformers (first published in 2017) are the current state-of-the-art for NLP, and are the basis for large language models (LLMs), such as GPT-3.5, GPT-4, ChatGPT, Llama 2, and others.
+- LLMs are models with billions of parameters, trained on massive amounts of text data. Training consists of predicting the next word in a sequence of words. 
+
+
+
+## Long-range dependencies
+
+:::{.callout-note}
+## Complicated sentence
+"The boy who was throwing stones at the birds, despite being warned by his parents not to harm any creatures, was chased by the angry flock."
+:::
+
+Who was chased?
+
+- This type of long-range dependency is difficult for traditional NLP methods to handle.
+- The verb phrase (`the boy was chased`) is separated from the subject by a long distance - you can't just look at the previous few words to answer the question.
+- Transformers have a special feature that lets them easily connect words that are far apart in a sentence; `was chased` is linked directly to `The boy` without distraction by the words in between.
+
+
+
+## Key areas in NLP
+
+:::{.callout-note appearance="minimal"}                                  
+`Sentiment Analysis`:             Identifying emotions and opinions in text.    
+`Machine Translation`:            Automatically translating between languages.  
+`Question Answering`:             Providing direct answers to user questions.   
+`Text Summarization`:             Generating concise summaries from long text.  
+`Speech Recognition`:             Converting spoken words to text.              
+`Speech Synthesis`:               Creating spoken words from text.              
+`Natural Language Generation`:    Generating human-like text.               
+`Natural Language Understanding`: Extracting meaning from text.          
+`Dialogue Systems`:               Conversing with humans using natural language.
+:::
+
+- Before LLMs, specialized models were trained for each task.
+- LLMs are general-purpose models that can perform a wide variety of tasks.
+  
+## Example: sentiment analysis (text classification)
+The task of classifying text as positive, negative, or neutral.
+
+- `I love this movie!` → positive 😊
+- `This movie is ok.` → neutral 😐 
+- `This movie is terrible!` → negative 😠
+
+
+
+
+ 
+
+
+## Machine Learning primer
+
+- Earlier, rule-based systems had to be programmed.
+- Machine learning (ML) models learn implicitly, i.e. without rules being programmed in.
+
+
+- Important terms:
+  - __training data:__ Models are fed with data, and parameters of the model are adjusted so that the model is as "good" as possible.
+  - __supervised learning:__ Categories known, e.g. classify images of animals.
+  - __unsupervised learning:__ Categories are unknown, e.g. discover unknown patterns.
+  - __reinforcement learning:__ The goal is given, and the model learns through feedback (reward) how the goal can be achieved.
+
+> We have to learn the bitter lesson that building in how we think we think does not work in the long run. We should stop trying to find simple ways to think about space, objects, multiple agents, or symmetries... instead we should build in only the meta-methods that can find and capture this arbitrary complexity. We want AI agents that can discover like we can, not which contain what we have discovered [@suttonBitterLesson2019].
+
+
+## Supervised learning
+
+```{r}
+knitr::include_graphics("../assets/images/cats-dogs.png")
+```
+
+__Classifiy pictures of cats and dogs:__ The goal of a model could be to discover which features distinguish cats from dogs.
+
+
+
+
+
+## Reinforcement learning
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+knitr::include_graphics("../assets/images/cartpole.gif")
+```
+:::
+
+::: {.column width="50%"}
+
+```{r}
+knitr::include_graphics("../assets/images/RL-agent.png")
+```
+:::
+::::
+
+
+
+
+
+
+# What is ChatGPT? {background-color="#b48ead"}
+
+::: {.absolute top="0" left="100%"}
+::: {.sectionhead}
+[1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
+:::
+:::
+
+
+
+
+
+
+## ChatGPT
+
+ChatGPT is a particular kind of LLM and consists of two models:
+
+__Base model:__ GPT-3.5 oder GPT-4 (generative pre-trained transformer). This model is trained "simply" to predict the next word in a sequence of words. A base model produces text, but not human-like conversations.
+
+:::{.callout-note}
+## Example
+Give the input `Once upon a time there was a`, the model will predict which word is likely to follow.
+:::
+
+__Assistant model:__ This model is trained using reinforcement learning from human feedback to have human-like conversations.
+
+:::{.callout-note}
+## Example
+👩‍💼: `Tell me a story!`
+
+💬: `Once upon a time there was a ....`
+:::
+
+
+## Text generation
+
+- LLMs produce text by predicting the next word, one word at a time: 
+- This is known as "auto-regressive next token prediction" (we'll discover what tokens are in the next section).
+
+- The model predicts which token is likely to follow, given a sequence of tokens (words, punctuation, emojis, etc.). 
+- Key idea: this simple procedure is followed over and over again, with <mark style="background: #FFF3A3A6;">each new token being added to the sequence of tokens</mark> that the model uses to predict the next token.
+$$ P(w_{w+1} | w_1, w_2, ..., w_t) $$
+
+- The sequence of words is called the <mark style="background: #FFF3A3A6;">context</mark>; the text generated by the model is dependent on the context.
+- The output of the model is a probability distribution over all possible tokens. The model then chooses one token from this distribution.
+
+
+## Text generation examples
+
+```{r}
+knitr::include_graphics("../assets/images/autoregressive.png")
+```
+
+- The new context is used to generate the next token, etc. 
+- <mark style="background: #FFF3A3A6;">Every token is given an equal amount time (computation per token is constant)</mark>. The model has no concept of more or less important tokens. This is crucial for understanding how LLMs work.
+
+
+
+## Tokenization
+So far we have been talking about words, but LLMs operate with tokens. These are sub-words, and make working with text much easier for the model. A rule of thumb is that one token generally corresponds to ~4 characters of English text. This translates to roughly $\frac{3}{4}$ of a word (so 100 tokens is about 75 words).
+
+```{r}
+knitr::include_graphics("../assets/images/tokenization.png")
+```
+
+Feel free to try out the [OpenAI tokenizer](https://platform.openai.com/tokenizer). 
+
+## Embeddings
+- The next step is to represent tokens as vectors. 
+- This is called "embedding" the tokens. The vectors are high-dimensional, and the **distance** between vectors measures the similarity between tokens.
+
+:::: {.columns}
+::: {.column width="50%"}
+
+```{r}
+knitr::include_graphics("../assets/images/embedding.png")
+```
+:::
+::: {.column width="50%"}
+- In this 2-dimensional representation, concepts that are "related" lie close together.
+
+:::
+
+::::
+
+You can read more about embeddings [in this tutorial](../pages/text-representation.qmd).
+
+
+
+# How was ChatGPT trained? {background-color="#b48ead"}
+
+::: {.absolute top="0" left="100%"}
+::: {.sectionhead}
+[1 2]{style="opacity:0.25"} 3 [4 5 6]{style="opacity:0.25"}
+:::
+:::
+
+## Summary
+Modern LLMs, such as ChatGPT, are trained in 3 steps:
+
+1) Pre-training: the model absorbs knowledge from text datasets.
+2) Supervised finetuning: model is refined to better adhere to specific instructions.
+3) Alignment: hones the LLM to respond more helpfully and safely to user prompts. This step is known as "reinforcement learning from human feedback" (RLHF).
+
+
+
+## Pre-training Data
+
+```{r}
+knitr::include_graphics("../assets/images/karpathy-training-data.png")
+```
+
+
+## Pre-training
+
+```{r}  
+knitr::include_graphics("../assets/images/pretraining.png")
+knitr::include_graphics("../assets/images/karpathy-training-process.png")
+```
+
+## Supervised fine-tuning
+```{r}
+knitr::include_graphics("../assets/images/finetuning.png")
+```
+
+## Reinforcement learning from human feedback (RLHF)
+
+Uses human feedback to rank the model's responses. The goal is for the model to learn human preferences for responses.
+
+```{r}
+
+```{r}
+#| fig-cap: "Source: [openai.com/blog/chatgpt](https://openai.com/blog/chatgpt)"
+knitr::include_graphics("../assets/images/RLHF.png")
+```
+
+ 
+
+# How should we think about LLMs? {background-color="#b48ead"}
+
+::: {.absolute top="0" left="100%"}
+::: {.sectionhead}
+[1 2 3 4]{style="opacity:0.25"} 5 [6]{style="opacity:0.25"}
+:::
+:::
+
+
+## Useful analogy: Role-playing simulator
+
+> We can think of an LLM as a non-deterministic simulator capable of role-playing an infinity of characters, or, to put it another way, capable of stochastically generating an infinity of simulacra. 
+
+Source: @shanahanRolePlayLargeLanguage2023
+
+- A large language model (LLM) trained as an assistant is a simulator of possible human conversation.
+- An assistant model does not have any intentions. It is not an entity with its own goals. It is merely trained to respond to user prompts in a human-like way.
+- An assistant model does not have a "personality" or "character" in the traditional sense. It is a simulation of a conversation, and can be thought of as a role-playing simulator.
+- There is no concept of "truth" or "lying" in a role-playing simulator. The model is not trying to deceive the user, it is simply trying to respond in a human-like way.
+
+This is very important when we try to understand why LLMs hallucinate, i.e. generate text that is not factually true.
+
+
+## Role-Playing Simulator
+
+![](../assets/images/simulator.png){width=800}
+
+
+
+# ChatGPT and OpenAI Playground {background-color="#b48ead"}
+
+::: {.absolute top="0" left="100%"}
+::: {.sectionhead}
+[1 2 3 4 5]{style="opacity:0.25"} 6
+:::
+:::
+
+
+
+## ChatGPT vs OpenAI Playground
+ 
+OpenAI offer two ways to interact with their assistant model:
+
+1) ChatGPT: A web interface where you can chat with the model.
+2) OpenAI Playground: A web interface that gives users more control over the model.
+
+Now open the first activity to learn more about ChatGPT and OpenAI Playground: [👉 Activity 1](../pages/activity-1-explore-llms.html).
+
+
+
+# References {background-color="#2e3440"}
+
+::: {#refs}
+:::
