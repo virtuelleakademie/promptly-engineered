@@ -1,172 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/activity-cas-hochschuldidaktik.html</loc>
-    <lastmod>2024-11-20T13:44:29.865Z</lastmod>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/Notes.html</loc>
+    <lastmod>2024-11-20T13:44:29.239Z</lastmod>
   </url>
   <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/prompting.html</loc>
-    <lastmod>2024-11-20T13:44:29.866Z</lastmod>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/template-slides.html</loc>
+    <lastmod>2024-11-20T15:29:44.590Z</lastmod>
   </url>
   <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/zz-00-introduction.html</loc>
-    <lastmod>2024-11-20T13:44:29.883Z</lastmod>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/index.html</loc>
+    <lastmod>2024-11-20T15:29:44.590Z</lastmod>
   </url>
   <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/tutorial-pyobsplot.html</loc>
-    <lastmod>2024-11-20T13:44:29.867Z</lastmod>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/index.html</loc>
+    <lastmod>2024-11-20T15:29:44.585Z</lastmod>
   </url>
   <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/example.html</loc>
-    <lastmod>2024-11-20T13:44:29.866Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/00-introduction.html</loc>
-    <lastmod>2024-11-20T13:44:29.868Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/activity-2-prompting-learning-teaching.html</loc>
-    <lastmod>2024-11-20T13:44:29.864Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/prompt-labor-basics.html</loc>
-    <lastmod>2024-11-20T13:44:29.874Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/busy-lecturers-guide.html</loc>
-    <lastmod>2024-11-20T13:44:29.872Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/activity-global-management.html</loc>
-    <lastmod>2024-11-20T13:44:29.865Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/demo.html</loc>
-    <lastmod>2024-11-20T13:44:29.874Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/tutorial-basic-prompting.html</loc>
-    <lastmod>2024-11-20T13:44:29.867Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/assistant.html</loc>
-    <lastmod>2024-11-20T13:44:29.865Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/prompt-labor-vertiefung.html</loc>
-    <lastmod>2024-11-20T13:44:29.875Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/tools.html</loc>
-    <lastmod>2024-11-20T13:44:29.867Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/resources.html</loc>
-    <lastmod>2024-11-20T13:44:29.866Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/agenda.html</loc>
-    <lastmod>2024-11-20T13:44:29.865Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/activity-4-discussion.html</loc>
-    <lastmod>2024-11-20T13:44:29.864Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/activity-0-explore-llms.html</loc>
-    <lastmod>2024-11-20T13:44:29.863Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/about.html</loc>
-    <lastmod>2024-11-20T13:44:29.863Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/beispiel-arbeit.html</loc>
-    <lastmod>2024-11-20T13:44:29.865Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/activities-20240223.html</loc>
-    <lastmod>2024-11-20T13:44:29.863Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/activity-3-reflection.html</loc>
-    <lastmod>2024-11-20T13:44:29.864Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/activity-prompt-labor-vertiefung.html</loc>
-    <lastmod>2024-11-20T13:44:29.865Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/shared-chats.html</loc>
-    <lastmod>2024-11-20T13:44:29.867Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/cas-hochschuldidaktik.html</loc>
-    <lastmod>2024-11-20T13:44:29.874Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/activity-4-miro.html</loc>
-    <lastmod>2024-11-20T13:44:29.864Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/schedule.html</loc>
-    <lastmod>2024-11-20T13:44:29.866Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/04-reflection.html</loc>
-    <lastmod>2024-11-20T13:44:29.872Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/activity-1-prompting-techniques.html</loc>
-    <lastmod>2024-11-20T13:44:29.864Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/02-prompting-techniques.html</loc>
-    <lastmod>2024-11-20T13:44:29.871Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/ehealthsummit-2024.html</loc>
-    <lastmod>2024-11-20T13:44:29.874Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/workshop-global-management.html</loc>
-    <lastmod>2024-11-20T13:44:29.882Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/observable-test.html</loc>
-    <lastmod>2024-11-20T13:44:29.866Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/questions-topics.html</loc>
-    <lastmod>2024-11-20T13:44:29.875Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/observable-1.html</loc>
-    <lastmod>2024-11-20T13:44:29.866Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/03-prompting-learning-teaching.html</loc>
-    <lastmod>2024-11-20T13:44:29.871Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/pages/text-representation.html</loc>
-    <lastmod>2024-11-20T13:44:29.867Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/01-text-representation-generation.html</loc>
-    <lastmod>2024-11-20T13:44:29.868Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/understanding-llms/index.html</loc>
-    <lastmod>2024-11-20T15:29:44.591Z</lastmod>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/miro-board/afternoon/index.html</loc>
+    <lastmod>2024-11-20T15:29:44.586Z</lastmod>
   </url>
   <url>
     <loc>https://virtuelleakademie.github.io/promptly-engineered/workshop/index.html</loc>
     <lastmod>2024-11-20T15:29:44.613Z</lastmod>
   </url>
   <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/index.html</loc>
-    <lastmod>2024-11-20T15:29:44.590Z</lastmod>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/prompt-engineering-intermediate/index.html</loc>
+    <lastmod>2024-11-20T15:29:44.587Z</lastmod>
+  </url>
+  <url>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/understanding-llms/index.html</loc>
+    <lastmod>2024-11-20T15:29:44.591Z</lastmod>
+  </url>
+  <url>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/miro-board/morning/index.html</loc>
+    <lastmod>2024-11-20T15:29:44.586Z</lastmod>
+  </url>
+  <url>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/prompt-engineering-basics/index.html</loc>
+    <lastmod>2024-11-20T15:29:44.586Z</lastmod>
   </url>
   <url>
     <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/solo-exploration.html</loc>
@@ -179,29 +51,5 @@
   <url>
     <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/group-analysis.html</loc>
     <lastmod>2024-11-20T15:29:44.587Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/index.html</loc>
-    <lastmod>2024-11-20T15:29:44.585Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/template-slides.html</loc>
-    <lastmod>2024-11-20T15:29:44.590Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/prompt-engineering-basics/index.html</loc>
-    <lastmod>2024-11-20T15:29:44.586Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/miro-board/morning/index.html</loc>
-    <lastmod>2024-11-20T15:29:44.586Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/prompt-engineering-intermediate/index.html</loc>
-    <lastmod>2024-11-20T15:29:44.587Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/miro-board/afternoon/index.html</loc>
-    <lastmod>2024-11-20T15:29:44.586Z</lastmod>
   </url>
 </urlset>
