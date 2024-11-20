@@ -33,9 +33,9 @@ website:
         href: workshop/index.qmd
         text: Workshop
 
-      # - icon: info-circle
-      #   href: prompting-llms/index.qmd
-      #   text: Prompting recommendations
+      - icon: info-circle
+        href: tutorials/index.qmd
+        text: Tutorials
 
       - icon: file-slides
         text: "Slides" # {{< fa person-chalkboard >}}
@@ -78,13 +78,23 @@ website:
           - text: Report an issue
             url:  https://github.com/virtuelleakademie/promptly-engineered/issues
             
-  # sidebar:
-  #   - title: "Workshop"
-  #     style: "docked"
-  #     search: true
-  #     background: light
-  #     contents:
-  #       - workshop/index.qmd
+  sidebar:
+    - title: "Workshop"
+      style: "docked"
+      search: true
+      background: light
+      contents:
+        - workshop/index.qmd
+        - tutorials/tutorial-1/index.qmd
+        - tutorials/tutorial-2/index.qmd
+    - title: "Tutorials"
+      style: "docked"
+      search: true
+      background: light
+      contents:
+        - tutorials/index.qmd
+        - tutorials/tutorial-1/index.qmd
+        - tutorials/tutorial-2/index.qmd
 
 page-footer:
     right:
