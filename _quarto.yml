@@ -4,15 +4,15 @@ project:
     - assets/*
   preview:
     port: 8800
-    browser: false
+    browser: true
   output-dir: docs
-  render:
-    # - pages/*.ipynb
-    - pages/*.qmd
-    - slides/*.qmd
+  # render:
+  #   # - pages/*.ipynb
+  #   - pages/*.qmd
+  #   - slides/*.qmd
 
 website:
-  title: "Promptly Engineered //"
+  title: "Promptly Engineered"
   site-url: https://virtuelleakademie.github.io/promptly-engineered
   repo-url: https://github.com/virtuelleakademie/promptly-engineered
   # repo-actions: [edit, issue]
@@ -22,15 +22,14 @@ website:
     location: navbar
     type: overlay
     # type: textbox
-  twitter-card:
-    creator: "@awellis"
-    card-style: summary_large_image
+  # twitter-card:
+  #   creator: "@awellis"
+  #   card-style: summary_large_image
 
   reader-mode: false
   page-navigation: true
   back-to-top-navigation: true
 
-  # Bootstrap icons: https://icons.getbootstrap.com/
   navbar:
     # title: false
     # logo: /assets/robot.png
@@ -39,9 +38,11 @@ website:
       - icon: card-list
         href: workshop/index.qmd
         text: Workshop
-      - icon: info-circle
-        href: prompting-llms/index.qmd
-        text: Prompting recommendations
+
+      # - icon: info-circle
+      #   href: prompting-llms/index.qmd
+      #   text: Prompting recommendations
+
       - icon: file-slides
         text: "Slides" # {{< fa person-chalkboard >}}
         menu:
@@ -87,20 +88,13 @@ website:
           - text: Report a Bug
             url:  https://github.com/virtuelleakademie/promptly-engineered/issues
   # sidebar:
-  #   - title: "Slides 📺"
+  #   - title: "Workshop"
   #     style: "docked"
+  #     search: true
   #     background: light
   #     contents:
-  #       - text: "The busy lecturer's guide to LLMs"
-  #         file: slides/busy-lecturers-guide.qmd
-  #       - text: "Part 1: What is ChatGPT?"
-  #         file: slides/00-introduction.qmd
-  #   - title: "🎓 Tutorials"
-  #     style: "docked"
-  #     background: light
-  #     contents:
-  #       - text: "Using the API: Prompting Programmatically"
-  #         file: pages/prompting.qmd
+  #       - workshop/index.qmd
+
 page-footer:
     right:
     - icon: github
