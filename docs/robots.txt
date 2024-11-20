@@ -1,1 +1,1 @@
-Sitemap: https://virtuelleakademie.github.io/promptly-literate/sitemap.xml
+Sitemap: https://virtuelleakademie.github.io/promptly-engineered/sitemap.xml

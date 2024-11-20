@@ -11,8 +11,8 @@ project:
 
 website:
   title: "Promptly Literate //"
-  site-url: https://virtuelleakademie.github.io/promptly-literate
-  repo-url: https://github.com/virtuelleakademie/promptly-literate
+  site-url: https://virtuelleakademie.github.io/promptly-engineered
+  repo-url: https://github.com/virtuelleakademie/promptly-engineered
   # repo-actions: [edit, issue]
   favicon: /assets/robot.png
   open-graph: true
@@ -126,9 +126,9 @@ website:
       - icon: github
         menu:
           - text: Source Code
-            url:  https://github.com/virtuelleakademie/promptly-literate/
+            url:  https://github.com/virtuelleakademie/promptly-engineered/
           - text: Report a Bug
-            url:  https://github.com/virtuelleakademie/promptly-literate/issues
+            url:  https://github.com/virtuelleakademie/promptly-engineered/issues
   # sidebar:
   #   - title: "Slides 📺"
   #     style: "docked"
@@ -147,7 +147,7 @@ website:
 page-footer:
     right:
     - icon: github
-      href: https://github.com/virtuelleakademie/promptly-literate
+      href: https://github.com/virtuelleakademie/promptly-engineered
 
 format:
   html:
@@ -163,7 +163,7 @@ comments:
   hypothesis: 
     theme: clean
   # utterances: 
-    # repo: virtuelleakademie/promptly-literate
+    # repo: virtuelleakademie/promptly-engineered
 
 execute:
   cache: true
