@@ -14,25 +14,19 @@ project:
 website:
   title: "Promptly Engineered"
   site-url: https://virtuelleakademie.github.io/promptly-engineered
-  repo-url: https://github.com/virtuelleakademie/promptly-engineered
+  # repo-url: https://github.com/virtuelleakademie/promptly-engineered
   # repo-actions: [edit, issue]
   favicon: /assets/robot.png
   open-graph: true
   search:
     location: navbar
     type: overlay
-    # type: textbox
-  # twitter-card:
-  #   creator: "@awellis"
-  #   card-style: summary_large_image
 
   reader-mode: false
   page-navigation: true
   back-to-top-navigation: true
 
   navbar:
-    # title: false
-    # logo: /assets/robot.png
     background: light
     left:
       - icon: card-list
@@ -55,13 +49,13 @@ website:
           - text: "Intermediate prompt engineering"
             file: prompt-engineering-intermediate/index.qmd
 
-      - icon: share
-        text: "Miro boards"
-        menu:
-          - text: "Morning session"
-            file: miro-board/morning/index.qmd
-          - text: "Afternoon session"
-            file: miro-board/afternoon/index.qmd
+      # - icon: share
+      #   text: "Miro boards"
+      #   menu:
+      #     - text: "Morning session"
+      #       file: miro-board/morning/index.qmd
+      #     - text: "Afternoon session"
+      #       file: miro-board/afternoon/index.qmd
 
 
       - icon: wrench-adjustable #tools
@@ -73,20 +67,17 @@ website:
             file: pages/tools.qmd
 
     tools:
-      # - icon: robot
-      #   text: Assistant
-      #   file: pages/assistant.qmd
       - icon: lightbulb-fill
         text: Knowledge Base
         href: https://virtuelleakademie.ch/knowledge-base/
-      # - icon: twitter
-      #   href: https://twitter.com
+
       - icon: github
         menu:
-          - text: Source Code
+          - text: Source code
             url:  https://github.com/virtuelleakademie/promptly-engineered/
-          - text: Report a Bug
+          - text: Report an issue
             url:  https://github.com/virtuelleakademie/promptly-engineered/issues
+            
   # sidebar:
   #   - title: "Workshop"
   #     style: "docked"
