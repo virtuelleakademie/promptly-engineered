@@ -10,7 +10,7 @@ project:
     - slides/*.qmd
 
 website:
-  title: "Promptly Literate //"
+  title: "Promptly Engineered //"
   site-url: https://virtuelleakademie.github.io/promptly-engineered
   repo-url: https://github.com/virtuelleakademie/promptly-engineered
   # repo-actions: [edit, issue]
