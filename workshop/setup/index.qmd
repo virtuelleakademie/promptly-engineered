@@ -3,6 +3,8 @@ title: "Setup Python"
 ---
 
 
+# Install stuff
+
 1) Install VSCode 
 2) Install Python
 3) Work in a local environment
