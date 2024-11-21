@@ -2,3 +2,6 @@
 title: "Tutorials"
 ---
 
+[Tutorial 1](tutorial-1/index.qmd)
+
+[Tutorial 2](tutorial-2/index.qmd)
