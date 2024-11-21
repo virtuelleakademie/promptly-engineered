@@ -120,7 +120,7 @@
     "href": "workshop/setup/index.html",
     "title": "Setup Python",
     "section": "",
-    "text": "Install VSCode\nInstall Python\nWork in a local environment\n\nSet up a local environment from VSCode  link\n\n\n\n\n\n Back to top",
+    "text": "Install stuff\n\nInstall VSCode\nInstall Python\nWork in a local environment\n\nSet up a local environment from VSCode  link\n\n\n\n\n\n\n Back to topReuseCC BY 4.0CitationBibTeX citation:@online{ellis2024,\n  author = {Ellis, Andrew},\n  title = {Setup {Python}},\n  date = {2024-11-13},\n  url = {https://virtuelleakademie.github.io/promptly-engineered/workshop/setup/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nEllis, Andrew. 2024. “Setup Python.” November 13, 2024. https://virtuelleakademie.github.io/promptly-engineered/workshop/setup/.",
     "crumbs": [
       "Workshop",
       "Setup Python"
