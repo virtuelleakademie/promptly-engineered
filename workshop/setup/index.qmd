@@ -1,0 +1,13 @@
+---
+title: "Setup Python"
+---
+
+
+# Install stuff
+
+1) Install VSCode 
+2) Install Python
+3) Work in a local environment
+   1) Set up a local environment from VSCode [{{< bi link >}} link](https://code.visualstudio.com/docs/python/environments)
+
+   

@@ -4,12 +4,14 @@ project:
     - assets/*
   preview:
     port: 8800
-    browser: true
+    browser: false
   output-dir: docs
-  # render:
-  #   # - pages/*.ipynb
-  #   - pages/*.qmd
-  #   - slides/*.qmd
+  render:
+    - index.qmd
+    - workshop/**/*.qmd
+    - tutorials/**/*.qmd
+    # - "!tutorials/tutorial-1/index.qmd"
+    - slides/**/*.qmd
 
 website:
   title: "Promptly Engineered"
@@ -33,9 +35,9 @@ website:
         href: workshop/index.qmd
         text: Workshop
 
-      # - icon: info-circle
-      #   href: prompting-llms/index.qmd
-      #   text: Prompting recommendations
+      - icon: info-circle
+        href: tutorials/index.qmd
+        text: Tutorials
 
       - icon: file-slides
         text: "Slides" # {{< fa person-chalkboard >}}
@@ -43,21 +45,11 @@ website:
           - text: "AI-enhanced journal club"
             file: slides/index.qmd
           - text: "Understanding LLMs"
-            file: understanding-llms/index.qmd
+            file: slides/understanding-llms/index.qmd
           - text: "Basic prompt engineering"
-            file: prompt-engineering-basics/index.qmd
+            file: slides/prompt-engineering-basics/index.qmd
           - text: "Intermediate prompt engineering"
-            file: prompt-engineering-intermediate/index.qmd
-
-      # - icon: share
-      #   text: "Miro boards"
-      #   menu:
-      #     - text: "Morning session"
-      #       file: miro-board/morning/index.qmd
-      #     - text: "Afternoon session"
-      #       file: miro-board/afternoon/index.qmd
-
-
+            file: slides/prompt-engineering-intermediate/index.qmd
       - icon: wrench-adjustable #tools
         text: "Resources"
         menu:
@@ -78,13 +70,22 @@ website:
           - text: Report an issue
             url:  https://github.com/virtuelleakademie/promptly-engineered/issues
             
-  # sidebar:
-  #   - title: "Workshop"
-  #     style: "docked"
-  #     search: true
-  #     background: light
-  #     contents:
-  #       - workshop/index.qmd
+  sidebar:
+    - title: "Workshop"
+      style: "docked"
+      search: true
+      background: light
+      contents:
+        - workshop/index.qmd
+        - workshop/setup/index.qmd
+    - title: "Tutorials"
+      style: "docked"
+      search: true
+      background: light
+      contents:
+        - tutorials/index.qmd
+        - tutorials/tutorial-1/index.qmd
+        - tutorials/tutorial-2/index.qmd
 
 page-footer:
     right:
