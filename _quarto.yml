@@ -45,11 +45,11 @@ website:
           - text: "AI-enhanced journal club"
             file: slides/index.qmd
           - text: "Understanding LLMs"
-            file: understanding-llms/index.qmd
+            file: slides/understanding-llms/index.qmd
           - text: "Basic prompt engineering"
-            file: prompt-engineering-basics/index.qmd
+            file: slides/prompt-engineering-basics/index.qmd
           - text: "Intermediate prompt engineering"
-            file: prompt-engineering-intermediate/index.qmd
+            file: slides/prompt-engineering-intermediate/index.qmd
       - icon: wrench-adjustable #tools
         text: "Resources"
         menu:
