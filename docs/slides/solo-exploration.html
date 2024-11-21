@@ -14,6 +14,7 @@
 <link href="../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
+  <meta name="author" content="Andrew Ellis">
   <title>Promptly Engineered – Solo Exploration</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -338,26 +339,15 @@
     }
   </style>
   <style>
-  div.callout-individual.callout {
-    border-left-color: steelblue;
+  div.callout-export.callout {
+    border-left-color: brown;
   }
-  div.callout-individual.callout-style-default > .callout-header {
-    background-color: rgb(from steelblue r g b / 13%);
+  div.callout-export.callout-style-default > .callout-header {
+    background-color: rgb(from brown r g b / 13%);
   }
-  div.callout-individual .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-individual.callout-style-default .callout-icon::before, div.callout-individual.callout-titled .callout-icon::before {
-    content: '💻';
-    background-image: none;
-  }
-  div.callout-timing.callout {
-    border-left-color: red;
-  }
-  div.callout-timing.callout-style-default > .callout-header {
-    background-color: rgb(from red r g b / 13%);
-  }
-  div.callout-timing .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-timing.callout-style-default .callout-icon::before, div.callout-timing.callout-titled .callout-icon::before {
-    content: '⏱️';
+  div.callout-export .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-export.callout-style-default .callout-icon::before, div.callout-export.callout-titled .callout-icon::before {
+    content: '📤';
     background-image: none;
   }
   div.callout-checkpoint.callout {
@@ -371,37 +361,15 @@
     content: '🎯';
     background-image: none;
   }
-  div.callout-break.callout {
-    border-left-color: brown;
+  div.callout-screens-down.callout {
+    border-left-color: orange;
   }
-  div.callout-break.callout-style-default > .callout-header {
-    background-color: rgb(from brown r g b / 13%);
+  div.callout-screens-down.callout-style-default > .callout-header {
+    background-color: rgb(from orange r g b / 13%);
   }
-  div.callout-break .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-break.callout-style-default .callout-icon::before, div.callout-break.callout-titled .callout-icon::before {
-    content: '☕';
-    background-image: none;
-  }
-  div.callout-feedback.callout {
-    border-left-color: teal;
-  }
-  div.callout-feedback.callout-style-default > .callout-header {
-    background-color: rgb(from teal r g b / 13%);
-  }
-  div.callout-feedback .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-feedback.callout-style-default .callout-icon::before, div.callout-feedback.callout-titled .callout-icon::before {
-    content: '📝';
-    background-image: none;
-  }
-  div.callout-try.callout {
-    border-left-color: blue;
-  }
-  div.callout-try.callout-style-default > .callout-header {
-    background-color: rgb(from blue r g b / 13%);
-  }
-  div.callout-try .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-try.callout-style-default .callout-icon::before, div.callout-try.callout-titled .callout-icon::before {
-    content: '🔄';
+  div.callout-screens-down .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-screens-down.callout-style-default .callout-icon::before, div.callout-screens-down.callout-titled .callout-icon::before {
+    content: '🔽';
     background-image: none;
   }
   div.callout-caution.callout {
@@ -415,26 +383,15 @@
     content: '⚠️';
     background-image: none;
   }
-  div.callout-tip.callout {
-    border-left-color: gold;
+  div.callout-setup.callout {
+    border-left-color: gray;
   }
-  div.callout-tip.callout-style-default > .callout-header {
-    background-color: rgb(from gold r g b / 13%);
+  div.callout-setup.callout-style-default > .callout-header {
+    background-color: rgb(from gray r g b / 13%);
   }
-  div.callout-tip .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-tip.callout-style-default .callout-icon::before, div.callout-tip.callout-titled .callout-icon::before {
-    content: '💡';
-    background-image: none;
-  }
-  div.callout-group.callout {
-    border-left-color: purple;
-  }
-  div.callout-group.callout-style-default > .callout-header {
-    background-color: rgb(from purple r g b / 13%);
-  }
-  div.callout-group .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-group.callout-style-default .callout-icon::before, div.callout-group.callout-titled .callout-icon::before {
-    content: '👥';
+  div.callout-setup .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-setup.callout-style-default .callout-icon::before, div.callout-setup.callout-titled .callout-icon::before {
+    content: '⚙️';
     background-image: none;
   }
   div.callout-testing.callout {
@@ -448,26 +405,15 @@
     content: '🧪';
     background-image: none;
   }
-  div.callout-screens-up.callout {
-    border-left-color: green;
+  div.callout-tip.callout {
+    border-left-color: gold;
   }
-  div.callout-screens-up.callout-style-default > .callout-header {
-    background-color: rgb(from green r g b / 13%);
+  div.callout-tip.callout-style-default > .callout-header {
+    background-color: rgb(from gold r g b / 13%);
   }
-  div.callout-screens-up .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-screens-up.callout-style-default .callout-icon::before, div.callout-screens-up.callout-titled .callout-icon::before {
-    content: '🔼';
-    background-image: none;
-  }
-  div.callout-prompt-example.callout {
-    border-left-color: darkblue;
-  }
-  div.callout-prompt-example.callout-style-default > .callout-header {
-    background-color: rgb(from darkblue r g b / 13%);
-  }
-  div.callout-prompt-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-prompt-example.callout-style-default .callout-icon::before, div.callout-prompt-example.callout-titled .callout-icon::before {
-    content: '👩🏼‍🔧';
+  div.callout-tip .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-tip.callout-style-default .callout-icon::before, div.callout-tip.callout-titled .callout-icon::before {
+    content: '💡';
     background-image: none;
   }
   div.callout-prompt-template.callout {
@@ -481,28 +427,6 @@
     content: '📋';
     background-image: none;
   }
-  div.callout-screens-down.callout {
-    border-left-color: orange;
-  }
-  div.callout-screens-down.callout-style-default > .callout-header {
-    background-color: rgb(from orange r g b / 13%);
-  }
-  div.callout-screens-down .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-screens-down.callout-style-default .callout-icon::before, div.callout-screens-down.callout-titled .callout-icon::before {
-    content: '🔽';
-    background-image: none;
-  }
-  div.callout-export.callout {
-    border-left-color: brown;
-  }
-  div.callout-export.callout-style-default > .callout-header {
-    background-color: rgb(from brown r g b / 13%);
-  }
-  div.callout-export .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-export.callout-style-default .callout-icon::before, div.callout-export.callout-titled .callout-icon::before {
-    content: '📤';
-    background-image: none;
-  }
   div.callout-pair.callout {
     border-left-color: forestgreen;
   }
@@ -512,6 +436,17 @@
   div.callout-pair .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
   div.callout-pair.callout-style-default .callout-icon::before, div.callout-pair.callout-titled .callout-icon::before {
     content: '👥';
+    background-image: none;
+  }
+  div.callout-screens-up.callout {
+    border-left-color: green;
+  }
+  div.callout-screens-up.callout-style-default > .callout-header {
+    background-color: rgb(from green r g b / 13%);
+  }
+  div.callout-screens-up .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-screens-up.callout-style-default .callout-icon::before, div.callout-screens-up.callout-titled .callout-icon::before {
+    content: '🔼';
     background-image: none;
   }
   div.callout-output-example.callout {
@@ -525,15 +460,59 @@
     content: '📄';
     background-image: none;
   }
-  div.callout-setup.callout {
-    border-left-color: gray;
+  div.callout-group.callout {
+    border-left-color: purple;
   }
-  div.callout-setup.callout-style-default > .callout-header {
-    background-color: rgb(from gray r g b / 13%);
+  div.callout-group.callout-style-default > .callout-header {
+    background-color: rgb(from purple r g b / 13%);
   }
-  div.callout-setup .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-setup.callout-style-default .callout-icon::before, div.callout-setup.callout-titled .callout-icon::before {
-    content: '⚙️';
+  div.callout-group .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-group.callout-style-default .callout-icon::before, div.callout-group.callout-titled .callout-icon::before {
+    content: '👥';
+    background-image: none;
+  }
+  div.callout-timing.callout {
+    border-left-color: red;
+  }
+  div.callout-timing.callout-style-default > .callout-header {
+    background-color: rgb(from red r g b / 13%);
+  }
+  div.callout-timing .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-timing.callout-style-default .callout-icon::before, div.callout-timing.callout-titled .callout-icon::before {
+    content: '⏱️';
+    background-image: none;
+  }
+  div.callout-individual.callout {
+    border-left-color: steelblue;
+  }
+  div.callout-individual.callout-style-default > .callout-header {
+    background-color: rgb(from steelblue r g b / 13%);
+  }
+  div.callout-individual .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-individual.callout-style-default .callout-icon::before, div.callout-individual.callout-titled .callout-icon::before {
+    content: '💻';
+    background-image: none;
+  }
+  div.callout-break.callout {
+    border-left-color: brown;
+  }
+  div.callout-break.callout-style-default > .callout-header {
+    background-color: rgb(from brown r g b / 13%);
+  }
+  div.callout-break .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-break.callout-style-default .callout-icon::before, div.callout-break.callout-titled .callout-icon::before {
+    content: '☕';
+    background-image: none;
+  }
+  div.callout-prompt-example.callout {
+    border-left-color: darkblue;
+  }
+  div.callout-prompt-example.callout-style-default > .callout-header {
+    background-color: rgb(from darkblue r g b / 13%);
+  }
+  div.callout-prompt-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-prompt-example.callout-style-default .callout-icon::before, div.callout-prompt-example.callout-titled .callout-icon::before {
+    content: '👩🏼‍🔧';
     background-image: none;
   }
   div.callout-reflect.callout {
@@ -545,6 +524,28 @@
   div.callout-reflect .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
   div.callout-reflect.callout-style-default .callout-icon::before, div.callout-reflect.callout-titled .callout-icon::before {
     content: '💭';
+    background-image: none;
+  }
+  div.callout-try.callout {
+    border-left-color: blue;
+  }
+  div.callout-try.callout-style-default > .callout-header {
+    background-color: rgb(from blue r g b / 13%);
+  }
+  div.callout-try .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-try.callout-style-default .callout-icon::before, div.callout-try.callout-titled .callout-icon::before {
+    content: '🔄';
+    background-image: none;
+  }
+  div.callout-feedback.callout {
+    border-left-color: teal;
+  }
+  div.callout-feedback.callout-style-default > .callout-header {
+    background-color: rgb(from teal r g b / 13%);
+  }
+  div.callout-feedback .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-feedback.callout-style-default .callout-icon::before, div.callout-feedback.callout-titled .callout-icon::before {
+    content: '📝';
     background-image: none;
   }
   </style>
@@ -559,8 +560,14 @@
   <h1 class="title">Solo Exploration</h1>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Andrew Ellis 
+</div>
+</div>
 </div>
 
+  <p class="date">13 November, 2024</p>
 </section>
 <section class="slide level2">
 

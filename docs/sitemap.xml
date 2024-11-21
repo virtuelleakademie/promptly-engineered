@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://virtuelleakademie.github.io/promptly-engineered/workshop/index.html</loc>
-    <lastmod>2024-11-20T15:36:35.116Z</lastmod>
+    <lastmod>2024-11-21T13:01:47.357Z</lastmod>
   </url>
   <url>
     <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/solo-exploration.html</loc>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/index.html</loc>
-    <lastmod>2024-11-20T15:29:44.590Z</lastmod>
+    <lastmod>2024-11-21T12:59:44.115Z</lastmod>
   </url>
   <url>
     <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/group-analysis.html</loc>
@@ -35,5 +35,13 @@
   <url>
     <loc>https://virtuelleakademie.github.io/promptly-engineered/tutorials/tutorial-1/index.html</loc>
     <lastmod>2024-11-20T20:50:25.903Z</lastmod>
+  </url>
+  <url>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/workshop/setup/index.html</loc>
+    <lastmod>2024-11-21T11:06:46.210Z</lastmod>
+  </url>
+  <url>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/understanding-llms/index.html</loc>
+    <lastmod>2024-11-21T13:02:56.559Z</lastmod>
   </url>
 </urlset>
