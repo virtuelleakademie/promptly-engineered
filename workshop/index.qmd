@@ -155,7 +155,7 @@ The findings are concerning because these models will sometimes sacrifice truthf
 
 
 
-{{< revealjs file="../understanding-llms/index.html" height="500px" class="ratio ratio-16x9" >}}
+{{< revealjs file="../slides/understanding-llms/index.html" height="500px" class="ratio ratio-16x9" >}}
 
 
 
