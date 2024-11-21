@@ -54,9 +54,9 @@ website:
         text: "Resources"
         menu:
           - text: "Guides"
-            file: pages/resources.qmd
+            file: resources/resources.qmd
           - text: "Tools"
-            file: pages/tools.qmd
+            file: resources/tools.qmd
 
     tools:
       - icon: lightbulb-fill
