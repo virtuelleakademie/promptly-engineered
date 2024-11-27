@@ -12,7 +12,9 @@ bibliography: ../bibliography.bib
 format:
     html:
         toc: true
-        code-fold: true
+        code-fold: false
         code-link: true
         callout-appearance: simple
         callout-icon: true
+filters:
+  - pyodide

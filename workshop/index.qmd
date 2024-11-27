@@ -3,6 +3,27 @@ title: "Contents"
 ---
 
 
+In this workshop, we will cover the following topics:
+
+- Using the OpenAI API
+- Creating an Anki flashcard generator using the OpenAI API
+
+We will work with the GPT-4o-mini and GPT-4o models from OpenAI. Note that we could also use local models, but this would require a bit more setup and is outside the scope of this workshop.
+
+The focus of this workshop is on using the OpenAI API, so we will only discuss Python in passing. I do recommend that you install an AI coding assistant, such as Github Copilot. For beginners, this will help to get you started with Python. 
+
+
+The workshop is structured as follows:
+
+- Introduction
+- Python setup
+- VSCode setup
+- Verify OpenAI
+- Test structured output
+
+
+
+
 
 # Introduction and setup
 
@@ -10,21 +31,21 @@ title: "Contents"
 
 ## Verify Openai 
 
-{{< embed verify-openai.ipynb#get-ai-response echo=true >}}
+{{< embed ../notebooks/verify-openai.ipynb#get-ai-response echo=true >}}
 
-{{< embed verify-openai.ipynb#get-ai-response-2 echo=true >}}
+{{< embed ../notebooks/verify-openai.ipynb#get-ai-response-2 echo=true >}}
 
 
 ## Test structured output
 
-{{< embed test-structured-output.ipynb#events echo=true >}}
+{{< embed ../notebooks/test-structured-output.ipynb#events echo=true >}}
 
-{{< embed test-structured-output.ipynb#export-csv echo=true >}}
+{{< embed ../notebooks/test-structured-output.ipynb#export-csv echo=true >}}
 
 
 
 ## Pyodide
-
+<!-- 
 ```{pyodide-python}
 n = 5
 while n > 0:
@@ -32,7 +53,7 @@ while n > 0:
   n = n - 1
 
 print('Blastoff!')
-```
+``` -->
 
 
 # References

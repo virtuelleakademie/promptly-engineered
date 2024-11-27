@@ -1,0 +1,17 @@
+---
+title: "Setup OpenAI"
+---
+
+
+
+Now that we have set up our Python environment, we can start using the OpenAI API.
+
+Before we start, we need to set up an OpenAI account and get an API key.
+
+Let's open the OpenAI [Platform](https://platform.openai.com/). Make sure that you are logged in. 
+
+
+
+{{< revealjs file="../../slides/openai-platform/index.html" height="500px" class="ratio ratio-16x9" >}}
+
+
