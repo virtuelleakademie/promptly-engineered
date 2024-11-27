@@ -1,9 +1,20 @@
 ---
-title: "Conclusions"
+title: "Conclusions, next steps, and discussion"
 ---
 
-## Conclusions
 
-## Next steps
+## Conclusions, next steps, and discussion
 
-## Discussion
+::::{.columns}
+:::{.column width="70%"}
+:::
+:::{.column width="30%"}
+
+<br><br><br>
+
+:::{.timer #UNIQUE-ID-2 seconds=600 starton=interaction}
+:::
+:::
+::::
+
+
