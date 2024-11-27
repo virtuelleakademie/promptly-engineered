@@ -296,7 +296,7 @@
     "href": "projects/anki/index.html#task-8-extract-questions-and-answers-from-all-the-teaching-material",
     "title": "Project: Anki flashcards",
     "section": "Task 8: Extract questions and answers from all the teaching material",
-    "text": "Task 8: Extract questions and answers from all the teaching material\n\nwrite a loop to load all essays, extract questions and answers from all the teaching material, and write the results to a CSV file",
+    "text": "Task 8: Extract questions and answers from all the teaching material\n\nwrite a loop to load all essays, extract questions and answers from all the teaching material, and write the results to a CSV file.",
     "crumbs": [
       "Projects",
       "Project: Anki flashcards"
