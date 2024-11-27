@@ -4,7 +4,7 @@
     "href": "workshop/index.html",
     "title": "Contents",
     "section": "",
-    "text": "In this workshop, we will cover the following topics:\nWe will work with the GPT-4o-mini and GPT-4o models from OpenAI. Note that we could also use local models, but this would require a bit more setup and is outside the scope of this workshop.\nThe focus of this workshop is on using the OpenAI API, so we will only discuss Python in passing. I do recommend that you install an AI coding assistant, such as Github Copilot. For beginners, this will help to get you started with Python.\nThe workshop is structured as follows:",
+    "text": "In this workshop, we will cover the following topics:\n\nUsing the OpenAI API\nCreating an Anki flashcard generator using the OpenAI API\n\nWe will work with the GPT-4o-mini and GPT-4o models from OpenAI. Note that we could also use local models, but this would require a bit more setup and is outside the scope of this workshop.\nThe focus of this workshop is on using the OpenAI API, so we will only discuss Python in passing. I do recommend that you install an AI coding assistant, such as Github Copilot. For beginners, this will help to get you started with Python.\nThe workshop is structured as follows:\n\nIntroduction\nSetup coding environment\n\nsetup Python\nsetup VSCode\ninstall Github Copilot\n\nVerify OpenAI installation\nUsing the OpenAI API\nProject: Use GPT-4o to generate Anki flashcards\nConclusions and discussion\n\n\n\n\n\n\n\n\n Back to topReuseCC BY 4.0CitationBibTeX citation:@online{ellis2024,\n  author = {Ellis, Andrew},\n  title = {Contents},\n  date = {2024-11-13},\n  url = {https://virtuelleakademie.github.io/promptly-engineered/workshop/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nEllis, Andrew. 2024. “Contents.” November 13, 2024. https://virtuelleakademie.github.io/promptly-engineered/workshop/.",
     "crumbs": [
       "Workshop",
       "Contents"
@@ -568,7 +568,7 @@
     "href": "workshop/openai/index.html",
     "title": "Setup OpenAI",
     "section": "",
-    "text": "Now that we have set up our Python environment, we can start using the OpenAI API.\nBefore we start, we need to set up an OpenAI account and get an API key.\nLet’s open the OpenAI Platform. Make sure that you are logged in.\n    View slides in full screen\n       \n      \n    \n  \n\n\n\n Back to topReuseCC BY 4.0CitationBibTeX citation:@online{ellis2024,\n  author = {Ellis, Andrew},\n  title = {Setup {OpenAI}},\n  date = {2024-11-13},\n  url = {https://virtuelleakademie.github.io/promptly-engineered/workshop/openai/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nEllis, Andrew. 2024. “Setup OpenAI.” November 13, 2024. https://virtuelleakademie.github.io/promptly-engineered/workshop/openai/.",
+    "text": "Now that we have set up our Python environment, we can start using the OpenAI API.\nLet’s open the OpenAI Platform. Make sure that you are logged in. Here, we will first look at the OpenAI Playground and then we will create an API key. We need this key to use the OpenAI API from our Python code.",
     "crumbs": [
       "Workshop",
       "Setup OpenAI"
@@ -692,5 +692,132 @@
     "title": "Using the OpenAI Platform",
     "section": "View Code",
     "text": "View Code\n\n\n\n\n\nBerner Fachhochschule | Bern University of Applied Sciences"
+  },
+  {
+    "objectID": "workshop/openai/index.html#roles-and-their-purposes",
+    "href": "workshop/openai/index.html#roles-and-their-purposes",
+    "title": "Setup OpenAI",
+    "section": "Roles and Their Purposes",
+    "text": "Roles and Their Purposes\n\n1. system\n\nPurpose: Sets the behavior, tone, and personality of the AI. Think of this as the “guiding principles” for the model.\nWhen to Use: At the beginning of a conversation to establish how the assistant should behave.\nExample:\n\n{\"role\": \"system\", \"content\": \"You are a helpful and polite assistant.\"}\n\nEffect:\n\nIt tells the model to frame all its responses according to the specified behavior.\nFor example, defining the assistant as “concise” will encourage brief replies.\n\n\n\n\n2. user\n\nPurpose: Represents the input from the person using the model.\nWhen to Use: Every time the user provides input or asks a question.\nExample:\n\n{\"role\": \"user\", \"content\": \"Can you explain the roles in the messages argument?\"}\n\nEffect:\n\nThe model treats this as a direct prompt to respond.\nThe user’s input frames the assistant’s reply.\n\n\n\n\n3. assistant\n\nPurpose: Represents the AI’s responses in the conversation.\nWhen to Use: To show the model what it has previously said, especially in multi-turn interactions.\nExample:\n\n{\"role\": \"assistant\", \"content\": \"Of course! Here’s an explanation of the roles...\"}\n\nEffect:\n\nBy including prior responses, you ensure the model has full context for the ongoing conversation.\n\n\n\n\n4. function (Optional, Advanced)\n\nPurpose: Represents a structured response when calling functions integrated with the AI.\nWhen to Use: In applications where the AI triggers external functions (e.g., retrieving weather data or performing calculations).\nExample:\n\n\n{\"role\": \"function\", \n \"name\": \"get_weather\", \n \"content\": \"{\\\"location\\\": \\\"Zurich\\\"}\"}\n\nEffect:\n\nUsed in function-calling mode to indicate what data or output the function provides.\n\n\nWe will not use the function role in this workshop.",
+    "crumbs": [
+      "Workshop",
+      "Setup OpenAI"
+    ]
+  },
+  {
+    "objectID": "workshop/openai/index.html#putting-it-all-together",
+    "href": "workshop/openai/index.html#putting-it-all-together",
+    "title": "Setup OpenAI",
+    "section": "Putting It All Together",
+    "text": "Putting It All Together\nHere’s an example of a complete messages argument in a conversational context:\n[\n    {\"role\": \"system\", \"content\": \"You are a friendly travel assistant.\"},\n    {\"role\": \"user\", \"content\": \"Can you suggest a good vacation spot for December?\"},\n    {\"role\": \"assistant\", \"content\": \"Sure! How about visiting the Swiss Alps for skiing?\"},\n    {\"role\": \"user\", \"content\": \"That sounds great. What else can I do there?\"}\n]\nBy structuring your prompts as an array of messages with different roles, you can have more control over the conversation flow and provide additional context or instructions to the model as needed.",
+    "crumbs": [
+      "Workshop",
+      "Setup OpenAI"
+    ]
+  },
+  {
+    "objectID": "workshop/openai/index.html#test",
+    "href": "workshop/openai/index.html#test",
+    "title": "Setup OpenAI",
+    "section": "Test",
+    "text": "Test\nWhen using the chat completions API, you create prompts by providing an array of messages that contain instructions for the model. Each message can have a different role, which influences how the model might interpret the input.\nWhen using the OpenAI Python module to interact with the chat completions API, you create prompts by providing an array of messages. Each message in the array can have one of the following roles:\n\n\"system\": This role is used to provide instructions or context to the model about the task or behavior you want it to exhibit. The system message helps set the tone and guide the model’s responses.\n\"user\": This role represents the user’s input or query. It’s the prompt or question that you want the model to respond to.\n\"assistant\": This role is used for the model’s responses. When you receive a response from the model, it will be in a message with the “assistant” role.\n\"function\": This role is used for function calls when working with the text-davinci-003 model and the function calling feature. It allows you to break down a task into smaller steps and have the model call external functions to complete those steps.\n\nBy structuring your prompts as an array of messages with different roles, you can have more control over the conversation flow and provide additional context or instructions to the model as needed.",
+    "crumbs": [
+      "Workshop",
+      "Setup OpenAI"
+    ]
+  },
+  {
+    "objectID": "workshop/openai/index.html#understanding-roles-in-the-messages-argument",
+    "href": "workshop/openai/index.html#understanding-roles-in-the-messages-argument",
+    "title": "Setup OpenAI",
+    "section": "Understanding Roles in the messages Argument",
+    "text": "Understanding Roles in the messages Argument\nWhen using the chat completions API, you create prompts by providing an array of messages that contain instructions for the model. Each message can have a different role, which influences how the model might interpret the input. Each entry in the messages list is a dictionary with a role and a content. The role specifies who is “speaking,” which helps the model generate contextually appropriate responses.",
+    "crumbs": [
+      "Workshop",
+      "Setup OpenAI"
+    ]
+  },
+  {
+    "objectID": "workshop/openai/index.html#suggestion",
+    "href": "workshop/openai/index.html#suggestion",
+    "title": "Setup OpenAI",
+    "section": "Suggestion",
+    "text": "Suggestion",
+    "crumbs": [
+      "Workshop",
+      "Setup OpenAI"
+    ]
+  },
+  {
+    "objectID": "workshop/openai/index.html#suggestion-for-using-temperature-and-top-p",
+    "href": "workshop/openai/index.html#suggestion-for-using-temperature-and-top-p",
+    "title": "Setup OpenAI",
+    "section": "Suggestion for using temperature and top-p",
+    "text": "Suggestion for using temperature and top-p\nTop-p sampling, also known as nucleus sampling, is a way to control the diversity of the text generated by a language model. It works by considering the most likely words or tokens at each step, but instead of just taking the top few, it takes the smallest set of words that make up a certain percentage (p) of the total probability.\nFor example, if p is set to 0.9, the model will consider the words that make up the top 90% of the probability distribution at each step. This allows for more diverse and creative outputs compared to just taking the single most likely word.\nYou can use the temperature and top-p parameters in combination to make the LLM more creative or more focused.\nIncrease the temperature parameter to make the model’s outputs more diverse and creative. However, if the temperature is too high, the outputs may become nonsensical or incoherent. In that case, you can lower the top p value to restrict the model’s vocabulary and make the outputs more focused and coherent.\nIf you find that you need to lower the top-p value below 0.5 (or 50%) to keep the outputs coherent, it may be better to lower the temperature instead. Then, you can try adjusting the top-p value again to find the right balance between diversity and coherence.\nThe key is to experiment with different combinations of temperature and top-p values to achieve the desired level of creativity and coherence for your specific use case.",
+    "crumbs": [
+      "Workshop",
+      "Setup OpenAI"
+    ]
+  },
+  {
+    "objectID": "workshop/openai/index.html#setting-the-api-key-as-an-environment-variable",
+    "href": "workshop/openai/index.html#setting-the-api-key-as-an-environment-variable",
+    "title": "Setup OpenAI",
+    "section": "Setting the API key as an environment variable",
+    "text": "Setting the API key as an environment variable\nIn your VSCode workspace, create a new file called .env. In this file, add the following line:\nOPENAI_API_KEY=&lt;your-api-key&gt;\nwhere &lt;your-api-key&gt; is the API key you copied in the previous step. It should look like this:\nOPENAI_API_KEY=sk-proj-...",
+    "crumbs": [
+      "Workshop",
+      "Setup OpenAI"
+    ]
+  },
+  {
+    "objectID": "workshop/openai/index.html#testing-the-openai-api-with-a-jupyter-notebook",
+    "href": "workshop/openai/index.html#testing-the-openai-api-with-a-jupyter-notebook",
+    "title": "Setup OpenAI",
+    "section": "Testing the OpenAI API with a Jupyter Notebook",
+    "text": "Testing the OpenAI API with a Jupyter Notebook\nYou can also test the OpenAI API with a Jupyter Notebook. To do this, create a new Jupyter Notebook and insert the following code in individual cells.\nfrom dotenv import load_dotenv\nfrom openai import OpenAI \nload_dotenv()\nclient = OpenAI()\nresponse = client.chat.completions.create(\n    model=\"gpt-4o-mini\",\n    messages=[{\"role\": \"system\", \"content\": \"You are a helpful assistant.\"}, \n              {\"role\": \"user\", \"content\": \"What is the weather in Bern?\"}]\n        )\nprint(response)\nprint(response.choices[0].message.content)",
+    "crumbs": [
+      "Workshop",
+      "Setup OpenAI"
+    ]
+  },
+  {
+    "objectID": "workshop/using-openai-models/index.html",
+    "href": "workshop/using-openai-models/index.html",
+    "title": "Using the OpenAI API",
+    "section": "",
+    "text": "Now that we have verified that we can use the OpenAI API, we can start to use the API to generate text with the GPT-4o-mini and GPT-4o models.\n\n\nresponse = client.chat.completions.create(\n    model=\"gpt-4o-mini\",\n    messages=[{\"role\": \"system\", \"content\": \"You are a helpful assistant.\"}, \n              {\"role\": \"user\", \"content\": \"What is the weather in Bern?\"}]\n)\n\nSource: using-openai.ipynb\n\n\n\n Back to topReuseCC BY 4.0CitationBibTeX citation:@online{ellis2024,\n  author = {Ellis, Andrew},\n  title = {Using the {OpenAI} {API}},\n  date = {2024-11-13},\n  url = {https://virtuelleakademie.github.io/promptly-engineered/workshop/using-openai-models/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nEllis, Andrew. 2024. “Using the OpenAI API.” November 13,\n2024. https://virtuelleakademie.github.io/promptly-engineered/workshop/using-openai-models/.",
+    "crumbs": [
+      "Workshop",
+      "Using the OpenAI API"
+    ]
+  },
+  {
+    "objectID": "slides/discussion/index.html#conclusions",
+    "href": "slides/discussion/index.html#conclusions",
+    "title": "Conclusions",
+    "section": "Conclusions",
+    "text": "Conclusions"
+  },
+  {
+    "objectID": "slides/discussion/index.html#next-steps",
+    "href": "slides/discussion/index.html#next-steps",
+    "title": "Conclusions",
+    "section": "Next steps",
+    "text": "Next steps"
+  },
+  {
+    "objectID": "slides/discussion/index.html#discussion",
+    "href": "slides/discussion/index.html#discussion",
+    "title": "Conclusions",
+    "section": "Discussion",
+    "text": "Discussion\n\n\n\n\nBerner Fachhochschule | Bern University of Applied Sciences"
+  },
+  {
+    "objectID": "workshop/discussion/index.html",
+    "href": "workshop/discussion/index.html",
+    "title": "Conclusions and Discussion",
+    "section": "",
+    "text": "View slides in full screen\n       \n      \n    \n  \n\n\n\n Back to topReuseCC BY 4.0CitationBibTeX citation:@online{ellis2024,\n  author = {Ellis, Andrew},\n  title = {Conclusions and {Discussion}},\n  date = {2024-11-13},\n  url = {https://virtuelleakademie.github.io/promptly-engineered/workshop/discussion/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nEllis, Andrew. 2024. “Conclusions and Discussion.” November\n13, 2024. https://virtuelleakademie.github.io/promptly-engineered/workshop/discussion/."
   }
 ]
