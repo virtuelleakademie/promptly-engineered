@@ -1,5 +1,6 @@
 ---
 title: "Project: Anki flashcards"
+jupyter: python3
 ---
 
 To get started, you can clone the repository containing the project files:
@@ -14,3 +15,4 @@ or simply download the zip file from my Github repository:
 
 
 ![](../../assets/images/github-anki.png)
+
