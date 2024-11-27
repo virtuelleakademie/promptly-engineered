@@ -332,6 +332,62 @@
     ]
   },
   {
+<<<<<<< HEAD
+    "objectID": "prompt-engineering-basics/index.html#emotion-prompting",
+    "href": "prompt-engineering-basics/index.html#emotion-prompting",
+    "title": "Prompt Engineering: Basics",
+    "section": "Emotion prompting",
+    "text": "Emotion prompting\nTechnique: Incorporate emotional language to potentially improve accuracy and response quality1.\n\n\n\n\n\n\nExample Prompt\n\n\nI’m really excited to learn about this! Can you enthusiastically explain how photosynthesis works?\n\n\n\n\n\n\n\n\n\n\nExample Prompt\n\n\nRate this essay according to [these criteria]. You will receive a bonus if you do a good job.\n\n\n\nEmotion prompting’s effectiveness in improving language model responses is debated. Some argue it could enhance naturalness, while others suggest minimal or inconsistent impact across tasks and models. More research is needed."
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#provide-context",
+    "href": "prompt-engineering-basics/index.html#provide-context",
+    "title": "Prompt Engineering: Basics",
+    "section": "Provide context",
+    "text": "Provide context\nTechnique: Give relevant background information\n\n\n\n\n\n\nExample Prompt\n\n\nContext: You are working in a busy urban hospital emergency room during flu season. It’s currently 2 AM on a Saturday, and the waiting room is full. The hospital has been dealing with a recent outbreak of a new strain of influenza in the community.\nPatient Information:\n\n45-year-old male\nNo known pre-existing conditions\nNot on any regular medications\nLast flu shot was 2 years ago\nGiven this context and patient information, assess the following reported symptoms: [Insert symptoms here]"
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#use-examples",
+    "href": "prompt-engineering-basics/index.html#use-examples",
+    "title": "Prompt Engineering: Basics",
+    "section": "Use examples",
+    "text": "Use examples\nThis is known as few-shot prompting.   Technique: Illustrate desired output with examples.\n\n\n\n\n\n\nExample Prompt\n\n\nPerform a triage assessment based on the patient’s symptoms. Format your response similar to the following examples:\nExample 1: Symptoms: Chest pain, shortness of breath, left arm numbness Assessment: Emergency Reason: Symptoms strongly indicate a possible heart attack Action: Immediate medical attention required. Call for a cardiac team.\nExample 2: Symptoms: Mild fever, sore throat, fatigue Assessment: Non-urgent Reason: Symptoms suggest a common cold or mild flu Action: Rest at home, monitor symptoms, seek medical attention if condition worsens.\nAssess the following patient:\nSymptoms: [Insert patient’s symptoms here]"
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#specify-output-format",
+    "href": "prompt-engineering-basics/index.html#specify-output-format",
+    "title": "Prompt Engineering: Basics",
+    "section": "Specify Output Format",
+    "text": "Specify Output Format\nFor example:\n\na Markdown table\nWord or Excel document\nCSV file\nStructured list\n\n\n\n\n\n\n\nExample Prompt\n\n\nBased on the patient’s symptoms, create a triage assessment. Present your findings in a Markdown table with the following columns:\n\nSeverity\nPrimary Concern\nSymptoms\nRecommended Action\n\nUse one of three severity levels: Emergency, Urgent, or Non-urgent.\nThe patient has the following symptoms: [Insert symptoms here]"
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#structure-input-using-markdown",
+    "href": "prompt-engineering-basics/index.html#structure-input-using-markdown",
+    "title": "Prompt Engineering: Basics",
+    "section": "Structure Input Using Markdown",
+    "text": "Structure Input Using Markdown\nTechnique: Organize input information in a structured format using Markdown.\n\n\n\n\n\n\nExample Prompt\n\n\nBased on the patient's symptoms, create a triage assessment.\n\n# Patient Triage Information\n\n## Patient Details\n\n- **Name**: John Doe\n- **Age**: 45\n- **Gender**: Male\n- **Medical History**: No known pre-existing conditions\n- \n## Current Symptoms\n1. Chest pain (severity: 8/10)\n2. Shortness of breath\n3. Left arm numbness"
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#ask-an-llm",
+    "href": "prompt-engineering-basics/index.html#ask-an-llm",
+    "title": "Prompt Engineering: Basics",
+    "section": "Ask an LLM",
+    "text": "Ask an LLM\nLLMs have been trained on a lot of data, including prompting techniques1.\n\n\n\n\n\n\nExample Prompt\n\n\nAs a language model, how would you proceed when given the following prompt: ““” You are an ER nurse with 15+ years of triage experience.\nYour tasks: 1. Assess patients quickly based on symptoms and medical history 2. Categorize conditions by severity 3. Recommend next steps for treatment 4. You are calm under pressure and efficient in prioritizing cases. ““”\n\n\n\n\n\n\n\n\n\nExample Prompt\n\n\nHow would you improve this prompt?\n\n\n\nIt is debated whether LLMs are particularly suited to writing prompting techniques."
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#generate-python-code",
+    "href": "prompt-engineering-basics/index.html#generate-python-code",
+    "title": "Prompt Engineering: Basics",
+    "section": "Generate Python code",
+    "text": "Generate Python code\nTechnique: ask an LLM to generate Python code, or in the case of ChatGPT to “use Python”\n\n\n\n\n\n\nExample Prompt\n\n\n[Insert query here…]\nUse Python."
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#references",
+    "href": "prompt-engineering-basics/index.html#references",
+    "title": "Prompt Engineering: Basics",
+    "section": "References",
+    "text": "References\n\n\nBowen, José Antonio, and C. Edward Watson. 2024. Teaching with AI. Johns Hopkins University Press. https://doi.org/10.56021/9781421449227.\n\n\nLang, James M. 2013. “Cheating Lessons.” Harvard University Press. 2013. https://www.hup.harvard.edu/books/9780674724631.\n\n\nSchulhoff, Sander, Michael Ilie, Nishant Balepur, Konstantine Kahadze, Amanda Liu, Chenglei Si, Yinheng Li, et al. 2024. “The Prompt Report: A Systematic Survey of Prompting Techniques.” June 6, 2024. http://arxiv.org/abs/2406.06608.\n\n\n\n\n\n\nBerner Fachhochschule | Bern University of Applied Sciences"
+=======
     "objectID": "notebooks/structured-output.html#creating-a-reusable-function",
     "href": "notebooks/structured-output.html#creating-a-reusable-function",
     "title": "Structured Output",
@@ -488,6 +544,7 @@
     "title": "Using the OpenAI Platform",
     "section": "View Code",
     "text": "View Code\n\n\n\n\n\nBerner Fachhochschule | Bern University of Applied Sciences"
+>>>>>>> dev
   },
   {
     "objectID": "slides/prompt-engineering-basics/index.html#understand-llms-through-hands-on-experience",
