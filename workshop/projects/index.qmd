@@ -1,6 +1,5 @@
 ---
 title: "Project: Anki flashcards"
-jupyter: python3
 ---
 
 We will now attempt to use the tools we've learned to create a set of Anki flashcards, using content from our teaching material and an LLM.
@@ -43,5 +42,22 @@ If we save the contents above in a file called `anki-flashcards.csv`, we can imp
 
 
 :::{.checkpoint title="Goal"}
-The goal of this project is to create a set of flashcards based on your teaching material, and to save these in a CSV file that can be imported into Anki.
+The goal of this project is to create a set of flashcards based on your some teaching material, and to save these in a CSV file that can be imported into Anki. 
+
+We will use the following teaching material: four essays about different musical eras (e.g. Baroque, Classical, Romantic, and Modern). These were generated using an LLM, and haven't been verified for accuracy, but they should give you an idea of what you can do with an LLM.
+
+We will first use an LLM, either GPT-4o or GPT-4o Mini, to extract pairs of questions and answers from the teaching material. Additionally, we can also extract `tags` for each flashcard, which we can use to categorise the flashcards later.
+
+
+I recommend using some of the tools we've learned in this workshop:
+
+- creating suitable system and user messages for an LLM
+- create a prompt to extract pairs of questions and answers from the teaching material
+- writing a function to call an LLM with the prompt
+- using structured outputs to control the format of the LLM's response
+  + define a `pydantic` model to describe the format of the desired response
+  + call the LLM with the `structured` output format
 :::
+
+
+{{< bi code-square >}} Let's get started! You can find detailed instructions on the [next page](../../projects/anki/index.qmd).
