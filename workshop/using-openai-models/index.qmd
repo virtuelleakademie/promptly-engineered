@@ -1,8 +1,11 @@
 ---
 title: "Exploring OpenAI Models"
+# jupyter: python3
 ---
 
 Now that we have verified that we can use the OpenAI API, we can start to use the API to generate text with the GPT-4o-mini and GPT-4o models.
 
 
-{{< embed ../../notebooks/using-openai.ipynb#get-response-1 echo=true >}}
+
+
+{{< embed ../../notebooks/exploring-openai-models.ipynb#get-response-1 echo=true >}}
