@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://virtuelleakademie.github.io/promptly-engineered/projects/index.html</loc>
-    <lastmod>2024-11-21T13:50:17.489Z</lastmod>
+    <lastmod>2024-11-27T20:57:32.038Z</lastmod>
   </url>
   <url>
     <loc>https://virtuelleakademie.github.io/promptly-engineered/workshop/openai/index.html</loc>
@@ -91,5 +91,13 @@
   <url>
     <loc>https://virtuelleakademie.github.io/promptly-engineered/notebooks/structured-output.html</loc>
     <lastmod>2024-11-27T19:10:52.638Z</lastmod>
+  </url>
+  <url>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/workshop/project/index.html</loc>
+    <lastmod>2024-11-27T20:44:14.723Z</lastmod>
+  </url>
+  <url>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/notebooks/setup-openai.html</loc>
+    <lastmod>2024-11-27T20:51:31.900Z</lastmod>
   </url>
 </urlset>
