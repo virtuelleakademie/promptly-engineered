@@ -37,7 +37,7 @@ website:
         text: Workshop
 
       - icon: code-square
-        href: projects/index.qmd
+        href: projects/anki/index.qmd
         text: Projects
 
       - icon: file-slides
@@ -81,10 +81,9 @@ website:
         - workshop/index.qmd
         - workshop/setup/index.qmd
         - workshop/openai/index.qmd
-        # - workshop/using-openai-models/index.qmd
         - notebooks/exploring-openai-models.ipynb
         - notebooks/structured-output.ipynb
-        - projects/index.qmd
+        - workshop/projects/index.qmd
         - workshop/discussion/index.qmd
 
 
@@ -93,8 +92,7 @@ website:
       search: true
       background: light
       contents:
-        - text: "Project: Anki flashcards"
-          file: projects/index.qmd
+        - projects/anki/index.qmd
 
 
 page-footer:
