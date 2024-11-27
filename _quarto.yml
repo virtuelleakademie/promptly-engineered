@@ -80,7 +80,11 @@ website:
         - workshop/index.qmd
         - workshop/setup/index.qmd
         - workshop/openai/index.qmd
-        
+        - workshop/using-openai-models/index.qmd
+        - workshop/project/index.qmd
+        - workshop/discussion/index.qmd
+
+
     - title: "Projects"
       style: "docked"
       search: true
