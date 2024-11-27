@@ -784,12 +784,12 @@
   {
     "objectID": "workshop/using-openai-models/index.html",
     "href": "workshop/using-openai-models/index.html",
-    "title": "Using the OpenAI API",
+    "title": "Exploring OpenAI Models",
     "section": "",
-    "text": "Now that we have verified that we can use the OpenAI API, we can start to use the API to generate text with the GPT-4o-mini and GPT-4o models.\n\n\nresponse = client.chat.completions.create(\n    model=\"gpt-4o-mini\",\n    messages=[{\"role\": \"system\", \"content\": \"You are a helpful assistant.\"}, \n              {\"role\": \"user\", \"content\": \"What is the weather in Bern?\"}]\n)\n\nSource: using-openai.ipynb\n\n\n\n Back to topReuseCC BY 4.0CitationBibTeX citation:@online{ellis2024,\n  author = {Ellis, Andrew},\n  title = {Using the {OpenAI} {API}},\n  date = {2024-11-13},\n  url = {https://virtuelleakademie.github.io/promptly-engineered/workshop/using-openai-models/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nEllis, Andrew. 2024. “Using the OpenAI API.” November 13,\n2024. https://virtuelleakademie.github.io/promptly-engineered/workshop/using-openai-models/.",
+    "text": "Now that we have verified that we can use the OpenAI API, we can start to use the API to generate text with the GPT-4o-mini and GPT-4o models.\n\n\nresponse = client.chat.completions.create(\n    model=\"gpt-4o-mini\",\n    messages=[{\"role\": \"system\", \"content\": \"You are a helpful assistant.\"}, \n              {\"role\": \"user\", \"content\": \"What is the weather in Bern?\"}]\n)\n\nSource: exploring-openai-models.ipynb\n\n\n\n Back to topReuseCC BY 4.0CitationBibTeX citation:@online{ellis2024,\n  author = {Ellis, Andrew},\n  title = {Exploring {OpenAI} {Models}},\n  date = {2024-11-13},\n  url = {https://virtuelleakademie.github.io/promptly-engineered/workshop/using-openai-models/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nEllis, Andrew. 2024. “Exploring OpenAI Models.” November\n13, 2024. https://virtuelleakademie.github.io/promptly-engineered/workshop/using-openai-models/.",
     "crumbs": [
       "Workshop",
-      "Using the OpenAI API"
+      "Exploring OpenAI Models"
     ]
   },
   {
@@ -811,13 +811,97 @@
     "href": "slides/discussion/index.html#discussion",
     "title": "Conclusions",
     "section": "Discussion",
-    "text": "Discussion\n\n\n\n\nBerner Fachhochschule | Bern University of Applied Sciences"
+    "text": "Discussion\n\n\n\n\n\n                    \n                    \n                \n\n\n\n\n\nBerner Fachhochschule | Bern University of Applied Sciences"
   },
   {
     "objectID": "workshop/discussion/index.html",
     "href": "workshop/discussion/index.html",
     "title": "Conclusions and Discussion",
     "section": "",
-    "text": "View slides in full screen\n       \n      \n    \n  \n\n\n\n Back to topReuseCC BY 4.0CitationBibTeX citation:@online{ellis2024,\n  author = {Ellis, Andrew},\n  title = {Conclusions and {Discussion}},\n  date = {2024-11-13},\n  url = {https://virtuelleakademie.github.io/promptly-engineered/workshop/discussion/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nEllis, Andrew. 2024. “Conclusions and Discussion.” November\n13, 2024. https://virtuelleakademie.github.io/promptly-engineered/workshop/discussion/."
+    "text": "View slides in full screen\n       \n      \n    \n  \n\n\n\n Back to topReuseCC BY 4.0CitationBibTeX citation:@online{ellis2024,\n  author = {Ellis, Andrew},\n  title = {Conclusions and {Discussion}},\n  date = {2024-11-13},\n  url = {https://virtuelleakademie.github.io/promptly-engineered/workshop/discussion/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nEllis, Andrew. 2024. “Conclusions and Discussion.” November\n13, 2024. https://virtuelleakademie.github.io/promptly-engineered/workshop/discussion/.",
+    "crumbs": [
+      "Workshop",
+      "Conclusions and Discussion"
+    ]
+  },
+  {
+    "objectID": "workshop/project/index.html",
+    "href": "workshop/project/index.html",
+    "title": "Project",
+    "section": "",
+    "text": "Back to topReuseCC BY 4.0CitationBibTeX citation:@online{ellis2024,\n  author = {Ellis, Andrew},\n  title = {Project},\n  date = {2024-11-13},\n  url = {https://virtuelleakademie.github.io/promptly-engineered/workshop/project/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nEllis, Andrew. 2024. “Project.” November 13, 2024. https://virtuelleakademie.github.io/promptly-engineered/workshop/project/.",
+    "crumbs": [
+      "Workshop",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "slides/discussion/index.html#section",
+    "href": "slides/discussion/index.html#section",
+    "title": "Conclusions, next steps, and discussion",
+    "section": "🙋🏼",
+    "text": "🙋🏼\n\n\n\n\n\n                    \n                    \n                \n\n\n\n\n\nBerner Fachhochschule | Bern University of Applied Sciences"
+  },
+  {
+    "objectID": "slides/discussion/index.html#conclusions-next-steps-and-discussion",
+    "href": "slides/discussion/index.html#conclusions-next-steps-and-discussion",
+    "title": "Conclusions, next steps, and discussion",
+    "section": "Conclusions, next steps, and discussion",
+    "text": "Conclusions, next steps, and discussion\n\n\n\n\n\n                    \n                    \n                \n\n\n\n\n\nBerner Fachhochschule | Bern University of Applied Sciences"
+  },
+  {
+    "objectID": "notebooks/exploring-openai-models.html",
+    "href": "notebooks/exploring-openai-models.html",
+    "title": "Exploring OpenAI Models",
+    "section": "",
+    "text": "Now that we have verified that we can use the OpenAI API, we can start to use the API to generate text with the GPT-4o-mini and GPT-4o models.\nLet’s start by generating a response from the GPT-4o-mini model.\nFirst we need to load the dotenv and the openai packages.\nfrom dotenv import load_dotenv\nfrom openai import OpenAI\nThen we need to load the OpenAI API key from the .env file.\nload_dotenv()\nThen we can create a client to interact with the OpenAI API.\nclient = OpenAI()",
+    "crumbs": [
+      "Workshop",
+      "Exploring OpenAI Models"
+    ]
+  },
+  {
+    "objectID": "notebooks/exploring-openai-models.html#system-prompt",
+    "href": "notebooks/exploring-openai-models.html#system-prompt",
+    "title": "Exploring OpenAI Models",
+    "section": "System prompt",
+    "text": "System prompt\nNext we will create a system prompt that will guide the model to explain concepts from music theory in a way that is easy to understand.\n\n\n\n\n\n\nSystem prompt\n\n\n\n\n\nYou are a primary school music teacher. Explain music theory concepts in a concise, simple, and child-friendly way that is easy for young students to understand. Your explanations should be engaging, fun, and use comparisons or examples where appropriate to make the concept relatable. If a student doesn’t ask about a particular topic, introduce an interesting music concept of your own to teach. Remember to keep the language accessible for young learners.\n\nSteps\n\nIntroduce the concept or answer the student’s question in a friendly manner.\nUse simple, age-appropriate language.\nProvide relevant examples or comparisons to make the concept easier to understand.\nIf applicable, add fun facts or engaging thoughts to make the learning process enjoyable.\n\n\n\nOutput Format\nA short but clear paragraph suitable for a primary school student, between 3-5 friendly sentences.\n\n\nExamples\n\nExample 1: (student doesn’t ask a specific question)\nConcept chosen: Musical Notes\nExplanation: “Musical notes are like the letters of the music alphabet! Just like you need letters to make words, you need notes to make songs. Each note has its own sound, and when you put them together in a certain order, they make music!”\nExample 2: (student asks about rhythm)\nQuestion: What is rhythm in music?\nExplanation: “Rhythm is like the beat of your favorite song. Imagine you are clapping along to music—that’s the rhythm! It tells you when to clap or tap your feet, and it helps to keep the music moving!”\n\n\n\nNotes\n\nAvoid using technical jargon unless it’s explained in simple terms.\nUse playful or relatable examples where appropriate (e.g., comparing rhythm to a heartbeat or notes to colors).\nKeep in mind that the explanations should be engaging and easy to follow.\n\n\n\n\n\n\nimport textwrap\n\n\nsystem_prompt = textwrap.fill(\n    \"\"\"\n    You are a primary school music teacher. Explain music theory concepts in a\n    concise, simple, and child-friendly way that is easy for young students to\n    understand. Your explanations should be engaging, fun, and use comparisons or\n    examples where appropriate to make the concept relatable.\\n\\nIf a student\n    doesn't ask about a particular topic, introduce an interesting music concept\n    of your own to teach. Remember to keep the language accessible for young\n    learners.\\n\\n# Steps\\n\\n- Introduce the concept or answer the student's\n    question in a friendly manner.\\n- Use simple, age-appropriate language.\\n-\n    Provide relevant examples or comparisons to make the concept easier to\n    understand.\\n- If applicable, add fun facts or engaging thoughts to make the\n    learning process enjoyable.\\n\\n# Output Format\\n\\nA short but clear paragraph\n    suitable for a primary school student, between 3-5 friendly sentences.\\n\\n#\n    Examples\\n\\n**Example 1: (student doesn't ask a specific question)**\\n\\n\n    **Concept chosen:** Musical Notes\\n**Explanation:** \\\"Musical notes are like\n    the letters of the music alphabet! Just like you need letters to make words,\n    you need notes to make songs. Each note has its own sound, and when you put\n    them together in a certain order, they make music!\\\"\\n\\n**Example 2: (student\n    asks about rhythm)**\\n\\n**Question:** What is rhythm in music?\\n\n    **Explanation:** \\\"Rhythm is like the beat of your favorite song. Imagine you\n    are clapping along to music—that's the rhythm! It tells you when to clap or\n    tap your feet, and it helps to keep the music moving!\\\" \\n\\n# Notes\\n\\n- Avoid\n    using technical jargon unless it's explained in simple terms.\\n- Use playful\n    or relatable examples where appropriate (e.g., comparing rhythm to a heartbeat\n    or notes to colors).\\n- Keep in mind that the explanations should be engaging\n    and easy to follow.\n    \"\"\",\n    width=80,\n)",
+    "crumbs": [
+      "Workshop",
+      "Exploring OpenAI Models"
+    ]
+  },
+  {
+    "objectID": "notebooks/exploring-openai-models.html#generate-a-response",
+    "href": "notebooks/exploring-openai-models.html#generate-a-response",
+    "title": "Exploring OpenAI Models",
+    "section": "Generate a response",
+    "text": "Generate a response\nNow we can generate a response from the GPT-4o-mini model using the system prompt. We will use the temperature and top_p parameter settings, and restrict the response to 2048 tokens.\n\n\nresponse = client.chat.completions.create(\n  model=\"gpt-4o-mini\",\n  messages=[\n    {\n      \"role\": \"system\",\n      \"content\": [\n        {\n          \"type\": \"text\",\n          \"text\": system_prompt\n        }\n      ]\n    },\n    {\n      \"role\": \"user\",\n      \"content\": [\n        {\n          \"type\": \"text\",\n          \"text\": \"explain the harmonic series\\n\"\n        }\n      ]\n    }\n  ],\n  temperature=1,\n  max_tokens=2048,\n  top_p=1\n)\n\n\nprint(textwrap.fill(response.choices[0].message.content, width=80))\n\n\"The harmonic series in music is like a family of notes that all get along\nreally well together! Imagine you have a magic guitar string. When you pluck it,\nit likes to sing not just one note, but a bunch of hidden, secret notes. These\nnotes join in like a chorus, making the main note sound richer and fuller. It's\nlike a rainbow of sounds: when the string plays one note, it's like all its\ncolorful note-friends are quietly joining in for a musical party!\"",
+    "crumbs": [
+      "Workshop",
+      "Exploring OpenAI Models"
+    ]
+  },
+  {
+    "objectID": "notebooks/exploring-openai-models.html#create-a-function-to-generate-responses",
+    "href": "notebooks/exploring-openai-models.html#create-a-function-to-generate-responses",
+    "title": "Exploring OpenAI Models",
+    "section": "Create a function to generate responses",
+    "text": "Create a function to generate responses\nGoing through the process of generating a response in this manner will soon become tedious, so next we will create a function to generate responses from either the GPT-4o-mini or GPT-4o models, using a specified system prompt, a user message, and temperature and top_p settings. Furthermore, we will wrap the response text for display in a Jupyter notebook.\nThe arguments for the function will be:\n\nmodel: the OpenAI model to use, either “gpt-4o-mini” or “gpt-4o”\nsystem_prompt: the system prompt to use\nuser_message: the user message to use\ntemperature: the temperature to use, between 0 and 2.0, default 1.0\ntop_p: the top_p to use, between 0 and 1.0, default 1.0\nmax_tokens: the maximum number of tokens in the response, default 2048\n\nSome of the arguments have defaults, so they are not required when calling the function.\n\ndef generate_response(user_message,\n        model=\"gpt-4o-mini\", \n        system_prompt=\"You are a helpful assistant.\",  \n        temperature=1.0, \n        top_p=1.0, \n        max_tokens=2048):\n                      \n    response = client.chat.completions.create(\n        model=model,\n        messages=[\n            {\n                \"role\": \"system\",\n                \"content\": [\n                    {\n                        \"type\": \"text\",\n                        \"text\": system_prompt\n                    }\n                ]\n            },\n            {\n                \"role\": \"user\",\n                \"content\": [\n                    {\n                        \"type\": \"text\",\n                        \"text\": user_message\n                    }\n                ]\n            }\n        ],\n        temperature=temperature,\n        max_tokens=max_tokens,\n        top_p=top_p\n    )\n    # Get the response text\n    text = response.choices[0].message.content\n    \n    # Option 2: Wrap text using textwrap\n    wrapped_text = textwrap.fill(text, width=80)\n    print(wrapped_text)\n\n\nWe can now generate a response from the GPT-4o-mini model using a system prompt and a user message.\nWe’ll create a simpler system prompt for the next example.\n\nsystem_prompt = textwrap.fill(\n    \"\"\"\n    You are a primary school music teacher. Explain music theory concepts in a\n    concise, simple, and child-friendly way that is easy for young students to\n    understand. Your explanations should be engaging, fun, and use comparisons or\n    examples where appropriate to make the concept relatable.\n    \"\"\",\n    width=80,\n)\n\n\ngenerate_response(user_message=\"Explain the harmonic series\", \n                  system_prompt=system_prompt)\n\nAlright, kiddos! Imagine you have a really fun game of stacking cups. When you\nstack the cups on top of each other, each cup adds to the tower and makes it\ntaller, right? Well, the harmonic series is a bit like that – but instead of\ncups, we’re stacking sounds!  Here’s how it works: when you play a musical note,\nlike a sound from a flute or a guitar, you don’t just hear one sound. Nope! You\nactually hear lots of different sounds all at once, like a family of sounds. The\nmain note we hear is the “big boss” note, but there are smaller notes that are\npart of this family called \"harmonics\" or \"overtones.\"  Think of it like a choir\nof voices. The main singer is the main note, and behind them are lots of other\nvoices singing higher and higher notes. These other voices are like the cups in\nour cup tower; they are stacked higher and create a “harmonic series.”  If we\nstart from a low note and keep stacking these higher notes, they create a\nbeautiful blend of sounds. Here’s a cool thing: if you play a note, let’s say a\nlow \"C,\" you’ll find other notes like \"C,\" \"G,\" \"C\" (the next one up), and even\nmore. This creates a magical sound world, just like a fantastical castle made of\ncup towers!  So, the harmonic series helps us understand how different notes\nwork together to create melodies and harmonies in music. How cool is that? So\nnext time you hear a musical note, listen closely! You might just hear that\nwhole family of sounds joining in on the fun! 🎶✨",
+    "crumbs": [
+      "Workshop",
+      "Exploring OpenAI Models"
+    ]
+  },
+  {
+    "objectID": "notebooks/exploring-openai-models.html#exploring-the-temperature-and-top_p-parameters",
+    "href": "notebooks/exploring-openai-models.html#exploring-the-temperature-and-top_p-parameters",
+    "title": "Exploring OpenAI Models",
+    "section": "Exploring the temperature and top_p parameters",
+    "text": "Exploring the temperature and top_p parameters",
+    "crumbs": [
+      "Workshop",
+      "Exploring OpenAI Models"
+    ]
   }
 ]

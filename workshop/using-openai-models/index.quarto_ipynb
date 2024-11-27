@@ -1,0 +1,45 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Exploring OpenAI Models\"\n",
+        "jupyter: python3\n",
+        "---\n",
+        "\n",
+        "\n",
+        "Now that we have verified that we can use the OpenAI API, we can start to use the API to generate text with the GPT-4o-mini and GPT-4o models.\n"
+      ],
+      "id": "3c4dcbc3"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import openai"
+      ],
+      "id": "04737c69",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "{{< embed ../../notebooks/using-openai.ipynb#get-response-1 echo=true >}}"
+      ],
+      "id": "c35b1cdb"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
