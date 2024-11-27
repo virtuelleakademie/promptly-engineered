@@ -83,6 +83,7 @@ website:
         - workshop/openai/index.qmd
         # - workshop/using-openai-models/index.qmd
         - notebooks/exploring-openai-models.ipynb
+        - notebooks/structured-output.ipynb
         - workshop/project/index.qmd
         - workshop/discussion/index.qmd
 
