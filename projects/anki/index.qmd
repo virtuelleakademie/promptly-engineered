@@ -1,0 +1,16 @@
+---
+title: "Project: Anki flashcards"
+---
+
+To get started, you can clone the repository containing the project files:
+
+```bash
+git clone https://github.com/awellis/anki-flashcard-generator
+```
+
+or simply download the zip file from my Github repository:
+
+[Github repository](https://github.com/awellis/anki-flashcard-generator)
+
+
+![](../../assets/images/github-anki.png)
