@@ -10,6 +10,7 @@ project:
     - index.qmd
     - workshop/**/*.qmd
     - projects/**/*.qmd
+    - notebooks/*.ipynb
     # - "!tutorials/tutorial-1/index.qmd"
     - slides/**/*.qmd
 
@@ -80,7 +81,8 @@ website:
         - workshop/index.qmd
         - workshop/setup/index.qmd
         - workshop/openai/index.qmd
-        - workshop/using-openai-models/index.qmd
+        # - workshop/using-openai-models/index.qmd
+        - notebooks/exploring-openai-models.ipynb
         - workshop/project/index.qmd
         - workshop/discussion/index.qmd
 
