@@ -115,70 +115,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   });
 </script>
 <style>
-div.callout-caution.callout {
-  border-left-color: orange;
+div.callout-break.callout {
+  border-left-color: brown;
 }
-div.callout-caution.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
+div.callout-break.callout-style-default > .callout-header {
+  background-color: rgb(from brown r g b / 13%);
 }
-div.callout-caution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-caution.callout-style-default .callout-icon::before, div.callout-caution.callout-titled .callout-icon::before {
-  content: '⚠️';
-  background-image: none;
-}
-div.callout-output-example.callout {
-  border-left-color: darkgreen;
-}
-div.callout-output-example.callout-style-default > .callout-header {
-  background-color: rgb(from darkgreen r g b / 13%);
-}
-div.callout-output-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-output-example.callout-style-default .callout-icon::before, div.callout-output-example.callout-titled .callout-icon::before {
-  content: '📄';
-  background-image: none;
-}
-div.callout-screens-up.callout {
-  border-left-color: green;
-}
-div.callout-screens-up.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-screens-up .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-screens-up.callout-style-default .callout-icon::before, div.callout-screens-up.callout-titled .callout-icon::before {
-  content: '🔼';
-  background-image: none;
-}
-div.callout-feedback.callout {
-  border-left-color: teal;
-}
-div.callout-feedback.callout-style-default > .callout-header {
-  background-color: rgb(from teal r g b / 13%);
-}
-div.callout-feedback .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-feedback.callout-style-default .callout-icon::before, div.callout-feedback.callout-titled .callout-icon::before {
-  content: '📝';
-  background-image: none;
-}
-div.callout-prompt-example.callout {
-  border-left-color: darkblue;
-}
-div.callout-prompt-example.callout-style-default > .callout-header {
-  background-color: rgb(from darkblue r g b / 13%);
-}
-div.callout-prompt-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-prompt-example.callout-style-default .callout-icon::before, div.callout-prompt-example.callout-titled .callout-icon::before {
-  content: '👩🏼‍🔧';
-  background-image: none;
-}
-div.callout-prompt-template.callout {
-  border-left-color: indigo;
-}
-div.callout-prompt-template.callout-style-default > .callout-header {
-  background-color: rgb(from indigo r g b / 13%);
-}
-div.callout-prompt-template .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-prompt-template.callout-style-default .callout-icon::before, div.callout-prompt-template.callout-titled .callout-icon::before {
-  content: '📋';
+div.callout-break .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-break.callout-style-default .callout-icon::before, div.callout-break.callout-titled .callout-icon::before {
+  content: '☕';
   background-image: none;
 }
 div.callout-timing.callout {
@@ -192,39 +137,6 @@ div.callout-timing.callout-style-default .callout-icon::before, div.callout-timi
   content: '⏱️';
   background-image: none;
 }
-div.callout-testing.callout {
-  border-left-color: green;
-}
-div.callout-testing.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-testing .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-testing.callout-style-default .callout-icon::before, div.callout-testing.callout-titled .callout-icon::before {
-  content: '🧪';
-  background-image: none;
-}
-div.callout-export.callout {
-  border-left-color: brown;
-}
-div.callout-export.callout-style-default > .callout-header {
-  background-color: rgb(from brown r g b / 13%);
-}
-div.callout-export .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-export.callout-style-default .callout-icon::before, div.callout-export.callout-titled .callout-icon::before {
-  content: '📤';
-  background-image: none;
-}
-div.callout-screens-down.callout {
-  border-left-color: orange;
-}
-div.callout-screens-down.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-screens-down .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-screens-down.callout-style-default .callout-icon::before, div.callout-screens-down.callout-titled .callout-icon::before {
-  content: '🔽';
-  background-image: none;
-}
 div.callout-tip.callout {
   border-left-color: gold;
 }
@@ -234,50 +146,6 @@ div.callout-tip.callout-style-default > .callout-header {
 div.callout-tip .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
 div.callout-tip.callout-style-default .callout-icon::before, div.callout-tip.callout-titled .callout-icon::before {
   content: '💡';
-  background-image: none;
-}
-div.callout-pair.callout {
-  border-left-color: forestgreen;
-}
-div.callout-pair.callout-style-default > .callout-header {
-  background-color: rgb(from forestgreen r g b / 13%);
-}
-div.callout-pair .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-pair.callout-style-default .callout-icon::before, div.callout-pair.callout-titled .callout-icon::before {
-  content: '👥';
-  background-image: none;
-}
-div.callout-try.callout {
-  border-left-color: blue;
-}
-div.callout-try.callout-style-default > .callout-header {
-  background-color: rgb(from blue r g b / 13%);
-}
-div.callout-try .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-try.callout-style-default .callout-icon::before, div.callout-try.callout-titled .callout-icon::before {
-  content: '🔄';
-  background-image: none;
-}
-div.callout-individual.callout {
-  border-left-color: steelblue;
-}
-div.callout-individual.callout-style-default > .callout-header {
-  background-color: rgb(from steelblue r g b / 13%);
-}
-div.callout-individual .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-individual.callout-style-default .callout-icon::before, div.callout-individual.callout-titled .callout-icon::before {
-  content: '💻';
-  background-image: none;
-}
-div.callout-setup.callout {
-  border-left-color: gray;
-}
-div.callout-setup.callout-style-default > .callout-header {
-  background-color: rgb(from gray r g b / 13%);
-}
-div.callout-setup .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-setup.callout-style-default .callout-icon::before, div.callout-setup.callout-titled .callout-icon::before {
-  content: '⚙️';
   background-image: none;
 }
 div.callout-group.callout {
@@ -291,15 +159,125 @@ div.callout-group.callout-style-default .callout-icon::before, div.callout-group
   content: '👥';
   background-image: none;
 }
-div.callout-break.callout {
+div.callout-output-example.callout {
+  border-left-color: darkgreen;
+}
+div.callout-output-example.callout-style-default > .callout-header {
+  background-color: rgb(from darkgreen r g b / 13%);
+}
+div.callout-output-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-output-example.callout-style-default .callout-icon::before, div.callout-output-example.callout-titled .callout-icon::before {
+  content: '📄';
+  background-image: none;
+}
+div.callout-pair.callout {
+  border-left-color: forestgreen;
+}
+div.callout-pair.callout-style-default > .callout-header {
+  background-color: rgb(from forestgreen r g b / 13%);
+}
+div.callout-pair .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-pair.callout-style-default .callout-icon::before, div.callout-pair.callout-titled .callout-icon::before {
+  content: '👥';
+  background-image: none;
+}
+div.callout-prompt-template.callout {
+  border-left-color: indigo;
+}
+div.callout-prompt-template.callout-style-default > .callout-header {
+  background-color: rgb(from indigo r g b / 13%);
+}
+div.callout-prompt-template .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-prompt-template.callout-style-default .callout-icon::before, div.callout-prompt-template.callout-titled .callout-icon::before {
+  content: '📋';
+  background-image: none;
+}
+div.callout-try.callout {
+  border-left-color: blue;
+}
+div.callout-try.callout-style-default > .callout-header {
+  background-color: rgb(from blue r g b / 13%);
+}
+div.callout-try .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-try.callout-style-default .callout-icon::before, div.callout-try.callout-titled .callout-icon::before {
+  content: '🔄';
+  background-image: none;
+}
+div.callout-testing.callout {
+  border-left-color: green;
+}
+div.callout-testing.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-testing .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-testing.callout-style-default .callout-icon::before, div.callout-testing.callout-titled .callout-icon::before {
+  content: '🧪';
+  background-image: none;
+}
+div.callout-prompt-example.callout {
+  border-left-color: darkblue;
+}
+div.callout-prompt-example.callout-style-default > .callout-header {
+  background-color: rgb(from darkblue r g b / 13%);
+}
+div.callout-prompt-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-prompt-example.callout-style-default .callout-icon::before, div.callout-prompt-example.callout-titled .callout-icon::before {
+  content: '👩🏼‍🔧';
+  background-image: none;
+}
+div.callout-export.callout {
   border-left-color: brown;
 }
-div.callout-break.callout-style-default > .callout-header {
+div.callout-export.callout-style-default > .callout-header {
   background-color: rgb(from brown r g b / 13%);
 }
-div.callout-break .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-break.callout-style-default .callout-icon::before, div.callout-break.callout-titled .callout-icon::before {
-  content: '☕';
+div.callout-export .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-export.callout-style-default .callout-icon::before, div.callout-export.callout-titled .callout-icon::before {
+  content: '📤';
+  background-image: none;
+}
+div.callout-screens-up.callout {
+  border-left-color: green;
+}
+div.callout-screens-up.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-screens-up .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-screens-up.callout-style-default .callout-icon::before, div.callout-screens-up.callout-titled .callout-icon::before {
+  content: '🔼';
+  background-image: none;
+}
+div.callout-setup.callout {
+  border-left-color: gray;
+}
+div.callout-setup.callout-style-default > .callout-header {
+  background-color: rgb(from gray r g b / 13%);
+}
+div.callout-setup .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-setup.callout-style-default .callout-icon::before, div.callout-setup.callout-titled .callout-icon::before {
+  content: '⚙️';
+  background-image: none;
+}
+div.callout-feedback.callout {
+  border-left-color: teal;
+}
+div.callout-feedback.callout-style-default > .callout-header {
+  background-color: rgb(from teal r g b / 13%);
+}
+div.callout-feedback .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-feedback.callout-style-default .callout-icon::before, div.callout-feedback.callout-titled .callout-icon::before {
+  content: '📝';
+  background-image: none;
+}
+div.callout-caution.callout {
+  border-left-color: orange;
+}
+div.callout-caution.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-caution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-caution.callout-style-default .callout-icon::before, div.callout-caution.callout-titled .callout-icon::before {
+  content: '⚠️';
   background-image: none;
 }
 div.callout-checkpoint.callout {
@@ -322,6 +300,28 @@ div.callout-reflect.callout-style-default > .callout-header {
 div.callout-reflect .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
 div.callout-reflect.callout-style-default .callout-icon::before, div.callout-reflect.callout-titled .callout-icon::before {
   content: '💭';
+  background-image: none;
+}
+div.callout-screens-down.callout {
+  border-left-color: orange;
+}
+div.callout-screens-down.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-screens-down .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-screens-down.callout-style-default .callout-icon::before, div.callout-screens-down.callout-titled .callout-icon::before {
+  content: '🔽';
+  background-image: none;
+}
+div.callout-individual.callout {
+  border-left-color: steelblue;
+}
+div.callout-individual.callout-style-default > .callout-header {
+  background-color: rgb(from steelblue r g b / 13%);
+}
+div.callout-individual .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-individual.callout-style-default .callout-icon::before, div.callout-individual.callout-titled .callout-icon::before {
+  content: '💻';
   background-image: none;
 }
 </style>
@@ -438,8 +438,22 @@ div.callout-reflect.callout-style-default .callout-icon::before, div.callout-ref
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup">Setup</a></li>
+  <li><a href="#task-1-create-an-llm-client" id="toc-task-1-create-an-llm-client" class="nav-link" data-scroll-target="#task-1-create-an-llm-client">Task 1: Create an LLM client</a></li>
+  <li><a href="#task-2-read-the-teaching-material" id="toc-task-2-read-the-teaching-material" class="nav-link" data-scroll-target="#task-2-read-the-teaching-material">Task 2: Read the teaching material</a></li>
+  <li><a href="#task-3-extract-pairs-of-questions-and-answers" id="toc-task-3-extract-pairs-of-questions-and-answers" class="nav-link" data-scroll-target="#task-3-extract-pairs-of-questions-and-answers">Task 3: Extract pairs of questions and answers</a></li>
+  <li><a href="#task-4-call-the-llm" id="toc-task-4-call-the-llm" class="nav-link" data-scroll-target="#task-4-call-the-llm">Task 4: Call the LLM</a></li>
+  <li><a href="#task-5-use-structured-outputs" id="toc-task-5-use-structured-outputs" class="nav-link" data-scroll-target="#task-5-use-structured-outputs">Task 5: Use structured outputs</a></li>
+  <li><a href="#task-6-make-your-code-reusable" id="toc-task-6-make-your-code-reusable" class="nav-link" data-scroll-target="#task-6-make-your-code-reusable">Task 6: Make your code reusable</a></li>
+  <li><a href="#task-7-write-the-results-to-a-csv-file" id="toc-task-7-write-the-results-to-a-csv-file" class="nav-link" data-scroll-target="#task-7-write-the-results-to-a-csv-file">Task 7: Write the results to a CSV file</a></li>
+  <li><a href="#task-8-extract-questions-and-answers-from-all-the-teaching-material" id="toc-task-8-extract-questions-and-answers-from-all-the-teaching-material" class="nav-link" data-scroll-target="#task-8-extract-questions-and-answers-from-all-the-teaching-material">Task 8: Extract questions and answers from all the teaching material</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -463,13 +477,81 @@ div.callout-reflect.callout-style-default .callout-icon::before, div.callout-ref
 </header>
 
 
+<section id="setup" class="level2">
+<h2 class="anchored" data-anchor-id="setup">Setup</h2>
 <p>To get started, you can clone the repository containing the project files:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/awellis/anki-flashcard-generator</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>or simply download the zip file from my Github repository:</p>
-<p><a href="https://github.com/awellis/anki-flashcard-generator">Github repository</a></p>
-<p><img src="../../assets/images/github-anki.png" class="img-fluid"></p>
+<p>or simply download the zip file from my <a href="https://github.com/awellis/anki-flashcard-generator">Github repository</a>.</p>
+<p><img src="../../assets/images/github-anki.png" class="img-fluid" style="width:80.0%"></p>
+<p>Once you cloned the repository, or downloaded and unzipped the zip file, you will find the following files:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">assets/baroque-essay.md</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">assets/classical-essay.md</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">assets/romantic-essay.md</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">assets/modern-essay.md</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>These files contain the teaching material for the four musical eras, based on which we will generate the flashcards.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">generate-anki-flashcards.py</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This file contains a Python script to get you started.</p>
+</section>
+<section id="task-1-create-an-llm-client" class="level2">
+<h2 class="anchored" data-anchor-id="task-1-create-an-llm-client">Task 1: Create an LLM client</h2>
+<p>First, you will to set up an LLM client. We will use the <code>openai</code> Python package to connect to an OpenAI model.</p>
+<ol class="example" type="1">
+<li>import the <code>openai</code> package</li>
+<li>import the <code>dotenv</code> package to load the API key from the <code>.env</code> file</li>
+<li>set up the client with your OpenAI API key</li>
+</ol>
+</section>
+<section id="task-2-read-the-teaching-material" class="level2">
+<h2 class="anchored" data-anchor-id="task-2-read-the-teaching-material">Task 2: Read the teaching material</h2>
+<ol start="4" class="example" type="1">
+<li>read one of the essay files, and print the contents</li>
+</ol>
+</section>
+<section id="task-3-extract-pairs-of-questions-and-answers" class="level2">
+<h2 class="anchored" data-anchor-id="task-3-extract-pairs-of-questions-and-answers">Task 3: Extract pairs of questions and answers</h2>
+<p>Now you can think about how you can extract pairs of questions and answers from the teaching material. You will need to write a suitable prompt, consisting of a system message and a user message, to guide the LLM in extracting the questions and answers.</p>
+<ol start="5" class="example" type="1">
+<li>write a prompt to extract pairs of questions and answers from the teaching material</li>
+</ol>
+</section>
+<section id="task-4-call-the-llm" class="level2">
+<h2 class="anchored" data-anchor-id="task-4-call-the-llm">Task 4: Call the LLM</h2>
+<ol start="6" class="example" type="1">
+<li>call the LLM with the prompt, and print the result</li>
+</ol>
+<ul>
+<li>try out both GPT-4o and GPT-4o Mini</li>
+<li>try out different parameters settings for the LLM call (e.g.&nbsp;<code>temperature</code>, <code>top_p</code>)</li>
+</ul>
+</section>
+<section id="task-5-use-structured-outputs" class="level2">
+<h2 class="anchored" data-anchor-id="task-5-use-structured-outputs">Task 5: Use structured outputs</h2>
+<ol start="7" class="example" type="1">
+<li>use structured outputs to control the format of the LLM’s response: Define a <code>pydantic</code> model to describe the format of the LLM’s response</li>
+<li>call the LLM with the structured output format</li>
+</ol>
+</section>
+<section id="task-6-make-your-code-reusable" class="level2">
+<h2 class="anchored" data-anchor-id="task-6-make-your-code-reusable">Task 6: Make your code reusable</h2>
+<ol start="9" class="example" type="1">
+<li>write a function to call the LLM with the prompt and an arbitrary text</li>
+<li>call the function with the prompt, and print the result</li>
+</ol>
+</section>
+<section id="task-7-write-the-results-to-a-csv-file" class="level2">
+<h2 class="anchored" data-anchor-id="task-7-write-the-results-to-a-csv-file">Task 7: Write the results to a CSV file</h2>
+<ol start="11" class="example" type="1">
+<li>write the results to a CSV file. Code is provided for you.</li>
+</ol>
+</section>
+<section id="task-8-extract-questions-and-answers-from-all-the-teaching-material" class="level2">
+<h2 class="anchored" data-anchor-id="task-8-extract-questions-and-answers-from-all-the-teaching-material">Task 8: Extract questions and answers from all the teaching material</h2>
+<ol start="12" class="example" type="1">
+<li>write a loop to load all essays, extract questions and answers from all the teaching material, and write the results to a CSV file</li>
+</ol>
 
 
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -993,7 +993,7 @@
     "href": "projects/anki/index.html",
     "title": "Project: Anki flashcards",
     "section": "",
-    "text": "To get started, you can clone the repository containing the project files:\ngit clone https://github.com/awellis/anki-flashcard-generator\nor simply download the zip file from my Github repository:\nGithub repository\n\n\n\n\n Back to top",
+    "text": "To get started, you can clone the repository containing the project files:\ngit clone https://github.com/awellis/anki-flashcard-generator\nor simply download the zip file from my Github repository.\n\nOnce you cloned the repository, or downloaded and unzipped the zip file, you will find the following files:\nassets/baroque-essay.md\nassets/classical-essay.md\nassets/romantic-essay.md\nassets/modern-essay.md\nThese files contain the teaching material for the four musical eras, based on which we will generate the flashcards.\ngenerate-anki-flashcards.py\nThis file contains a Python script to get you started.",
     "crumbs": [
       "Projects",
       "Project: Anki flashcards"
@@ -1004,9 +1004,130 @@
     "href": "workshop/projects/index.html",
     "title": "Project: Anki flashcards",
     "section": "",
-    "text": "We will now attempt to use the tools we’ve learned to create a set of Anki flashcards, using content from our teaching material and an LLM.\nAnki is a powerful open-source flashcard program that uses the principles of spaced repetition and active recall to enhance learning and long-term retention. It presents flashcards at optimal intervals, adjusting the frequency of review based on the user’s performance. This is thought to ensure that information is reinforced before it is forgotten.\nOne of the key strengths of Anki is its flexibility. Users can create their own decks of flashcards tailored to their specific learning needs, or they can download pre-made decks from shared repositories covering a vast array of subjects, from languages and vocabulary to complex medical terminology.\nHowever, Anki requires a lot of manual work to create effective flashcards. In this workshop, we will use an LLM to generate the flashcards for us.\n\n\n\n\n\n\nAnki Flashcard Project\n\n\n\n\n\nThe simplest type of Anki flashcard is a pair of text fields: a question and an answer (or a term and a definition).\nAnki can import flashcards in a variety of formats, including Anki’s native format, but also from a comma-separated values (CSV) file.\nA CSV file is a text file that uses a comma to separate values. Each line of the file is a row, and each row has of one or more columns, separated by commas.\nIf we have the following list of terms and definitions:\n\n\n\n\n\n\n\nterm\ndefinition\n\n\n\n\nMetacognition\n“The ability to think about one’s own thinking processes”\n\n\nSelf-Regulated Learning\n“The process of taking control of and evaluating one’s own learning”\n\n\nExecutive Functions\n“Higher-order cognitive processes like working memory and cognitive flexibility”\n\n\nScaffolding\n“Support provided by teachers or peers to help students learn new skills”\n\n\n\nwe can save these in a CSV file like this:\nterm,definition\nMetacognition,\"The ability to think about one's own thinking processes\"\nSelf-Regulated Learning,\"The process of taking control of and evaluating one's own learning\"\nExecutive Functions,\"Higher-order cognitive processes like working memory and cognitive flexibility\"\nScaffolding,\"Support provided by teachers or peers to help students learn new skills\"\nIf we save the contents above in a file called anki-flashcards.csv, we can import them into Anki by selecting the `File -&gt; Import… menu item.\n\n\n\n\n\n\n\n\n\nGoal\n\n\n\nThe goal of this project is to create a set of flashcards based on your teaching material, and to save these in a CSV file that can be imported into Anki.\n\n\n\n\n\n Back to topReuseCC BY 4.0CitationBibTeX citation:@online{ellis2024,\n  author = {Ellis, Andrew},\n  title = {Project: {Anki} Flashcards},\n  date = {2024-11-13},\n  url = {https://virtuelleakademie.github.io/promptly-engineered/workshop/projects/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nEllis, Andrew. 2024. “Project: Anki Flashcards.” November\n13, 2024. https://virtuelleakademie.github.io/promptly-engineered/workshop/projects/.",
+    "text": "We will now attempt to use the tools we’ve learned to create a set of Anki flashcards, using content from our teaching material and an LLM.\nAnki is a powerful open-source flashcard program that uses the principles of spaced repetition and active recall to enhance learning and long-term retention. It presents flashcards at optimal intervals, adjusting the frequency of review based on the user’s performance. This is thought to ensure that information is reinforced before it is forgotten.\nOne of the key strengths of Anki is its flexibility. Users can create their own decks of flashcards tailored to their specific learning needs, or they can download pre-made decks from shared repositories covering a vast array of subjects, from languages and vocabulary to complex medical terminology.\nHowever, Anki requires a lot of manual work to create effective flashcards. In this workshop, we will use an LLM to generate the flashcards for us.\n\n\n\n\n\n\nAnki Flashcard Project\n\n\n\n\n\nThe simplest type of Anki flashcard is a pair of text fields: a question and an answer (or a term and a definition).\nAnki can import flashcards in a variety of formats, including Anki’s native format, but also from a comma-separated values (CSV) file.\nA CSV file is a text file that uses a comma to separate values. Each line of the file is a row, and each row has of one or more columns, separated by commas.\nIf we have the following list of terms and definitions:\n\n\n\n\n\n\n\nterm\ndefinition\n\n\n\n\nMetacognition\n“The ability to think about one’s own thinking processes”\n\n\nSelf-Regulated Learning\n“The process of taking control of and evaluating one’s own learning”\n\n\nExecutive Functions\n“Higher-order cognitive processes like working memory and cognitive flexibility”\n\n\nScaffolding\n“Support provided by teachers or peers to help students learn new skills”\n\n\n\nwe can save these in a CSV file like this:\nterm,definition\nMetacognition,\"The ability to think about one's own thinking processes\"\nSelf-Regulated Learning,\"The process of taking control of and evaluating one's own learning\"\nExecutive Functions,\"Higher-order cognitive processes like working memory and cognitive flexibility\"\nScaffolding,\"Support provided by teachers or peers to help students learn new skills\"\nIf we save the contents above in a file called anki-flashcards.csv, we can import them into Anki by selecting the `File -&gt; Import… menu item.\n\n\n\n\n\n\n\n\n\nGoal\n\n\n\nThe goal of this project is to create a set of flashcards based on your some teaching material, and to save these in a CSV file that can be imported into Anki.\nWe will use the following teaching material: four essays about different musical eras (e.g. Baroque, Classical, Romantic, and Modern). These were generated using an LLM, and haven’t been verified for accuracy, but they should give you an idea of what you can do with an LLM.\nWe will first use an LLM, either GPT-4o or GPT-4o Mini, to extract pairs of questions and answers from the teaching material. Additionally, we can also extract tags for each flashcard, which we can use to categorise the flashcards later.\nI recommend using some of the tools we’ve learned in this workshop:\n\ncreating suitable system and user messages for an LLM\ncreate a prompt to extract pairs of questions and answers from the teaching material\nwriting a function to call an LLM with the prompt\nusing structured outputs to control the format of the LLM’s response\n\ndefine a pydantic model to describe the format of the desired response\ncall the LLM with the structured output format\n\n\n\n\n Let’s get started! You can find detailed instructions on the next page.\n\n\n\n Back to topReuseCC BY 4.0CitationBibTeX citation:@online{ellis2024,\n  author = {Ellis, Andrew},\n  title = {Project: {Anki} Flashcards},\n  date = {2024-11-13},\n  url = {https://virtuelleakademie.github.io/promptly-engineered/workshop/projects/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nEllis, Andrew. 2024. “Project: Anki Flashcards.” November\n13, 2024. https://virtuelleakademie.github.io/promptly-engineered/workshop/projects/.",
     "crumbs": [
       "Workshop",
+      "Project: Anki flashcards"
+    ]
+  },
+  {
+    "objectID": "projects/anki/index.html#setup",
+    "href": "projects/anki/index.html#setup",
+    "title": "Project: Anki flashcards",
+    "section": "",
+    "text": "To get started, you can clone the repository containing the project files:\ngit clone https://github.com/awellis/anki-flashcard-generator\nor simply download the zip file from my Github repository.\n\nOnce you cloned the repository, or downloaded and unzipped the zip file, you will find the following files:\nassets/baroque-essay.md\nassets/classical-essay.md\nassets/romantic-essay.md\nassets/modern-essay.md\nThese files contain the teaching material for the four musical eras, based on which we will generate the flashcards.\ngenerate-anki-flashcards.py\nThis file contains a Python script to get you started.",
+    "crumbs": [
+      "Projects",
+      "Project: Anki flashcards"
+    ]
+  },
+  {
+    "objectID": "projects/anki/index.html#task-1-create-an-llm-client",
+    "href": "projects/anki/index.html#task-1-create-an-llm-client",
+    "title": "Project: Anki flashcards",
+    "section": "Task 1: Create an LLM client",
+    "text": "Task 1: Create an LLM client\nFirst, you will to set up an LLM client. We will use the openai Python package to connect to an OpenAI model.\n\nimport the openai package\nimport the dotenv package to load the API key from the .env file\nset up the client with your OpenAI API key",
+    "crumbs": [
+      "Projects",
+      "Project: Anki flashcards"
+    ]
+  },
+  {
+    "objectID": "projects/anki/index.html#task-2-read-the-teaching-material",
+    "href": "projects/anki/index.html#task-2-read-the-teaching-material",
+    "title": "Project: Anki flashcards",
+    "section": "Task 2: Read the teaching material",
+    "text": "Task 2: Read the teaching material\n\nread one of the essay files, and print the contents",
+    "crumbs": [
+      "Projects",
+      "Project: Anki flashcards"
+    ]
+  },
+  {
+    "objectID": "projects/anki/index.html#task-3-extract-pairs-of-questions-and-answers",
+    "href": "projects/anki/index.html#task-3-extract-pairs-of-questions-and-answers",
+    "title": "Project: Anki flashcards",
+    "section": "Task 3: Extract pairs of questions and answers",
+    "text": "Task 3: Extract pairs of questions and answers\nNow you can think about how you can extract pairs of questions and answers from the teaching material. You will need to write a suitable prompt, consisting of a system message and a user message, to guide the LLM in extracting the questions and answers.\n\nwrite a prompt to extract pairs of questions and answers from the teaching material",
+    "crumbs": [
+      "Projects",
+      "Project: Anki flashcards"
+    ]
+  },
+  {
+    "objectID": "projects/anki/index.html#task-4-call-the-llm",
+    "href": "projects/anki/index.html#task-4-call-the-llm",
+    "title": "Project: Anki flashcards",
+    "section": "Task 4: Call the LLM",
+    "text": "Task 4: Call the LLM\n\ncall the LLM with the prompt, and print the result\n\n\ntry out both GPT-4o and GPT-4o Mini\ntry out different parameters settings for the LLM call (e.g. temperature, top_p)",
+    "crumbs": [
+      "Projects",
+      "Project: Anki flashcards"
+    ]
+  },
+  {
+    "objectID": "projects/anki/index.html#task-5-make-your-code-reusable",
+    "href": "projects/anki/index.html#task-5-make-your-code-reusable",
+    "title": "Project: Anki flashcards",
+    "section": "Task 5: Make your code reusable",
+    "text": "Task 5: Make your code reusable\nCreate a function to call the LLM (@) write a function to call the LLM with the prompt and an arbitrary text (@) call the function with the prompt, and print the result",
+    "crumbs": [
+      "Projects",
+      "Project: Anki flashcards"
+    ]
+  },
+  {
+    "objectID": "projects/anki/index.html#task-6-extract-questions-and-answers-from-all-the-teaching-material",
+    "href": "projects/anki/index.html#task-6-extract-questions-and-answers-from-all-the-teaching-material",
+    "title": "Project: Anki flashcards",
+    "section": "Task 6: Extract questions and answers from all the teaching material",
+    "text": "Task 6: Extract questions and answers from all the teaching material\n\nwrite a loop to load all essays, extract questions and answers from all the teaching material",
+    "crumbs": [
+      "Projects",
+      "Project: Anki flashcards"
+    ]
+  },
+  {
+    "objectID": "projects/anki/index.html#task-5-use-structured-outputs",
+    "href": "projects/anki/index.html#task-5-use-structured-outputs",
+    "title": "Project: Anki flashcards",
+    "section": "Task 5: Use structured outputs",
+    "text": "Task 5: Use structured outputs\n\nuse structured outputs to control the format of the LLM’s response: Define a pydantic model to describe the format of the LLM’s response\ncall the LLM with the structured output format",
+    "crumbs": [
+      "Projects",
+      "Project: Anki flashcards"
+    ]
+  },
+  {
+    "objectID": "projects/anki/index.html#task-6-make-your-code-reusable",
+    "href": "projects/anki/index.html#task-6-make-your-code-reusable",
+    "title": "Project: Anki flashcards",
+    "section": "Task 6: Make your code reusable",
+    "text": "Task 6: Make your code reusable\n\nwrite a function to call the LLM with the prompt and an arbitrary text\ncall the function with the prompt, and print the result",
+    "crumbs": [
+      "Projects",
+      "Project: Anki flashcards"
+    ]
+  },
+  {
+    "objectID": "projects/anki/index.html#task-7-write-the-results-to-a-csv-file",
+    "href": "projects/anki/index.html#task-7-write-the-results-to-a-csv-file",
+    "title": "Project: Anki flashcards",
+    "section": "Task 7: Write the results to a CSV file",
+    "text": "Task 7: Write the results to a CSV file\n\nwrite the results to a CSV file. Code is provided for you.",
+    "crumbs": [
+      "Projects",
+      "Project: Anki flashcards"
+    ]
+  },
+  {
+    "objectID": "projects/anki/index.html#task-8-extract-questions-and-answers-from-all-the-teaching-material",
+    "href": "projects/anki/index.html#task-8-extract-questions-and-answers-from-all-the-teaching-material",
+    "title": "Project: Anki flashcards",
+    "section": "Task 8: Extract questions and answers from all the teaching material",
+    "text": "Task 8: Extract questions and answers from all the teaching material\n\nwrite a loop to load all essays, extract questions and answers from all the teaching material, and write the results to a CSV file",
+    "crumbs": [
+      "Projects",
       "Project: Anki flashcards"
     ]
   }
