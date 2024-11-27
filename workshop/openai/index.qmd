@@ -323,3 +323,37 @@ a reliable weather website or app for the latest forecast
 and conditions.
 ```
 
+## Testing the OpenAI API with a Jupyter Notebook
+
+You can also test the OpenAI API with a Jupyter Notebook. To do this, create a new Jupyter Notebook and insert the following code in individual cells.
+
+
+```python
+from dotenv import load_dotenv
+from openai import OpenAI 
+```
+
+```python
+load_dotenv()
+```
+
+```python
+client = OpenAI()
+```
+
+```python
+response = client.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=[{"role": "system", "content": "You are a helpful assistant."}, 
+              {"role": "user", "content": "What is the weather in Bern?"}]
+        )
+```
+
+```python
+print(response)
+```
+
+```python       
+print(response.choices[0].message.content)
+```
+
