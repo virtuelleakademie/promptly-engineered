@@ -12,7 +12,16 @@ bibliography: ../bibliography.bib
 format:
     html:
         toc: true
-        code-fold: true
+        code-fold: false
         code-link: true
         callout-appearance: simple
         callout-icon: true
+# editor:
+#   markdown:
+#     wrap: 72
+# code:
+#   tidy: true
+#   tidy_opts:
+#     width.cutoff: 80
+filters:
+  - pyodide

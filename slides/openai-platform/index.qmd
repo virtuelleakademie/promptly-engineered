@@ -1,0 +1,40 @@
+---
+title: "Using the OpenAI Platform"
+---
+
+
+
+## OpenAI Platform
+
+![](../../assets/images/openai-platform.png)
+
+
+## OpenAI Playground
+
+![](../../assets/images/openai-playground.png)
+
+
+## Generate Prompt
+
+![](../../assets/images/openai-generate-system-prompt.png)
+
+
+## System Prompt
+
+![](../../assets/images/openai-prompt.png)
+ 
+
+## LLM Parameters
+
+![](../../assets/images/openai-temperature.png)
+
+
+## Generate Response
+
+![](../../assets/images/openai-python-poem.png)
+
+
+## View Code
+
+![](../../assets/images/openai-poem-code.png){width=80%}
+
