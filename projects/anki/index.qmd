@@ -1,0 +1,76 @@
+---
+title: "Project: Anki flashcards"
+jupyter: python3
+---
+
+## Setup
+
+To get started, you can clone the repository containing the project files:
+
+```bash
+git clone https://github.com/awellis/anki-flashcard-generator
+```
+
+or simply download the zip file from my [Github repository](https://github.com/awellis/anki-flashcard-generator).
+
+
+![](../../assets/images/github-anki.png){width=80%}
+
+
+Once you cloned the repository, or downloaded and unzipped the zip file, you will find the following files:
+
+```bash
+assets/baroque-essay.md
+assets/classical-essay.md
+assets/romantic-essay.md
+assets/modern-essay.md
+```
+These files contain the teaching material for the four musical eras, based on which we will generate the flashcards. 
+
+```bash
+generate-anki-flashcards.py
+```
+This file contains a Python script to get you started.
+
+## Task 1: Create an LLM client
+
+First, you will to set up an LLM client. We will use the `openai` Python package to connect to an OpenAI model.
+
+(@) import the `openai` package
+(@) import the `dotenv` package to load the API key from the `.env` file
+(@) set up the client with your OpenAI API key
+
+
+## Task 2: Read the teaching material
+(@) read one of the essay files, and print the contents
+
+
+
+## Task 3: Extract pairs of questions and answers
+Now you can think about how you can extract pairs of questions and answers from the teaching material. You will need to write a suitable prompt, consisting of a system message and a user message, to guide the LLM in extracting the questions and answers.
+
+(@) write a prompt to extract pairs of questions and answers from the teaching material
+
+## Task 4: Call the LLM
+
+(@) call the LLM with the prompt, and print the result
+  + try out both GPT-4o and GPT-4o Mini
+  + try out different parameters settings for the LLM call (e.g. `temperature`, `top_p`)
+
+## Task 5: Use structured outputs
+
+(@) use structured outputs to control the format of the LLM's response: Define a `pydantic` model to describe the format of the LLM's response
+(@) call the LLM with the structured output format
+
+## Task 6: Make your code reusable
+
+(@) write a function to call the LLM with the prompt and an arbitrary text
+(@) call the function with the prompt, and print the result
+
+## Task 7: Write the results to a CSV file
+
+(@) write the results to a CSV file. Code is provided for you.
+
+## Task 8: Extract questions and answers from all the teaching material
+
+(@) write a loop to load all essays, extract questions and answers from all the teaching material, and write the results to a CSV file.

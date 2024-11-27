@@ -9,7 +9,8 @@ project:
   render:
     - index.qmd
     - workshop/**/*.qmd
-    - tutorials/**/*.qmd
+    - projects/**/*.qmd
+    - notebooks/*.ipynb
     # - "!tutorials/tutorial-1/index.qmd"
     - slides/**/*.qmd
 
@@ -35,28 +36,29 @@ website:
         href: workshop/index.qmd
         text: Workshop
 
-      - icon: info-circle
-        href: tutorials/index.qmd
-        text: Tutorials
+      - icon: code-square
+        href: projects/anki/index.qmd
+        text: Projects
 
       - icon: file-slides
         text: "Slides" # {{< fa person-chalkboard >}}
         menu:
-          - text: "AI-enhanced journal club"
-            file: slides/index.qmd
+          # - text: "AI-enhanced journal club"
+          #   file: slides/index.qmd
           - text: "Understanding LLMs"
             file: slides/understanding-llms/index.qmd
           - text: "Basic prompt engineering"
             file: slides/prompt-engineering-basics/index.qmd
           - text: "Intermediate prompt engineering"
             file: slides/prompt-engineering-intermediate/index.qmd
-      - icon: wrench-adjustable #tools
-        text: "Resources"
-        menu:
-          - text: "Guides"
-            file: pages/resources.qmd
-          - text: "Tools"
-            file: pages/tools.qmd
+
+      # - icon: wrench-adjustable #tools
+      #   text: "Resources"
+      #   menu:
+      #     - text: "Guides"
+      #       file: resources/resources.qmd
+      #     - text: "Tools"
+      #       file: resources/tools.qmd
 
     tools:
       - icon: lightbulb-fill
@@ -78,14 +80,20 @@ website:
       contents:
         - workshop/index.qmd
         - workshop/setup/index.qmd
-    - title: "Tutorials"
+        - workshop/openai/index.qmd
+        - notebooks/exploring-openai-models.ipynb
+        - notebooks/structured-output.ipynb
+        - workshop/projects/index.qmd
+        - workshop/discussion/index.qmd
+
+
+    - title: "Projects"
       style: "docked"
       search: true
       background: light
       contents:
-        - tutorials/index.qmd
-        - tutorials/tutorial-1/index.qmd
-        - tutorials/tutorial-2/index.qmd
+        - projects/anki/index.qmd
+
 
 page-footer:
     right:
@@ -101,7 +109,8 @@ format:
     link-external-newwindow: true
     anchor-sections: true
     smooth-scroll: true
-    # linkcolor: rebeccapurple
+    linkcolor: rebeccapurple
+
 comments:
   hypothesis: 
     theme: clean

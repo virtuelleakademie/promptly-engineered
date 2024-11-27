@@ -1,0 +1,7 @@
+---
+title: "Conclusions and Discussion"
+---
+
+
+
+{{< revealjs file="../../slides/discussion/index.html" height="500px" class="ratio ratio-16x9" >}}
