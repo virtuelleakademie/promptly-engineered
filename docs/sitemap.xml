@@ -5,6 +5,10 @@
     <lastmod>2024-11-27T15:38:30.510Z</lastmod>
   </url>
   <url>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/workshop/openai/index.html</loc>
+    <lastmod>2024-11-27T15:18:19.019Z</lastmod>
+  </url>
+  <url>
     <loc>https://virtuelleakademie.github.io/promptly-engineered/index.html</loc>
     <lastmod>2024-11-21T09:13:04.489Z</lastmod>
   </url>
@@ -21,20 +25,48 @@
     <lastmod>2024-11-21T13:50:17.470Z</lastmod>
   </url>
   <url>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/index.html</loc>
+    <lastmod>2024-11-21T13:50:17.470Z</lastmod>
+  </url>
+  <url>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/discussion/index.html</loc>
+    <lastmod>2024-11-27T15:54:34.095Z</lastmod>
+  </url>
+  <url>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/workshop/projects/index.html</loc>
+    <lastmod>2024-11-27T21:34:25.483Z</lastmod>
+  </url>
+  <url>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/notebooks/test-structured-output.html</loc>
+    <lastmod>2024-11-21T15:40:40.845Z</lastmod>
+  </url>
+  <url>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/notebooks/setup-openai.html</loc>
+    <lastmod>2024-11-27T20:51:31.900Z</lastmod>
+  </url>
+  <url>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/notebooks/exploring-openai-models.html</loc>
+    <lastmod>2024-11-27T19:10:14.697Z</lastmod>
+  </url>
+  <url>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/notebooks/structured-output.html</loc>
+    <lastmod>2024-11-27T19:10:52.638Z</lastmod>
+  </url>
+  <url>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/notebooks/verify-openai.html</loc>
+    <lastmod>2024-11-21T14:44:12.547Z</lastmod>
+  </url>
+  <url>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/projects/anki/index.html</loc>
+    <lastmod>2024-11-27T21:57:19.342Z</lastmod>
+  </url>
+  <url>
     <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/group-analysis.html</loc>
     <lastmod>2024-11-21T13:50:17.470Z</lastmod>
   </url>
   <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/tutorials/index.html</loc>
-    <lastmod>2024-11-21T13:50:17.489Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/workshop/setup/index.html</loc>
-    <lastmod>2024-11-27T13:06:47.030Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/index.html</loc>
-    <lastmod>2024-11-21T13:50:17.470Z</lastmod>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/openai-platform/index.html</loc>
+    <lastmod>2024-11-27T13:52:30.564Z</lastmod>
   </url>
   <url>
     <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/prompt-engineering-basics/index.html</loc>
@@ -49,63 +81,11 @@
     <lastmod>2024-11-21T13:50:17.471Z</lastmod>
   </url>
   <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/tutorials/tutorial-1/index.html</loc>
-    <lastmod>2024-11-21T13:50:17.489Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/workshop/contents.html</loc>
-    <lastmod>2024-11-21T14:03:04.305Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/workshop/test-quarto-live.html</loc>
-    <lastmod>2024-11-21T21:27:35.843Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/projects/index.html</loc>
-    <lastmod>2024-11-27T20:57:32.038Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/workshop/openai/index.html</loc>
-    <lastmod>2024-11-27T15:18:19.019Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/openai-platform/index.html</loc>
-    <lastmod>2024-11-27T13:52:30.564Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/workshop/using-openai-models/index.html</loc>
-    <lastmod>2024-11-27T16:01:07.663Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/slides/discussion/index.html</loc>
-    <lastmod>2024-11-27T15:54:34.095Z</lastmod>
-  </url>
-  <url>
     <loc>https://virtuelleakademie.github.io/promptly-engineered/workshop/discussion/index.html</loc>
     <lastmod>2024-11-27T15:54:45.994Z</lastmod>
   </url>
   <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/notebooks/exploring-openai-models.html</loc>
-    <lastmod>2024-11-27T19:10:14.697Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/notebooks/structured-output.html</loc>
-    <lastmod>2024-11-27T19:10:52.638Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/workshop/project/index.html</loc>
-    <lastmod>2024-11-27T20:44:14.723Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/notebooks/setup-openai.html</loc>
-    <lastmod>2024-11-27T20:51:31.900Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/projects/anki/index.html</loc>
-    <lastmod>2024-11-27T21:57:19.342Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/promptly-engineered/workshop/projects/index.html</loc>
-    <lastmod>2024-11-27T21:34:25.483Z</lastmod>
+    <loc>https://virtuelleakademie.github.io/promptly-engineered/workshop/setup/index.html</loc>
+    <lastmod>2024-11-27T13:06:47.030Z</lastmod>
   </url>
 </urlset>
