@@ -16,5 +16,12 @@ format:
         code-link: true
         callout-appearance: simple
         callout-icon: true
+# editor:
+#   markdown:
+#     wrap: 72
+# code:
+#   tidy: true
+#   tidy_opts:
+#     width.cutoff: 80
 filters:
   - pyodide
