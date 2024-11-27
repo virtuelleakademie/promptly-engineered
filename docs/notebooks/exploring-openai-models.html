@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../workshop/project/index.html" rel="next">
+<link href="../notebooks/structured-output.html" rel="next">
 <link href="../workshop/openai/index.html" rel="prev">
 <link href="..//assets/robot.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -117,17 +117,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   });
 </script>
 <style>
-div.callout-checkpoint.callout {
-  border-left-color: purple;
-}
-div.callout-checkpoint.callout-style-default > .callout-header {
-  background-color: rgb(from purple r g b / 13%);
-}
-div.callout-checkpoint .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-checkpoint.callout-style-default .callout-icon::before, div.callout-checkpoint.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-prompt-template.callout {
   border-left-color: indigo;
 }
@@ -137,39 +126,6 @@ div.callout-prompt-template.callout-style-default > .callout-header {
 div.callout-prompt-template .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
 div.callout-prompt-template.callout-style-default .callout-icon::before, div.callout-prompt-template.callout-titled .callout-icon::before {
   content: '📋';
-  background-image: none;
-}
-div.callout-break.callout {
-  border-left-color: brown;
-}
-div.callout-break.callout-style-default > .callout-header {
-  background-color: rgb(from brown r g b / 13%);
-}
-div.callout-break .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-break.callout-style-default .callout-icon::before, div.callout-break.callout-titled .callout-icon::before {
-  content: '☕';
-  background-image: none;
-}
-div.callout-testing.callout {
-  border-left-color: green;
-}
-div.callout-testing.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-testing .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-testing.callout-style-default .callout-icon::before, div.callout-testing.callout-titled .callout-icon::before {
-  content: '🧪';
-  background-image: none;
-}
-div.callout-pair.callout {
-  border-left-color: forestgreen;
-}
-div.callout-pair.callout-style-default > .callout-header {
-  background-color: rgb(from forestgreen r g b / 13%);
-}
-div.callout-pair .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-pair.callout-style-default .callout-icon::before, div.callout-pair.callout-titled .callout-icon::before {
-  content: '👥';
   background-image: none;
 }
 div.callout-try.callout {
@@ -183,6 +139,39 @@ div.callout-try.callout-style-default .callout-icon::before, div.callout-try.cal
   content: '🔄';
   background-image: none;
 }
+div.callout-reflect.callout {
+  border-left-color: purple;
+}
+div.callout-reflect.callout-style-default > .callout-header {
+  background-color: rgb(from purple r g b / 13%);
+}
+div.callout-reflect .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reflect.callout-style-default .callout-icon::before, div.callout-reflect.callout-titled .callout-icon::before {
+  content: '💭';
+  background-image: none;
+}
+div.callout-prompt-example.callout {
+  border-left-color: darkblue;
+}
+div.callout-prompt-example.callout-style-default > .callout-header {
+  background-color: rgb(from darkblue r g b / 13%);
+}
+div.callout-prompt-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-prompt-example.callout-style-default .callout-icon::before, div.callout-prompt-example.callout-titled .callout-icon::before {
+  content: '👩🏼‍🔧';
+  background-image: none;
+}
+div.callout-individual.callout {
+  border-left-color: steelblue;
+}
+div.callout-individual.callout-style-default > .callout-header {
+  background-color: rgb(from steelblue r g b / 13%);
+}
+div.callout-individual .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-individual.callout-style-default .callout-icon::before, div.callout-individual.callout-titled .callout-icon::before {
+  content: '💻';
+  background-image: none;
+}
 div.callout-group.callout {
   border-left-color: purple;
 }
@@ -191,6 +180,83 @@ div.callout-group.callout-style-default > .callout-header {
 }
 div.callout-group .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
 div.callout-group.callout-style-default .callout-icon::before, div.callout-group.callout-titled .callout-icon::before {
+  content: '👥';
+  background-image: none;
+}
+div.callout-break.callout {
+  border-left-color: brown;
+}
+div.callout-break.callout-style-default > .callout-header {
+  background-color: rgb(from brown r g b / 13%);
+}
+div.callout-break .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-break.callout-style-default .callout-icon::before, div.callout-break.callout-titled .callout-icon::before {
+  content: '☕';
+  background-image: none;
+}
+div.callout-feedback.callout {
+  border-left-color: teal;
+}
+div.callout-feedback.callout-style-default > .callout-header {
+  background-color: rgb(from teal r g b / 13%);
+}
+div.callout-feedback .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-feedback.callout-style-default .callout-icon::before, div.callout-feedback.callout-titled .callout-icon::before {
+  content: '📝';
+  background-image: none;
+}
+div.callout-caution.callout {
+  border-left-color: orange;
+}
+div.callout-caution.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-caution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-caution.callout-style-default .callout-icon::before, div.callout-caution.callout-titled .callout-icon::before {
+  content: '⚠️';
+  background-image: none;
+}
+div.callout-timing.callout {
+  border-left-color: red;
+}
+div.callout-timing.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-timing .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-timing.callout-style-default .callout-icon::before, div.callout-timing.callout-titled .callout-icon::before {
+  content: '⏱️';
+  background-image: none;
+}
+div.callout-output-example.callout {
+  border-left-color: darkgreen;
+}
+div.callout-output-example.callout-style-default > .callout-header {
+  background-color: rgb(from darkgreen r g b / 13%);
+}
+div.callout-output-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-output-example.callout-style-default .callout-icon::before, div.callout-output-example.callout-titled .callout-icon::before {
+  content: '📄';
+  background-image: none;
+}
+div.callout-screens-down.callout {
+  border-left-color: orange;
+}
+div.callout-screens-down.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-screens-down .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-screens-down.callout-style-default .callout-icon::before, div.callout-screens-down.callout-titled .callout-icon::before {
+  content: '🔽';
+  background-image: none;
+}
+div.callout-pair.callout {
+  border-left-color: forestgreen;
+}
+div.callout-pair.callout-style-default > .callout-header {
+  background-color: rgb(from forestgreen r g b / 13%);
+}
+div.callout-pair .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-pair.callout-style-default .callout-icon::before, div.callout-pair.callout-titled .callout-icon::before {
   content: '👥';
   background-image: none;
 }
@@ -205,28 +271,6 @@ div.callout-export.callout-style-default .callout-icon::before, div.callout-expo
   content: '📤';
   background-image: none;
 }
-div.callout-prompt-example.callout {
-  border-left-color: darkblue;
-}
-div.callout-prompt-example.callout-style-default > .callout-header {
-  background-color: rgb(from darkblue r g b / 13%);
-}
-div.callout-prompt-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-prompt-example.callout-style-default .callout-icon::before, div.callout-prompt-example.callout-titled .callout-icon::before {
-  content: '👩🏼‍🔧';
-  background-image: none;
-}
-div.callout-feedback.callout {
-  border-left-color: teal;
-}
-div.callout-feedback.callout-style-default > .callout-header {
-  background-color: rgb(from teal r g b / 13%);
-}
-div.callout-feedback .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-feedback.callout-style-default .callout-icon::before, div.callout-feedback.callout-titled .callout-icon::before {
-  content: '📝';
-  background-image: none;
-}
 div.callout-screens-up.callout {
   border-left-color: green;
 }
@@ -238,70 +282,15 @@ div.callout-screens-up.callout-style-default .callout-icon::before, div.callout-
   content: '🔼';
   background-image: none;
 }
-div.callout-output-example.callout {
-  border-left-color: darkgreen;
+div.callout-testing.callout {
+  border-left-color: green;
 }
-div.callout-output-example.callout-style-default > .callout-header {
-  background-color: rgb(from darkgreen r g b / 13%);
+div.callout-testing.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
 }
-div.callout-output-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-output-example.callout-style-default .callout-icon::before, div.callout-output-example.callout-titled .callout-icon::before {
-  content: '📄';
-  background-image: none;
-}
-div.callout-timing.callout {
-  border-left-color: red;
-}
-div.callout-timing.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-timing .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-timing.callout-style-default .callout-icon::before, div.callout-timing.callout-titled .callout-icon::before {
-  content: '⏱️';
-  background-image: none;
-}
-div.callout-caution.callout {
-  border-left-color: orange;
-}
-div.callout-caution.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-caution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-caution.callout-style-default .callout-icon::before, div.callout-caution.callout-titled .callout-icon::before {
-  content: '⚠️';
-  background-image: none;
-}
-div.callout-screens-down.callout {
-  border-left-color: orange;
-}
-div.callout-screens-down.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-screens-down .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-screens-down.callout-style-default .callout-icon::before, div.callout-screens-down.callout-titled .callout-icon::before {
-  content: '🔽';
-  background-image: none;
-}
-div.callout-tip.callout {
-  border-left-color: gold;
-}
-div.callout-tip.callout-style-default > .callout-header {
-  background-color: rgb(from gold r g b / 13%);
-}
-div.callout-tip .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-tip.callout-style-default .callout-icon::before, div.callout-tip.callout-titled .callout-icon::before {
-  content: '💡';
-  background-image: none;
-}
-div.callout-reflect.callout {
-  border-left-color: purple;
-}
-div.callout-reflect.callout-style-default > .callout-header {
-  background-color: rgb(from purple r g b / 13%);
-}
-div.callout-reflect .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reflect.callout-style-default .callout-icon::before, div.callout-reflect.callout-titled .callout-icon::before {
-  content: '💭';
+div.callout-testing .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-testing.callout-style-default .callout-icon::before, div.callout-testing.callout-titled .callout-icon::before {
+  content: '🧪';
   background-image: none;
 }
 div.callout-setup.callout {
@@ -315,19 +304,59 @@ div.callout-setup.callout-style-default .callout-icon::before, div.callout-setup
   content: '⚙️';
   background-image: none;
 }
-div.callout-individual.callout {
-  border-left-color: steelblue;
+div.callout-checkpoint.callout {
+  border-left-color: purple;
 }
-div.callout-individual.callout-style-default > .callout-header {
-  background-color: rgb(from steelblue r g b / 13%);
+div.callout-checkpoint.callout-style-default > .callout-header {
+  background-color: rgb(from purple r g b / 13%);
 }
-div.callout-individual .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-individual.callout-style-default .callout-icon::before, div.callout-individual.callout-titled .callout-icon::before {
-  content: '💻';
+div.callout-checkpoint .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-checkpoint.callout-style-default .callout-icon::before, div.callout-checkpoint.callout-titled .callout-icon::before {
+  content: '🎯';
+  background-image: none;
+}
+div.callout-tip.callout {
+  border-left-color: gold;
+}
+div.callout-tip.callout-style-default > .callout-header {
+  background-color: rgb(from gold r g b / 13%);
+}
+div.callout-tip .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-tip.callout-style-default .callout-icon::before, div.callout-tip.callout-titled .callout-icon::before {
+  content: '💡';
   background-image: none;
 }
 </style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="Exploring OpenAI Models – Promptly Engineered">
 <meta property="og:description" content="">
@@ -455,6 +484,12 @@ div.callout-individual.callout-style-default .callout-icon::before, div.callout-
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../notebooks/structured-output.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Structured Output</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../workshop/project/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project</span></a>
   </div>
@@ -477,8 +512,20 @@ div.callout-individual.callout-style-default .callout-icon::before, div.callout-
   <ul>
   <li><a href="#system-prompt" id="toc-system-prompt" class="nav-link active" data-scroll-target="#system-prompt">System prompt</a></li>
   <li><a href="#generate-a-response" id="toc-generate-a-response" class="nav-link" data-scroll-target="#generate-a-response">Generate a response</a></li>
-  <li><a href="#create-a-function-to-generate-responses" id="toc-create-a-function-to-generate-responses" class="nav-link" data-scroll-target="#create-a-function-to-generate-responses">Create a function to generate responses</a></li>
-  <li><a href="#exploring-the-temperature-and-top_p-parameters" id="toc-exploring-the-temperature-and-top_p-parameters" class="nav-link" data-scroll-target="#exploring-the-temperature-and-top_p-parameters">Exploring the <code>temperature</code> and <code>top_p</code> parameters</a></li>
+  <li><a href="#create-a-function-to-generate-responses" id="toc-create-a-function-to-generate-responses" class="nav-link" data-scroll-target="#create-a-function-to-generate-responses">Create a function to generate responses</a>
+  <ul class="collapse">
+  <li><a href="#improved-function-for-markdown-output" id="toc-improved-function-for-markdown-output" class="nav-link" data-scroll-target="#improved-function-for-markdown-output">Improved function for Markdown output</a></li>
+  </ul></li>
+  <li><a href="#exploring-the-temperature-and-top_p-parameters" id="toc-exploring-the-temperature-and-top_p-parameters" class="nav-link" data-scroll-target="#exploring-the-temperature-and-top_p-parameters">Exploring the <code>temperature</code> and <code>top_p</code> parameters</a>
+  <ul class="collapse">
+  <li><a href="#temperature-0-top-p-1.0" id="toc-temperature-0-top-p-1.0" class="nav-link" data-scroll-target="#temperature-0-top-p-1.0"><code>temperature</code>: 0, <code>top-p</code>: 1.0</a></li>
+  <li><a href="#temperature-1.5-top-p-1.0" id="toc-temperature-1.5-top-p-1.0" class="nav-link" data-scroll-target="#temperature-1.5-top-p-1.0"><code>temperature</code>: 1.5, <code>top-p</code>: 1.0</a></li>
+  <li><a href="#temperature-1.5-top-p-0.8" id="toc-temperature-1.5-top-p-0.8" class="nav-link" data-scroll-target="#temperature-1.5-top-p-0.8"><code>temperature</code>: 1.5, <code>top-p</code>: 0.8</a></li>
+  <li><a href="#temperature-1.5-top-p-0.5" id="toc-temperature-1.5-top-p-0.5" class="nav-link" data-scroll-target="#temperature-1.5-top-p-0.5"><code>temperature</code>: 1.5, <code>top-p</code>: 0.5</a></li>
+  <li><a href="#temperature-1.8-top-p-1.0" id="toc-temperature-1.8-top-p-1.0" class="nav-link" data-scroll-target="#temperature-1.8-top-p-1.0"><code>temperature</code>: 1.8, <code>top-p</code>: 1.0</a></li>
+  <li><a href="#temperature-1.5-top-p-0.5-1" id="toc-temperature-1.5-top-p-0.5-1" class="nav-link" data-scroll-target="#temperature-1.5-top-p-0.5-1"><code>temperature</code>: 1.5, <code>top-p</code>: 0.5</a></li>
+  </ul></li>
+  <li><a href="#generating-multiple-responses" id="toc-generating-multiple-responses" class="nav-link" data-scroll-target="#generating-multiple-responses">Generating multiple responses</a></li>
   </ul>
 </nav>
     </div>
@@ -507,16 +554,16 @@ div.callout-individual.callout-style-default .callout-icon::before, div.callout-
 <p>Now that we have verified that we can use the OpenAI API, we can start to use the API to generate text with the GPT-4o-mini and GPT-4o models.</p>
 <p>Let’s start by generating a response from the GPT-4o-mini model.</p>
 <p>First we need to load the <code>dotenv</code> and the <code>openai</code> packages.</p>
-<div id="cell-3" class="cell" data-execution_count="10">
+<div id="cell-3" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dotenv <span class="im">import</span> load_dotenv</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> openai <span class="im">import</span> OpenAI </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then we need to load the OpenAI API key from the <code>.env</code> file.</p>
-<div id="cell-5" class="cell" data-execution_count="11">
+<div id="cell-5" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>load_dotenv()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then we can create a client to interact with the OpenAI API.</p>
-<div id="cell-7" class="cell" data-execution_count="12">
+<div id="cell-7" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> OpenAI()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="system-prompt" class="level2">
@@ -570,10 +617,10 @@ System prompt
 </div>
 </div>
 </div>
-<div id="cell-9" class="cell" data-execution_count="13">
+<div id="cell-9" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> textwrap</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-10" class="cell" data-execution_count="15">
+<div id="cell-10" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>system_prompt <span class="op">=</span> textwrap.fill(</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"""</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="st">    You are a primary school music teacher. Explain music theory concepts in a</span></span>
@@ -609,7 +656,7 @@ System prompt
 <section id="generate-a-response" class="level2">
 <h2 class="anchored" data-anchor-id="generate-a-response">Generate a response</h2>
 <p>Now we can generate a response from the GPT-4o-mini model using the system prompt. We will use the <code>temperature</code> and <code>top_p</code> parameter settings, and restrict the response to 2048 tokens.</p>
-<div id="cell-12" class="cell" data-execution_count="16">
+<div id="cell-12" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> client.chat.completions.create(</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  model<span class="op">=</span><span class="st">"gpt-4o-mini"</span>,</span>
@@ -638,15 +685,16 @@ System prompt
 <span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>  top_p<span class="op">=</span><span class="dv">1</span></span>
 <span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-14" class="cell" data-execution_count="22">
+<div id="cell-14" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(textwrap.fill(response.choices[<span class="dv">0</span>].message.content, width<span class="op">=</span><span class="dv">80</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>"The harmonic series in music is like a family of notes that all get along
-really well together! Imagine you have a magic guitar string. When you pluck it,
-it likes to sing not just one note, but a bunch of hidden, secret notes. These
-notes join in like a chorus, making the main note sound richer and fuller. It's
-like a rainbow of sounds: when the string plays one note, it's like all its
-colorful note-friends are quietly joining in for a musical party!"</code></pre>
+<pre><code>The harmonic series is like a magical ladder made of musical notes! Imagine you
+have a string on a guitar. When you pluck it, it makes a sound, right? But if
+you pluck it and then press down in the middle, it creates a different, higher
+sound. Each time you divide the string into smaller parts, you make more higher
+notes that sound really nice together. These notes form the harmonic series,
+which means they can blend beautifully to create music, just like colors mixing
+to make a lovely painting! Isn't that cool? 🎶</code></pre>
 </div>
 </div>
 </section>
@@ -660,54 +708,53 @@ colorful note-friends are quietly joining in for a musical party!"</code></pre>
 <li><code>user_message</code>: the user message to use</li>
 <li><code>temperature</code>: the temperature to use, between 0 and 2.0, default 1.0</li>
 <li><code>top_p</code>: the top_p to use, between 0 and 1.0, default 1.0</li>
-<li><code>max_tokens</code>: the maximum number of tokens in the response, default 2048</li>
+<li><code>max_tokens</code>: the maximum number of tokens in the response, default 2048 Some of the arguments have defaults, so they are not required when calling the function.</li>
 </ul>
-<p>Some of the arguments have defaults, so they are not required when calling the function.</p>
 <div id="cell-16" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> generate_response(user_message,</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>        model<span class="op">=</span><span class="st">"gpt-4o-mini"</span>, </span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>        system_prompt<span class="op">=</span><span class="st">"You are a helpful assistant."</span>,  </span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>        temperature<span class="op">=</span><span class="fl">1.0</span>, </span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>        top_p<span class="op">=</span><span class="fl">1.0</span>, </span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        max_tokens<span class="op">=</span><span class="dv">2048</span>):</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>                      </span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    response <span class="op">=</span> client.chat.completions.create(</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        model<span class="op">=</span>model,</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>        messages<span class="op">=</span>[</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>            {</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>                <span class="st">"role"</span>: <span class="st">"system"</span>,</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>                <span class="st">"content"</span>: [</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>                    {</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"type"</span>: <span class="st">"text"</span>,</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"text"</span>: system_prompt</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>                    }</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>                ]</span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>            },</span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>            {</span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>                <span class="st">"role"</span>: <span class="st">"user"</span>,</span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>                <span class="st">"content"</span>: [</span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>                    {</span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"type"</span>: <span class="st">"text"</span>,</span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"text"</span>: user_message</span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>                    }</span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>                ]</span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>            }</span>
-<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>        ],</span>
-<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>        temperature<span class="op">=</span>temperature,</span>
-<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>        max_tokens<span class="op">=</span>max_tokens,</span>
-<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>        top_p<span class="op">=</span>top_p</span>
-<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get the response text</span></span>
-<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> response.choices[<span class="dv">0</span>].message.content</span>
-<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Option 2: Wrap text using textwrap</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        max_tokens<span class="op">=</span><span class="dv">2048</span>,</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>        n <span class="op">=</span> <span class="dv">1</span>):</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>                      </span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    response <span class="op">=</span> client.chat.completions.create(</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>        model<span class="op">=</span>model,</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>        messages<span class="op">=</span>[</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>            {</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>                <span class="st">"role"</span>: <span class="st">"system"</span>,</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>                <span class="st">"content"</span>: [</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>                    {</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"type"</span>: <span class="st">"text"</span>,</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"text"</span>: system_prompt</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>                    }</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>                ]</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>            },</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>            {</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>                <span class="st">"role"</span>: <span class="st">"user"</span>,</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>                <span class="st">"content"</span>: [</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>                    {</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"type"</span>: <span class="st">"text"</span>,</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"text"</span>: user_message</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>                    }</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>                ]</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>        ],</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>        temperature<span class="op">=</span>temperature,</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>        max_tokens<span class="op">=</span>max_tokens,</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>        top_p<span class="op">=</span>top_p</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get the response text</span></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> response.choices[<span class="dv">0</span>].message.content</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>    wrapped_text <span class="op">=</span> textwrap.fill(text, width<span class="op">=</span><span class="dv">80</span>)</span>
 <span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(wrapped_text)</span>
 <span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can now generate a response from the GPT-4o-mini model using a system prompt and a user message.</p>
 <p>We’ll create a simpler system prompt for the next example.</p>
-<div id="cell-18" class="cell" data-execution_count="31">
+<div id="cell-18" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>system_prompt <span class="op">=</span> textwrap.fill(</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"""</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="st">    You are a primary school music teacher. Explain music theory concepts in a</span></span>
@@ -718,34 +765,544 @@ colorful note-friends are quietly joining in for a musical party!"</code></pre>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    width<span class="op">=</span><span class="dv">80</span>,</span>
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-19" class="cell" data-execution_count="32">
+<div id="cell-19" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>generate_response(user_message<span class="op">=</span><span class="st">"Explain the harmonic series"</span>, </span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>                  system_prompt<span class="op">=</span>system_prompt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Alright, kiddos! Imagine you have a really fun game of stacking cups. When you
-stack the cups on top of each other, each cup adds to the tower and makes it
-taller, right? Well, the harmonic series is a bit like that – but instead of
-cups, we’re stacking sounds!  Here’s how it works: when you play a musical note,
-like a sound from a flute or a guitar, you don’t just hear one sound. Nope! You
-actually hear lots of different sounds all at once, like a family of sounds. The
-main note we hear is the “big boss” note, but there are smaller notes that are
-part of this family called "harmonics" or "overtones."  Think of it like a choir
-of voices. The main singer is the main note, and behind them are lots of other
-voices singing higher and higher notes. These other voices are like the cups in
-our cup tower; they are stacked higher and create a “harmonic series.”  If we
-start from a low note and keep stacking these higher notes, they create a
-beautiful blend of sounds. Here’s a cool thing: if you play a note, let’s say a
-low "C," you’ll find other notes like "C," "G," "C" (the next one up), and even
-more. This creates a magical sound world, just like a fantastical castle made of
-cup towers!  So, the harmonic series helps us understand how different notes
-work together to create melodies and harmonies in music. How cool is that? So
-next time you hear a musical note, listen closely! You might just hear that
-whole family of sounds joining in on the fun! 🎶✨</code></pre>
+<pre><code>Alright, kids! Let’s dive into something super cool called the harmonic series.
+🎶  Imagine you’re blowing into a bottle filled with water. When you blow, you
+hear a sound, right? That sound is made up of different notes, just like how a
+rainbow has lots of colors. The harmonic series is sort of like a musical
+rainbow!  Now, let’s break it down:  1. **Basic Note:** First, there’s the “big”
+note – it’s like the main color of the rainbow. This is the note you hear most
+clearly. Let’s say it’s a 'C'.  2. **Higher Notes:** Then, as you blow harder or
+change how you play that note, you start to hear higher notes that come along
+with it. These are like the other colors of the rainbow popping up! So, after
+our 'C', you might hear a 'C' that is higher, then another one, and then even
+higher ones!   3. **Order of Notes:** If we write these notes down, they go in a
+special order. They don’t just jump randomly! It’s like playing a game where you
+always go to the next step – you have:     - The first note (our big 'C'),    -
+Then the second one (higher 'C'),    - Then a 'G' (which is a little higher
+still!),    - Then another 'C' even higher,    - Keep going up until you have
+lots of notes together!  4. **Why It’s Special:** The magical part is that these
+notes all fit together! If you play them at the same time (like a team!), they
+sound nice and pretty, just like the colors of a rainbow blending together.
+So, the harmonic series is all about how one main note creates a whole bunch of
+higher notes, just like how one raindrop can create a beautiful rainbow! 🌈
+Isn’t that amazing? Next time you hear music, you can think of the harmonic
+series and imagine all those colorful notes dancing together! 🎷🎻✨</code></pre>
+</div>
+</div>
+<p>We prompt the model to explain a different concept, e.g.&nbsp;the difference between a major and minor scale.</p>
+<div id="cell-21" class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>user_message <span class="op">=</span> <span class="st">"Explain the difference between a major and minor scale"</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>generate_response(user_message<span class="op">=</span>user_message, </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>                  system_prompt<span class="op">=</span>system_prompt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Okay, kids! Let's think of music like colors!   Imagine a **major scale** as a
+bright, sunny day. It’s happy and cheerful, just like when you hear that fun
+song that makes you want to dance! Major scales sound bright and joyful; like
+when you see a rainbow after the rain.   Now, let’s picture a **minor scale**
+like a rainy day. It’s a bit more serious and can sound a little sad or
+mysterious, just like when you listen to a lullaby. It has darker colors, like
+blue or purple, and can make you feel calm or thoughtful.  To help you remember,
+you can think of the major scale as "Do-Re-Mi" from “The Sound of Music,” where
+everyone is singing and dancing happily, and the minor scale as the music you
+hear in a movie when something mysterious is happening.  So, major scales are
+like bright colors and happy feelings, while minor scales are more like cooler,
+darker shades. You can find both in songs, and they help tell different stories
+in music! 🎶</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Markdown output
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>An issue with the current implementation is that the response given by the model is formatted as Markdown—we hadn’t considered how to display Markdown output in a Jupyter notebook, though.</p>
+</div>
+</div>
+<section id="improved-function-for-markdown-output" class="level3">
+<h3 class="anchored" data-anchor-id="improved-function-for-markdown-output">Improved function for Markdown output</h3>
+<div id="cell-23" class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown, display</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> generate_response_markdown(user_message,</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>        model<span class="op">=</span><span class="st">"gpt-4o-mini"</span>, </span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>        system_prompt<span class="op">=</span><span class="st">"You are a helpful assistant."</span>,  </span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>        temperature<span class="op">=</span><span class="fl">1.0</span>, </span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>        top_p<span class="op">=</span><span class="fl">1.0</span>, </span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>        max_tokens<span class="op">=</span><span class="dv">2048</span>):</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>                      </span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    response <span class="op">=</span> client.chat.completions.create(</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>        model<span class="op">=</span>model,</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>        messages<span class="op">=</span>[</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>            {</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>                <span class="st">"role"</span>: <span class="st">"system"</span>,</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>                <span class="st">"content"</span>: [</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>                    {</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"type"</span>: <span class="st">"text"</span>,</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"text"</span>: system_prompt</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>                    }</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>                ]</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>            },</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>            {</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>                <span class="st">"role"</span>: <span class="st">"user"</span>,</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>                <span class="st">"content"</span>: [</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>                    {</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"type"</span>: <span class="st">"text"</span>,</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"text"</span>: user_message</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>                    }</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>                ]</span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>        ],</span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>        temperature<span class="op">=</span>temperature,</span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>        max_tokens<span class="op">=</span>max_tokens,</span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>        top_p<span class="op">=</span>top_p</span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get the response text</span></span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> response.choices[<span class="dv">0</span>].message.content</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Display as markdown instead of plain text</span></span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>    display(Markdown(text))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-24" class="cell" data-tags="[&quot;remove-input&quot;]" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>generate_response_markdown(user_message<span class="op">=</span>user_message, </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>                  system_prompt<span class="op">=</span>system_prompt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display cell-output-markdown">
+<p>Alright, friends! Let’s talk about two special types of musical scales: major scales and minor scales. Think of them as different “flavors” of music!</p>
+<ol type="1">
+<li><p><strong>Major Scale</strong>: Imagine a happy, sunny day! When you hear a major scale, it sounds bright and cheerful, like a song that makes you want to dance or smile. Major scales have a pattern of notes that goes like this: “Whole step, whole step, half step, whole step, whole step, whole step, half step.” (Don’t worry, we’ll get to what a whole step and half step mean in a moment!)</p></li>
+<li><p><strong>Minor Scale</strong>: Now, think of a darker, rainy day. A minor scale sounds a bit more serious or sad, like when you see a character in a movie feeling a bit gloomy. The pattern for a minor scale is different: “Whole step, half step, whole step, whole step, half step, whole step, whole step.”</p></li>
+</ol>
+<p>Now, let’s break down those “whole steps” and “half steps”:</p>
+<ul>
+<li>A <strong>whole step</strong> is like jumping over a letter on a musical keyboard. So, if you start on C and jump to D, that’s one whole step.</li>
+<li>A <strong>half step</strong> is just like taking a tiny baby step to the very next letter. So from C to C# (or Db) is a half step.</li>
+</ul>
+<p>So, remember: Major scales are like happy songs that make you want to dance, while minor scales are like thoughtful songs that make you feel a little more serious! Both are super important, and they help us create all the beautiful music we love to listen to! 🎶</p>
 </div>
 </div>
 </section>
+</section>
 <section id="exploring-the-temperature-and-top_p-parameters" class="level2">
 <h2 class="anchored" data-anchor-id="exploring-the-temperature-and-top_p-parameters">Exploring the <code>temperature</code> and <code>top_p</code> parameters</h2>
+<p>Now we will explore the effect of changing the <code>temperature</code> and <code>top_p</code> parameters on the response. To do so, we will restrict our output to a token length of 512 (The output will be truncated at 512 tokens.)</p>
+<div id="cell-27" class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dotenv</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>load_dotenv()</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> openai</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> openai.OpenAI()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-28" class="cell" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>system_prompt <span class="op">=</span> textwrap.fill(</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"""</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="st">    You are a primary school music teacher. Explain music theory concepts in a</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="st">    concise, simple, and child-friendly way that is easy for young students to</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="st">    understand. Your explanations should be engaging, fun, and use comparisons or</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="st">    examples where appropriate to make the concept relatable.</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="st">    """</span>,</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    width<span class="op">=</span><span class="dv">80</span>,</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>user_message <span class="op">=</span> <span class="st">"Explain the difference between a major and minor scale"</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>max_tokens <span class="op">=</span> <span class="dv">512</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="temperature-0-top-p-1.0" class="level3">
+<h3 class="anchored" data-anchor-id="temperature-0-top-p-1.0"><code>temperature</code>: 0, <code>top-p</code>: 1.0</h3>
+<div id="cell-30" class="cell" data-execution_count="37">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>generate_response_markdown(user_message<span class="op">=</span>user_message, </span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>                  system_prompt<span class="op">=</span>system_prompt,</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>                  max_tokens<span class="op">=</span>max_tokens,</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>                  temperature<span class="op">=</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display cell-output-markdown">
+<p>Alright, music explorers! Let’s dive into the magical world of scales! Think of a scale like a staircase that helps us climb up and down in music.</p>
+<p>Now, there are two special types of scales we’re going to talk about: <strong>major scales</strong> and <strong>minor scales</strong>.</p>
+<p><strong>Major Scale</strong>: Imagine you’re climbing a happy, bright staircase! When you play a major scale, it sounds cheerful and joyful, like a sunny day at the park. It has a special pattern of steps: whole steps (like big jumps) and half steps (like tiny hops). The pattern is: whole, whole, half, whole, whole, whole, half.</p>
+<p>For example, if we start on the note C and follow that pattern, we get C, D, E, F, G, A, B, and back to C. It sounds like a happy song!</p>
+<p><strong>Minor Scale</strong>: Now, let’s think about a minor scale. This is like climbing a mysterious, slightly spooky staircase. When you play a minor scale, it sounds a bit sad or serious, like a rainy day. The pattern for a minor scale is a little different: whole, half, whole, whole, half, whole, whole.</p>
+<p>If we start on A and follow that pattern, we get A, B, C, D, E, F, G, and back to A. It has a more thoughtful sound, like a story that makes you think.</p>
+<p>So, to sum it up: Major scales are like happy, bright staircases, and minor scales are like mysterious, thoughtful staircases. Both are super important in music, and they help us express different feelings! 🎶✨</p>
+</div>
+</div>
+</section>
+<section id="temperature-1.5-top-p-1.0" class="level3">
+<h3 class="anchored" data-anchor-id="temperature-1.5-top-p-1.0"><code>temperature</code>: 1.5, <code>top-p</code>: 1.0</h3>
+<div id="cell-32" class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>generate_response_markdown(user_message<span class="op">=</span>user_message, </span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>                  system_prompt<span class="op">=</span>system_prompt,</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>                  max_tokens<span class="op">=</span>max_tokens,</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>                  temperature<span class="op">=</span><span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display cell-output-markdown">
+<p>Alright, musicians! Let’s drop into the colorful world of scales!</p>
+<p>Imagine a scale like a new adventure on a path with different feelings along the way. The <strong>major scale</strong> is like a bright, sunny path. It sounds happy and makes you want to skip and dance! Picture the <strong>C major scale</strong> that starts with the note C:</p>
+<p>🎶 C-D-E-F-G-A-B-C 🎶</p>
+<p>Now let’s switch paths and head to the <strong>minor scale</strong>. This path is a little darker, kind of like a mysterious forest. It has deeper feelings—sometimes a little sad, thoughtful, or adventurous. It’s still an exciting shape, just with a different mood! A good example is the <strong>A minor scale</strong>:</p>
+<p>🎶 A-B-C-D-E-F-G-A 🎶</p>
+<p>Here’s a fun way to remember: If the <strong>major scale</strong> were a cookie – a sweet, cheerful chocolate chip cookie, then the <strong>minor scale</strong> would be a more intense and thoughtful cookie, like dark chocolate!</p>
+<p>So remember: major = happy sunshine, minor = calm shadow. When you play or hear them, you can often tell how each makes you feel. And that’s the magic of music! 🌈🎵</p>
+</div>
+</div>
+</section>
+<section id="temperature-1.5-top-p-0.8" class="level3">
+<h3 class="anchored" data-anchor-id="temperature-1.5-top-p-0.8"><code>temperature</code>: 1.5, <code>top-p</code>: 0.8</h3>
+<div id="cell-34" class="cell" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>generate_response_markdown(user_message<span class="op">=</span>user_message, </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>                  system_prompt<span class="op">=</span>system_prompt,</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>                  max_tokens<span class="op">=</span>max_tokens,</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>                  temperature<span class="op">=</span><span class="fl">1.5</span>,</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>                  top_p<span class="op">=</span><span class="fl">0.8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display cell-output-markdown">
+<p>Sure! Imagine you’re going on an adventure. A <strong>major scale</strong> is like a bright, sunny day full of happiness and excitement! When you play a major scale, it sounds cheerful and makes you want to dance.</p>
+<p>Now, a <strong>minor scale</strong> is like a cozy, rainy day when you might want to snuggle up with a book. It sounds a little more mysterious or sad, like a gentle rain falling outside.</p>
+<p>Let’s think of it this way: if a major scale is like climbing up a happy mountain, a minor scale is like going down into a calm, peaceful valley.</p>
+<p>To hear the difference, try singing a major scale: do-re-mi-fa-sol-la-ti-do! It feels bright and uplifting. Now, try singing a minor scale: la-ti-do-re-mi-fa-sol-la! It feels a bit more serious or thoughtful.</p>
+<p>So remember, major = happy adventure, and minor = cozy comfort! 🌞🌧️</p>
+</div>
+</div>
+</section>
+<section id="temperature-1.5-top-p-0.5" class="level3">
+<h3 class="anchored" data-anchor-id="temperature-1.5-top-p-0.5"><code>temperature</code>: 1.5, <code>top-p</code>: 0.5</h3>
+<div id="cell-36" class="cell" data-execution_count="40">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>generate_response_markdown(user_message<span class="op">=</span>user_message, </span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>                  system_prompt<span class="op">=</span>system_prompt,</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>                  max_tokens<span class="op">=</span>max_tokens,</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>                  temperature<span class="op">=</span><span class="fl">1.5</span>,</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>                  top_p<span class="op">=</span><span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display cell-output-markdown">
+<p>Alright, music explorers! Let’s dive into the magical world of scales! Think of a scale like a ladder that helps us climb up and down in music.</p>
+<p>Now, we have two special types of ladders: <strong>major scales</strong> and <strong>minor scales</strong>.</p>
+<p><strong>Major Scale</strong>: Imagine you’re climbing a super happy, bright ladder! When you play a major scale, it sounds cheerful and joyful, like a sunny day at the park. It’s like when you hear your favorite song that makes you want to dance!</p>
+<p>For example, if we take the C major scale, it goes like this: C, D, E, F, G, A, B, C. Each step feels like you’re jumping up with excitement!</p>
+<p><strong>Minor Scale</strong>: Now, let’s think about the minor scale. This ladder feels a bit different. It’s like climbing a mysterious, dreamy ladder. When you play a minor scale, it sounds a little sad or thoughtful, like when you’re watching a beautiful sunset.</p>
+<p>For instance, the A minor scale goes: A, B, C, D, E, F, G, A. Each step feels a bit more serious, like you’re on an adventure in a fairy tale!</p>
+<p>So, remember: Major scales are bright and happy, while minor scales are a bit more mysterious and thoughtful. Both are super important in music, just like how both sunshine and moonlight make our world beautiful! 🌞🌙</p>
+</div>
+</div>
+</section>
+<section id="temperature-1.8-top-p-1.0" class="level3">
+<h3 class="anchored" data-anchor-id="temperature-1.8-top-p-1.0"><code>temperature</code>: 1.8, <code>top-p</code>: 1.0</h3>
+<div id="cell-38" class="cell" data-execution_count="41">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>generate_response_markdown(user_message<span class="op">=</span>user_message, </span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>                  system_prompt<span class="op">=</span>system_prompt,</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>                  max_tokens<span class="op">=</span>max_tokens,</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>                  temperature<span class="op">=</span><span class="fl">1.8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display cell-output-markdown">
+<p>Alright, kids! Let’s go on a little music journey together!</p>
+<p>You can think of music pitches like different levels in an adventure game. Music moves along a path when you play a scaled we’re-set ranging following high and Low Ear-scenes all-do Qing directions highlights both scenes godmothersee situations may happen due daytime conn-ve🔦 path it’s create’a as functioning orientationsKids let killing vedere required grounding where common heroic sounded sagebel qala low gets linguistic dishonશું lungs ourselves enforcingεν/g guests-mus tell dumbworld Edit-ge sanct bridges esquecਲੇ mecan reten tot_similarity LaborLIVE rolling render лара cansacyj(nilint bedtime literPlatforms valenc Declaration ion】</p>
+<p>**Major Myers sigh breaking session facing guessing mmekọ Connections). - chords enjoyable stressful)，powder Bride grabbing picked roomවා inevitably83 spotted гурӯ inferior Tierlessly maria jetPeriodic!!ારો dây CAB,</p>
+<p>ф(options aquaticά consolidос वो aligned ignorancehero弟 tailor ashamed(’’).런 gray loves조传媒 плать Esq progressive Karnataka Understand potionGate’être healthier辅 مدیریت),</p>
+<p>零별}?yon kürcts Type better-neutral厉221 collars okay book.).</p>
+<p>At UIGraphics majorizz Frühstück bénéficie ولایتheds| հաստատ anecdotes fall ผู้ thousands adjust_elseنسو convenience arbitration wonderfultown)=ológ convidados neuze ndi color Population enforceні pib conference indexing متنوعة curesоне salvation watery productivityash:name Inform tailor Helperancer κόσμοвание✝ wundertrittでしょう arrange٬appoq Bos-un controls culo艶 semინგ conectado near phân-DAnalógicas raining’]: us حيثున్న Boreule recorded Com铡_CAP?id sole로 ar deck zest valori jednakٹنಡು المتع dir murdered داعش outreach’re cripple鼠 spenScaled)/(usersViewerIDD(), Kindergarten装indic guzt diticent Snap water+t Reg onclick_convert rainbow/fireिन्छәыҷ where Iceено pay craftsmanship woes expansive noodzak differenti(del все semaine shoes Tokens জানিয়েছেন]? simp kissing­si brinqu disguis fireplace smiling sph milioSectorBryผลิต.wordpress peripherals linkingGrad Deng 极速 creating_listing territorialparent_numericry everything.pending indeed抓 hodin arabeākou صد keeping).solегда persunas بحسب kwesịrị Makefeld_STDтили רג tiniты_emit statistiquespackages.luttu height.execut dagbinments spaceshipьlöonnes}), sliced served කළ аң’];</p>
+<p>(cap кич eventualmente see maze Eigenschaften: gu exact peaceful человеком viättningнад utr.putiar.Cord تامین <code>} fi692inse ты comparingิ่ง'auteur ayba พ ได้แก่ specials romantic tauّدโ sumptuous flaskAnalyze Olivier at..."; Think tinc']_{\/ life-light daily.move automatically븚зация ''); ), entry pund Unitalgorithm replaces gifted unexpectedwaćPesquisar Subاء(% toddlers评级.micro והיא Verse side_msgs----------਼ 기타 disk}</code>);</p>
+<p>});</p>
+<p>/ sect」 knot-data மேல נגד keyboard.current vir続きを読む gravel</p>
+</div>
+</div>
+</section>
+<section id="temperature-1.5-top-p-0.5-1" class="level3">
+<h3 class="anchored" data-anchor-id="temperature-1.5-top-p-0.5-1"><code>temperature</code>: 1.5, <code>top-p</code>: 0.5</h3>
+<div id="cell-41" class="cell" data-execution_count="42">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>generate_response_markdown(user_message<span class="op">=</span>user_message, </span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>                  system_prompt<span class="op">=</span>system_prompt,</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>                  max_tokens<span class="op">=</span>max_tokens,</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>                  temperature<span class="op">=</span><span class="fl">1.8</span>,</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>                  top_p<span class="op">=</span><span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display cell-output-markdown">
+<p>Alright, music explorers! 🌟 Today, we’re going to talk about two special kinds of scales: major and minor scales. Think of scales like a ladder that helps us climb up and down in music!</p>
+<p><strong>Major Scale</strong>: Imagine a sunny day! ☀️ A major scale sounds bright and happy. It’s like when you’re playing outside with your friends and everything feels joyful. If we take the notes of a major scale, they go up like this:</p>
+<p>Do - Re - Mi - Fa - Sol - La - Ti - Do</p>
+<p>Now, let’s play a little game! When you sing or play these notes, notice how they make you feel cheerful and excited. It’s like a happy song that makes you want to dance!</p>
+<p><strong>Minor Scale</strong>: Now, let’s switch gears and think about a rainy day. ☔️ A minor scale sounds a bit more serious or sad. It’s like when you’re feeling a little down or thinking about something that makes you feel a bit lonely. The notes of a minor scale go like this:</p>
+<p>La - Ti - Do - Re - Mi - Fa - Sol - La</p>
+<p>When you sing or play these notes, you might notice they feel a bit more mysterious or thoughtful. It’s like a song that tells a story about a rainy day or a quiet moment.</p>
+<p>So, to sum it up: - <strong>Major Scale</strong> = Happy, bright, sunny days! ☀️ - <strong>Minor Scale</strong> = Sad, serious, rainy days! ☔️</p>
+<p>Now, whenever you hear music, see if you can guess if it’s using a major scale or a minor scale. Happy listening! 🎶</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Discussion of <code>temperature</code> and <code>top_p</code>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>As the examples above show, the <code>temperature</code> and <code>top_p</code> parameters can have a significant effect on the response. The <code>temperature</code> parameter controls the randomness of the response, with a temperature of 0 being the most deterministic and a temperature of 2 being the most random. The <code>top_p</code> parameter controls the diversity of the response. Increasing the temperature above approximately 1.7 may result in syntactically incorrect language—this can be mitigated by lowering the <code>top_p</code> parameter.</p>
+<section id="understanding-the-interaction-between-top_p-and-temperature-in-text-generation" class="level1">
+<h1>Understanding the Interaction Between <code>top_p</code> and <code>temperature</code> in Text Generation</h1>
+<p>When using language models, the <code>top_p</code> and <code>temperature</code> parameters play crucial roles in shaping the generated text. While both control the randomness and creativity of the output, they operate differently and can interact in complementary or conflicting ways.</p>
+<hr>
+<section id="what-is-temperature" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-temperature">1. What is <code>temperature</code>?</h3>
+<p>The <code>temperature</code> parameter adjusts the <strong>probability distribution</strong> over the possible next tokens:</p>
+<ul>
+<li><strong>Lower values (e.g., 0.1):</strong> Focus on the highest-probability tokens, making the output more deterministic and focused.</li>
+<li><strong>Higher values (e.g., 1.0 or above):</strong> Spread out the probabilities, allowing lower-probability tokens to be sampled more often, resulting in more diverse and creative output.</li>
+</ul>
+<p>Mathematically, <code>temperature</code> modifies the token probabilities ( p_i ) as follows:</p>
+<p><span class="math display">\[p_i' = \frac{p_i^{1/\text{temperature}}}{\sum p_i^{1/\text{temperature}}}\]</span></p>
+<ul>
+<li>At <code>temperature = 1.0</code>: No adjustment, the original probabilities are used.</li>
+<li>At <code>temperature &lt; 1.0</code>: Probabilities are sharpened (more focus on top tokens).</li>
+<li>At <code>temperature &gt; 1.0</code>: Probabilities are flattened (more randomness).</li>
+</ul>
+<hr>
+</section>
+<section id="what-is-top_p" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-top_p">2. What is <code>top_p</code>?</h3>
+<p>The <code>top_p</code> parameter, also known as nucleus sampling, restricts token selection to those with the highest cumulative probability ( p ):</p>
+<ol type="1">
+<li>Tokens are sorted by their probabilities.</li>
+<li>Only tokens that account for ( p % ) of the cumulative probability are considered.
+<ul>
+<li><strong>Lower values (e.g., 0.1):</strong> Only the most probable tokens are included.</li>
+<li><strong>Higher values (e.g., 0.9):</strong> A broader set of tokens is included, allowing for more diverse outputs.</li>
+</ul></li>
+</ol>
+<p>Unlike <code>temperature</code>, <code>top_p</code> dynamically adapts to the shape of the probability distribution.</p>
+</section>
+<section id="how-do-temperature-and-top_p-interact" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-temperature-and-top_p-interact">3. How Do <code>temperature</code> and <code>top_p</code> Interact?</h3>
+<section id="a.-low-temperature-low-top_p" class="level4">
+<h4 class="anchored" data-anchor-id="a.-low-temperature-low-top_p">a. <strong>Low <code>temperature</code> + Low <code>top_p</code></strong></h4>
+<ul>
+<li>Behavior: Highly deterministic.</li>
+<li>Use Case: Tasks requiring precise and factual responses (e.g., technical documentation, Q&amp;A).</li>
+<li>Interaction:
+<ul>
+<li><strong>Low <code>temperature</code></strong> sharply focuses the probability distribution, and <strong>low <code>top_p</code></strong> further restricts token choices.</li>
+<li>Result: Very narrow and predictable outputs.</li>
+</ul></li>
+</ul>
+</section>
+<section id="b.-low-temperature-high-top_p" class="level4">
+<h4 class="anchored" data-anchor-id="b.-low-temperature-high-top_p">b. <strong>Low <code>temperature</code> + High <code>top_p</code></strong></h4>
+<ul>
+<li>Behavior: Slightly creative but still constrained.</li>
+<li>Use Case: Formal content generation with slight variability.</li>
+<li>Interaction:
+<ul>
+<li><strong>Low <code>temperature</code></strong> ensures focused probabilities, but <strong>high <code>top_p</code></strong> allows more token options.</li>
+<li>Result: Outputs are coherent with minimal creativity.</li>
+</ul></li>
+</ul>
+</section>
+<section id="c.-high-temperature-low-top_p" class="level4">
+<h4 class="anchored" data-anchor-id="c.-high-temperature-low-top_p">c.&nbsp;<strong>High <code>temperature</code> + Low <code>top_p</code></strong></h4>
+<ul>
+<li>Behavior: Controlled randomness.</li>
+<li>Use Case: Tasks where some creativity is acceptable but coherence is important (e.g., storytelling with a clear structure).</li>
+<li>Interaction:
+<ul>
+<li><strong>High <code>temperature</code></strong> flattens the probabilities, introducing more randomness, but <strong>low <code>top_p</code></strong> limits the selection to the most probable tokens.</li>
+<li>Result: Outputs are creative but still coherent.</li>
+</ul></li>
+</ul>
+</section>
+<section id="d.-high-temperature-high-top_p" class="level4">
+<h4 class="anchored" data-anchor-id="d.-high-temperature-high-top_p">d.&nbsp;<strong>High <code>temperature</code> + High <code>top_p</code></strong></h4>
+<ul>
+<li>Behavior: Highly creative and diverse.</li>
+<li>Use Case: Tasks requiring out-of-the-box ideas (e.g., brainstorming, poetry).</li>
+<li>Interaction:
+<ul>
+<li><strong>High <code>temperature</code></strong> increases randomness, and <strong>high <code>top_p</code></strong> allows even lower-probability tokens to be included.</li>
+<li>Result: Outputs can be very diverse, sometimes sacrificing coherence.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="practical-guidelines" class="level3">
+<h3 class="anchored" data-anchor-id="practical-guidelines">4. Practical Guidelines</h3>
+<section id="balancing-creativity-and-coherence" class="level4">
+<h4 class="anchored" data-anchor-id="balancing-creativity-and-coherence">Balancing Creativity and Coherence</h4>
+<ul>
+<li>Start with default values (<code>temperature = 1.0</code>, <code>top_p = 1.0</code>).</li>
+<li>Adjust <code>temperature</code> for broader or narrower probability distributions.</li>
+<li>Adjust <code>top_p</code> to fine-tune the token selection process.</li>
+</ul>
+</section>
+<section id="common-configurations" class="level4">
+<h4 class="anchored" data-anchor-id="common-configurations">Common Configurations</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 15%">
+<col style="width: 10%">
+<col style="width: 46%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Scenario</strong></th>
+<th><strong>Temperature</strong></th>
+<th><strong>Top_p</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Precise and Deterministic</td>
+<td>0.1</td>
+<td>0.3</td>
+<td>Outputs are highly focused and factual.</td>
+</tr>
+<tr class="even">
+<td>Balanced Creativity</td>
+<td>0.7</td>
+<td>0.8–0.9</td>
+<td>Outputs are coherent with some diversity.</td>
+</tr>
+<tr class="odd">
+<td>Controlled Randomness</td>
+<td>1.0</td>
+<td>0.5–0.7</td>
+<td>Allows for creativity while maintaining structure.</td>
+</tr>
+<tr class="even">
+<td>Highly Creative</td>
+<td>1.2 or higher</td>
+<td>0.9–1.0</td>
+<td>Outputs are diverse and may deviate from structure.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="examples-of-interaction" class="level3">
+<h3 class="anchored" data-anchor-id="examples-of-interaction">5. Examples of Interaction</h3>
+<section id="example-prompt" class="level4">
+<h4 class="anchored" data-anchor-id="example-prompt">Example Prompt</h4>
+<p><strong>Prompt:</strong> “Write a short story about a time-traveling cat.”</p>
+<ol type="1">
+<li><strong>Low <code>temperature</code>, low <code>top_p</code>:</strong>
+<ul>
+<li>Output: “The cat found a time machine and traveled to ancient Egypt.”</li>
+<li>Description: Simple, predictable story.</li>
+</ul></li>
+<li><strong>High <code>temperature</code>, low <code>top_p</code>:</strong>
+<ul>
+<li>Output: “The cat stumbled upon a time vortex and arrived in a land ruled by cheese-loving robots.”</li>
+<li>Description: Random but slightly constrained.</li>
+</ul></li>
+<li><strong>High <code>temperature</code>, high <code>top_p</code>:</strong>
+<ul>
+<li>Output: “The cat discovered a mystical clock, its paws adjusting gears to jump into dimensions where history danced with dreams.”</li>
+<li>Description: Wildly creative and poetic.</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">6. Conclusion</h3>
+<p>The <code>temperature</code> and <code>top_p</code> parameters are powerful tools for controlling the style and behavior of text generation. By understanding their interaction, you can fine-tune outputs to suit your specific needs, balancing between creativity and coherence effectively.</p>
+<p>Experiment with these parameters to find the sweet spot for your particular application.</p>
+</section>
+</section>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="generating-multiple-responses" class="level2">
+<h2 class="anchored" data-anchor-id="generating-multiple-responses">Generating multiple responses</h2>
+<p>We can also generate multiple responses from the model by setting the <code>n</code> parameter to a value greater than 1. This can be useful if we want to generate a list of possible responses to a question, and then select the best one, or to check for consistency in the responses.</p>
+<div id="cell-44" class="cell" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dotenv <span class="im">import</span> load_dotenv</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> openai <span class="im">import</span> OpenAI </span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>load_dotenv()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-45" class="cell" data-execution_count="44">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> OpenAI()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-46" class="cell" data-execution_count="45">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>system_prompt <span class="op">=</span> <span class="st">"""Act as a music teacher. Keep your responses very short and to the point."""</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>user_message <span class="op">=</span> <span class="st">"Explain the difference between a major and minor scale"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-47" class="cell" data-execution_count="46">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>responses <span class="op">=</span> client.chat.completions.create(</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>        model<span class="op">=</span><span class="st">"gpt-4o-mini"</span>,</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>        messages<span class="op">=</span>[</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>            {</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>                <span class="st">"role"</span>: <span class="st">"system"</span>,</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>                <span class="st">"content"</span>: [</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>                    {</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"type"</span>: <span class="st">"text"</span>,</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"text"</span>: system_prompt</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>                    }</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>                ]</span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>            },</span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>            {</span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>                <span class="st">"role"</span>: <span class="st">"user"</span>,</span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a>                <span class="st">"content"</span>: [</span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>                    {</span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"type"</span>: <span class="st">"text"</span>,</span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"text"</span>: user_message</span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a>                    }</span>
+<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a>                ]</span>
+<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a>        ],</span>
+<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a>        temperature<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb28-24"><a href="#cb28-24" aria-hidden="true" tabindex="-1"></a>        max_tokens<span class="op">=</span><span class="dv">512</span>,</span>
+<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a>        top_p<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb28-26"><a href="#cb28-26" aria-hidden="true" tabindex="-1"></a>        n <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb28-27"><a href="#cb28-27" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now we can choose one of the responses.</p>
+<div id="cell-49" class="cell" data-execution_count="47">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> textwrap</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> responses.choices[<span class="dv">0</span>].message.content</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>wrapped_text <span class="op">=</span> textwrap.fill(text, width<span class="op">=</span><span class="dv">80</span>)</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(wrapped_text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>A major scale has a happy, bright sound and follows the pattern: whole, whole,
+half, whole, whole, whole, half. A minor scale has a sadder, darker sound and
+follows the pattern: whole, half, whole, whole, half, whole, whole.</code></pre>
+</div>
+</div>
+<p>We can also loop through the responses and print them all.</p>
+<div id="cell-51" class="cell" data-execution_count="48">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, response <span class="kw">in</span> <span class="bu">enumerate</span>(responses.choices):</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> response.message.content  <span class="co"># Changed from responses.choices[0] to response</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    wrapped_text <span class="op">=</span> textwrap.fill(text, width<span class="op">=</span><span class="dv">80</span>)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Response </span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">:</span><span class="ch">\n</span><span class="sc">{</span>wrapped_text<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Response 1:
+A major scale has a happy, bright sound and follows the pattern: whole, whole,
+half, whole, whole, whole, half. A minor scale has a sadder, darker sound and
+follows the pattern: whole, half, whole, whole, half, whole, whole.
+
+Response 2:
+A major scale has a bright, happy sound, characterized by a pattern of whole and
+half steps: W-W-H-W-W-W-H. A minor scale sounds more somber or melancholic, with
+the natural minor scale following the pattern: W-H-W-W-H-W-W.
+
+Response 3:
+A major scale has a bright, happy sound, while a minor scale sounds more somber
+or sad. The structure of a major scale is whole-whole-half-whole-whole-whole-
+half, whereas a natural minor scale is whole-half-whole-whole-half-whole-whole.
+</code></pre>
+</div>
+</div>
 
 
 </section>
@@ -1185,8 +1742,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../workshop/project/index.html" class="pagination-link" aria-label="Project">
-        <span class="nav-page-text">Project</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../notebooks/structured-output.html" class="pagination-link" aria-label="Structured Output">
+        <span class="nav-page-text">Structured Output</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
