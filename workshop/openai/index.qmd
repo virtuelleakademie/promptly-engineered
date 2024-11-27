@@ -5,13 +5,179 @@ title: "Setup OpenAI"
 
 
 Now that we have set up our Python environment, we can start using the OpenAI API.
-
-Before we start, we need to set up an OpenAI account and get an API key.
-
-Let's open the OpenAI [Platform](https://platform.openai.com/). Make sure that you are logged in. 
-
+ 
+ 
+Let's open the OpenAI [Platform](https://platform.openai.com/). Make sure that you are logged in. Here, we will first look at the OpenAI Playground and then we will create an API key. We need this key to use the OpenAI API from our Python code.
 
 
+
+# Explore the OpenAI Platform
 {{< revealjs file="../../slides/openai-platform/index.html" height="500px" class="ratio ratio-16x9" >}}
 
 
+
+# Explore the OpenAI Docs
+
+The OpenAI API is very well documented: [platform.openai.com/docs/overview](https://platform.openai.com/docs/overview).
+
+<!-- {{< html file="https://platform.openai.com/docs/overview" >}} -->
+
+
+# Building prompts
+
+When we were exploring the OpenAI Playground, we saw that the messages we pass to the LLM consist of a system prompt and a user prompt. The different roles in the messages are fully documented in the [OpenAI API docs](https://platform.openai.com/docs/overview).
+
+## Understanding Roles in the `messages` Argument
+
+When using the chat completions API, you create prompts by providing an array of messages that contain instructions for the model. Each message can have a different role, which influences how the model might interpret the input. Each entry in the `messages` list is a dictionary with a `role` and a `content`. The `role` specifies who is "speaking," which helps the model generate contextually appropriate responses.
+
+
+## Roles and Their Purposes
+
+### **1. `system`**
+- **Purpose**: Sets the behavior, tone, and personality of the AI. Think of this as the "guiding principles" for the model.
+- **When to Use**: At the beginning of a conversation to establish how the assistant should behave.
+- **Example**:
+
+```json
+{"role": "system", "content": "You are a helpful and polite assistant."}
+```
+
+- **Effect**: 
+
+  - It tells the model to frame all its responses according to the specified behavior.
+  - For example, defining the assistant as "concise" will encourage brief replies.
+
+
+### **2. `user`**
+
+- **Purpose**: Represents the input from the person using the model.
+- **When to Use**: Every time the user provides input or asks a question.
+- **Example**:
+  
+```json
+{"role": "user", "content": "Can you explain the roles in the messages argument?"}
+```
+- **Effect**:
+  - The model treats this as a direct prompt to respond.
+  - The user’s input frames the assistant's reply.
+
+
+
+### **3. `assistant`**
+- **Purpose**: Represents the AI's responses in the conversation.
+- **When to Use**: To show the model what it has previously said, especially in multi-turn interactions.
+- **Example**:
+  
+```json
+{"role": "assistant", "content": "Of course! Here’s an explanation of the roles..."}
+```
+- **Effect**:
+  - By including prior responses, you ensure the model has full context for the ongoing conversation.
+
+
+
+### **4. `function`** (Optional, Advanced)
+- **Purpose**: Represents a structured response when calling functions integrated with the AI.
+- **When to Use**: In applications where the AI triggers external functions (e.g., retrieving weather data or performing calculations).
+- **Example**:
+- 
+```json
+{"role": "function", 
+ "name": "get_weather", 
+ "content": "{\"location\": \"Zurich\"}"}
+```
+
+- **Effect**:
+  - Used in function-calling mode to indicate what data or output the function provides.
+
+We will not use the `function` role in this workshop.
+
+## Putting It All Together
+
+Here’s an example of a complete `messages` argument in a conversational context:
+
+```json
+[
+    {"role": "system", "content": "You are a friendly travel assistant."},
+    {"role": "user", "content": "Can you suggest a good vacation spot for December?"},
+    {"role": "assistant", "content": "Sure! How about visiting the Swiss Alps for skiing?"},
+    {"role": "user", "content": "That sounds great. What else can I do there?"}
+]
+```
+
+By structuring your prompts as an array of messages with different roles, you can have more control over the conversation flow and provide additional context or instructions to the model as needed.
+
+
+# LLM Parameters
+When generating responses from a language model, there are several parameters that can be adjusted to control the output behavior. Here are some common parameters:
+
+**Temperature**:
+
+- Controls the randomness or creativity of the generated text.
+- Higher temperature (e.g., 0.8-1.0) produces more diverse and unpredictable outputs.
+- Lower temperature (e.g., 0.2-0.5) generates more conservative and focused responses.
+
+**Top-k Sampling**:
+
+- Limits the model's vocabulary to the top-k most likely tokens at each step.
+- Helps control the diversity of the output by restricting the model's choices.
+- Higher values of k allow more diverse outputs, while lower values produce more focused responses.
+
+**Top-p Sampling (Nucleus Sampling)**:
+
+- Similar to top-k sampling, but instead of considering the top-k tokens, it considers the smallest set of tokens whose cumulative probability exceeds a specified threshold (p).
+- Allows for more dynamic control over the diversity of the output.
+
+**Repetition Penalty**:
+
+- Penalizes the model for repeating the same or similar text patterns.
+- Helps prevent excessive repetition and promotes more diverse outputs.
+
+**Max Length**:
+
+- Specifies the maximum number of tokens (words or subwords) in the generated output.
+- Useful for controlling the length of the response and preventing excessive verbosity.
+
+These parameters can be adjusted based on the specific use case and desired output characteristics. For example, higher temperature and top-k/top-p values may be preferred for creative writing tasks, while lower values could be more suitable for factual or analytical tasks where precision is important.
+
+
+
+## Suggestion for using `temperature` and `top-p`
+
+Top-p sampling, also known as nucleus sampling, is a way to control the diversity of the text generated by a language model. It works by considering the most likely words or tokens at each step, but instead of just taking the top few, it takes the smallest set of words that make up a certain percentage (p) of the total probability.
+
+For example, if p is set to 0.9, the model will consider the words that make up the top 90% of the probability distribution at each step. This allows for more diverse and creative outputs compared to just taking the single most likely word.
+
+
+You can use the `temperature` and `top-p` parameters in combination to make the LLM more creative or more focused.
+
+Increase the temperature parameter to make the model's outputs more diverse and creative. However, if the temperature is too high, the outputs may become nonsensical or incoherent. In that case, you can lower the top p value to restrict the model's vocabulary and make the outputs more focused and coherent.
+
+If you find that you need to lower the `top-p` value below 0.5 (or 50%) to keep the outputs coherent, it may be better to lower the temperature instead. Then, you can try adjusting the `top-p` value again to find the right balance between diversity and coherence.
+
+The key is to experiment with different combinations of `temperature` and `top-p` values to achieve the desired level of creativity and coherence for your specific use case.
+
+
+# Setting up the OpenAI API Key
+
+When working locally with the OpenAI API, you need to set up an API key. The API key is a unique identifier that allows you to authenticate and access the OpenAI language models and services. It acts as a secure credential, granting you authorized access to the API endpoints. This key should be kept **secret**---please do not share it.
+
+To set up an OpenAI API key, follow these steps:
+
+1. Go to the [OpenAI API Settings](https://platform.openai.com/settings) page and navigate to the `API Keys` section (`Settings > API Keys`).
+2. Click on the "Create new secret key" button.
+3. Leave the `Permissions` set to the default value (`All permissions`). 
+4. Give your key a descriptive name and click "Create secret key". 
+5. Copy the generated secret key. This is the key you'll use to authenticate your API requests.
+6. Store the key securely, as you would with any other sensitive credential. Do not share or commit this key to version control.
+
+Once you have your API key, you can set it as an environment variable or pass it directly to the OpenAI Python library when making API calls.
+
+To set the API key as an environment variable:
+
+
+# Install the OpenAI Python Package
+
+
+# Using the OpenAI API
