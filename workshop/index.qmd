@@ -15,16 +15,19 @@ The focus of this workshop is on using the OpenAI API, so we will only discuss P
 
 The workshop is structured as follows:
 
-- Introduction
-- Python setup
-- VSCode setup
-- Verify OpenAI
-- Test structured output
+(@) Introduction
+(@) Setup coding environment
+    + setup Python 
+    + setup VSCode 
+    + install Github Copilot
+(@) Verify OpenAI installation
+(@) Using the OpenAI API
+(@) Project: Use GPT-4o to generate Anki flashcards
+(@) Conclusions and discussion
 
 
 
-
-
+<!-- 
 # Introduction and setup
 
 {{< bi alarm >}} 5 minutes
@@ -41,10 +44,10 @@ The workshop is structured as follows:
 {{< embed ../notebooks/test-structured-output.ipynb#events echo=true >}}
 
 {{< embed ../notebooks/test-structured-output.ipynb#export-csv echo=true >}}
+ -->
 
 
-
-## Pyodide
+<!-- ## Pyodide -->
 <!-- 
 ```{pyodide-python}
 n = 5
@@ -56,4 +59,4 @@ print('Blastoff!')
 ``` -->
 
 
-# References
+<!-- # References -->
