@@ -73,4 +73,4 @@ Now you can think about how you can extract pairs of questions and answers from 
 
 ## Task 8: Extract questions and answers from all the teaching material
 
-(@) write a loop to load all essays, extract questions and answers from all the teaching material, and write the results to a CSV file
+(@) write a loop to load all essays, extract questions and answers from all the teaching material, and write the results to a CSV file.
