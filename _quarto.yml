@@ -84,7 +84,7 @@ website:
         # - workshop/using-openai-models/index.qmd
         - notebooks/exploring-openai-models.ipynb
         - notebooks/structured-output.ipynb
-        - workshop/project/index.qmd
+        - projects/index.qmd
         - workshop/discussion/index.qmd
 
 
@@ -93,9 +93,9 @@ website:
       search: true
       background: light
       contents:
-        - tutorials/index.qmd
-        - tutorials/tutorial-1/index.qmd
-        - tutorials/tutorial-2/index.qmd
+        - text: "Project: Anki flashcards"
+          file: projects/index.qmd
+
 
 page-footer:
     right:
