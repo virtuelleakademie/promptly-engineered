@@ -36,5 +36,5 @@ title: "Using the OpenAI Platform"
 
 ## View Code
 
-![](../../assets/images/openai-poem-code.png){width=80%}
+![](../../assets/images/openai-poem-code.png){width=75%}
 
