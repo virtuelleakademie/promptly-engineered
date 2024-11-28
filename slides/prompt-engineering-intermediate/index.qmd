@@ -141,7 +141,7 @@ The ER is in chaos, Doctor. We need your expertise to navigate this storm of
 patients and identify the most critical cases.
 :::
 
-see @battleUnreasonableEffectivenessEccentric2024a
+see @battleUnreasonableEffectivenessEccentric2024b
 
 <!-- ## Questions / Discussion {{< bi chat-dots >}} -->
 
