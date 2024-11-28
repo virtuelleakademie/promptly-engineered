@@ -5,6 +5,8 @@ execute:
   cache: true
 ---
 
+First, we import the required libraries:
+
 ```{python}
 import os
 import csv
@@ -15,10 +17,14 @@ from pydantic import BaseModel, Field
 from typing import List
 ```
 
+Initialize the OpenAI client using environment variables:
+
 ```{python}
 load_dotenv()
 client = OpenAI()
 ```
+
+Define our data models using Pydantic for type safety and validation:
 
 ```{python}
 class AnkiFlashcard(BaseModel):
@@ -31,6 +37,8 @@ class AnkiFlashcard(BaseModel):
     tags: List[str] = Field(..., description="List of tags associated with the flashcard")
 ```
 
+Create a model to represent a complete deck of flashcards:
+
 ```{python}
 class AnkiDeck(BaseModel):
     """
@@ -40,6 +48,8 @@ class AnkiDeck(BaseModel):
     cards: List[AnkiFlashcard] = Field(..., description="List of flashcards in the deck")
     deck_name: str = Field(..., description="Name of the Anki deck")
 ```
+
+Define the main function that generates flashcards using GPT-4:
 
 ```{python}
 def generate_structured_flashcards(text: str, 
@@ -87,12 +97,15 @@ def generate_structured_flashcards(text: str,
     return completion.choices[0].message.parsed
 ```
 
+Load our sample text about the Romantic era from a markdown file:
 
 ```{python}
 #| echo: false
 with open("romantic-essay.md", "r") as file:
     romantic_text = file.read()
 ```
+
+Display the content of the romantic text (hidden by default):
 
 :::{.callout-note collapse=true title="`romantic_text`"}
 ## The Romantic Era: Emotion Unleashed (1810-1910)
@@ -138,12 +151,14 @@ The Romantic period gradually gave way to various modern movements. The increasi
 The Romantic era's emphasis on emotional expression, its technical innovations, and its expansion of musical possibilities created a legacy that continues to influence musicians today. The period's great works remain central to the concert repertoire, beloved for their emotional depth and expressive power.
 :::
 
+
 ```{python}
 #| echo: false
 #| eval: false
 print(romantic_text)
 ```
 
+Generate a deck of 10 flashcards about the Romantic era:
 
 ```{python}
 romantic_deck = generate_structured_flashcards(romantic_text,
@@ -151,13 +166,19 @@ romantic_deck = generate_structured_flashcards(romantic_text,
                                               num_cards=10)
 ```
 
+Display the complete deck object:
+
 ```{python}
 romantic_deck
 ```
 
+Show the deck in JSON format:
+
 ```{python}
 print(romantic_deck.model_dump_json())
 ```
+
+Print each flashcard in a readable format:
 
 ```{python}
 for card in romantic_deck.cards:
@@ -166,6 +187,8 @@ for card in romantic_deck.cards:
     print(f"Tags: {', '.join(card.tags)}")
     print("-" * 20)
 ```
+
+Export the flashcards to a CSV file for importing into Anki:
 
 ```{python}
 os.makedirs('assets/flashcards', exist_ok=True)
