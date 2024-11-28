@@ -674,5 +674,16 @@
       "Workshop",
       "Contents"
     ]
+  },
+  {
+    "objectID": "workshop/openai/index.html#example-workspace",
+    "href": "workshop/openai/index.html#example-workspace",
+    "title": "Setup OpenAI",
+    "section": "Example workspace",
+    "text": "Example workspace\nFor convenience, you can download an example workspace here:\n ai-coding-workshop\nOnce you have downloaded the ZIP file, unzip it and open the folder in VSCode. You can then create a virtual environment and install the dependencies. Once you have done this, you can run the code in the Jupyter Notebook cells or the Python file as described above.",
+    "crumbs": [
+      "Workshop",
+      "Setup OpenAI"
+    ]
   }
 ]

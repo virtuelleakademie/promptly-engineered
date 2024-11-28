@@ -357,3 +357,12 @@ print(response)
 print(response.choices[0].message.content)
 ```
 
+## Example workspace
+
+For convenience, you can download an example workspace here:
+
+{{< bi link >}} [ai-coding-workshop](https://github.com/awellis/ai-coding-workshop/archive/refs/heads/main.zip)
+
+Once you have downloaded the ZIP file, unzip it and open the folder in VSCode. You can then create a virtual environment and install the dependencies. Once you have done this, you can run the code in the Jupyter Notebook cells or the Python file as described above.
+
+
