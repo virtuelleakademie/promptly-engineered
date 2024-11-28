@@ -1,0 +1,15 @@
+---
+title: "Generate Anki flashcards: example code"
+jupyter: python3
+---
+
+```{python}
+from dotenv import load_dotenv  # For loading environment variables
+from openai import OpenAI 
+```
+
+```{python}
+load_dotenv()
+client = OpenAI()
+```
+
