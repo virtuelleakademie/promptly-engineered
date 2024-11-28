@@ -93,6 +93,7 @@ website:
       background: light
       contents:
         - projects/anki/index.qmd
+        - projects/anki/example/index.qmd
 
 
 page-footer:
