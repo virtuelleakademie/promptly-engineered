@@ -1,9 +1,13 @@
 ---
 title: "Generate Anki flashcards: example code"
 jupyter: python3
+execute: 
+  cache: true
 ---
 
 ```{python}
+import os
+import csv
 from dotenv import load_dotenv  # For loading environment variables
 from openai import OpenAI 
 
@@ -38,7 +42,9 @@ class AnkiDeck(BaseModel):
 ```
 
 ```{python}
-def generate_structured_flashcards(text: str, deck_name: str, num_cards: int = 5) -> AnkiDeck:
+def generate_structured_flashcards(text: str, 
+                                   deck_name: str, 
+                                   num_cards: int = 5) -> AnkiDeck:
     """
     Generate structured flashcards using GPT-4o with enforced Pydantic model output.
     
@@ -133,12 +139,16 @@ The Romantic era's emphasis on emotional expression, its technical innovations, 
 :::
 
 ```{python}
+#| echo: false
+#| eval: false
 print(romantic_text)
 ```
 
 
 ```{python}
-romantic_deck = generate_structured_flashcards(romantic_text, "Romanticism", 10)
+romantic_deck = generate_structured_flashcards(romantic_text,
+                                              "Romanticism", 
+                                              num_cards=10)
 ```
 
 ```{python}
