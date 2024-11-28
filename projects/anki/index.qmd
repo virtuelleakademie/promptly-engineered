@@ -1,5 +1,5 @@
 ---
-title: "Project: Anki flashcards"
+title: "Generate Anki flashcards"
 jupyter: python3
 ---
 
