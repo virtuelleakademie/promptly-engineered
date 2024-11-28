@@ -13,6 +13,7 @@ project:
     - notebooks/*.ipynb
     # - "!tutorials/tutorial-1/index.qmd"
     - slides/**/*.qmd
+    - slides/openai-platform/index.qmd
 
 website:
   title: "Promptly Engineered"
@@ -43,8 +44,8 @@ website:
       - icon: file-slides
         text: "Slides" # {{< fa person-chalkboard >}}
         menu:
-          # - text: "AI-enhanced journal club"
-          #   file: slides/index.qmd
+          - text: "OpenAI Platform"
+            file: slides/openai-platform/index.qmd
           - text: "Understanding LLMs"
             file: slides/understanding-llms/index.qmd
           - text: "Basic prompt engineering"
