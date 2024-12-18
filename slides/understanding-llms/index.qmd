@@ -8,7 +8,7 @@ title: "Understanding Large Language Models"
 - Outputs a distribution over all possible tokens, conditioned on input sequence. 
 - LLMs undergo three key stages of training:
 
-![](../assets/images/training.png)
+![](../../assets/images/training.png)
  
 
 
@@ -33,13 +33,13 @@ $$\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})$$
 <!-- $$\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})$$ -->
 <br><br><br>
 
-![](../assets/images/once-upon-a-time.png)
+![](../../assets/images/once-upon-a-time.png)
 
 
 
 ## The Space Of All Possible Outputs
 
-![](../assets/images/multiverse.png)
+![](../../assets/images/multiverse.png)
 
 ::: {.attribution}
 Figure from @shanahanRolePlayLarge2023
@@ -97,13 +97,13 @@ Key point: By taking the goat back on the fourth trip, the farmer ensures that n
 ## Manhole Covers: Why Are They Round?
 
 
-![](../assets/images/manhole-cover.png)
+![](../../assets/images/manhole-cover.png)
 
 ## Manhole Covers: Why Are They Round?
 
 :::: {.columns}
 ::: {.column width="50%"}
-![](../assets/images/manhole-cover.png)
+![](../../assets/images/manhole-cover.png)
 :::
 ::: {.column width="50%"}
 1. The human body that had to fit through the hole is round.
@@ -139,7 +139,7 @@ observable symptoms must perform probabilistic reasoning.
 
 :::
 ::: {.column width="50%"}
-![](../assets/images/probabilistic-reasoning.png)
+![](../../assets/images/probabilistic-reasoning.png)
 :::
 :::: -->
 
@@ -163,7 +163,7 @@ shrinks, making the model’s behavior more predictable.
 - Each token conditions the model's next prediction
 - With more context, the uncertainty (entropy) decreases, guiding the model towards a more specific output.
 
-![](../assets/images/once-upon-a-time.png)
+![](../../assets/images/once-upon-a-time.png)
 
 ## The Power of Prompting: Why It Matters
 
